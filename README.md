@@ -1,4 +1,5 @@
 -Nhóm 7- Dự án 1: Website bán giày online pullman.
+
 -HƯỚNG DẪN CHẠY WEBSITE:
 1. Tạo 1 thư mục đặt tên: Nhom_7_DA1 trong thư mục htdocs
 2. Tải code trên nhánh main về thư mục trên.
