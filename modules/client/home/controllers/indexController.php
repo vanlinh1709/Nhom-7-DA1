@@ -6,6 +6,9 @@ function construct() {
 
 function indexAction() {
     $categories = get_list_categories();
-//    var_dump($categories);
-    load_view('index', ['categories' => $categories]);
+    $list_newest_product = get_list_product_newest();
+//   var_dump($categories);
+//   var_dump($list_newest_product[0]['thumbnail']);
+//   die();
+    load_view('index', compact('categories', 'list_newest_product'));
 }

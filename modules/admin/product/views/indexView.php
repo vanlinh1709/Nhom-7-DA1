@@ -73,7 +73,8 @@
                             <th title="Field #2">Nhãn hiệu</th>
                             <th title="Field #2">Só lượng</th>
                             <th title="Field #2">Giá khuyến mãi</th>
-                            <th title="Field #2">Lượt xem</th>
+                            <th title="Field #2">Số lượng sản phẩm đã bán</th>
+                            <th title="Field #2">Số lượt xem</th>
                             <th title="Field #2">Ảnh đại diện</th>
                             <th title="Field #2">Mô tả</th>
                             <th title="Field #2">Trạng thái</th>
@@ -117,7 +118,8 @@
                                 <td><?php echo ($product['brand_name']) ?></td>
                                 <td><?php echo ($product['number']) ?></td>
                                 <td><?php echo ($product['promo_price']) ?></td>
-                                <td><?php echo ($product['view']) ?></td>
+                                <td><?php echo ($product['sales']) ?></td>
+                                <td><?php echo ($product['views']) ?></td>
                                 <td>
                                     <img src="./public/uploads/images/product/<?php echo ($product['thumbnail'])?>" height="100"
                                     width="100">
