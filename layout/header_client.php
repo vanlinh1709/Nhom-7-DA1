@@ -12,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
     <!-- CSS
 	============================================ -->
     <!-- google fonts -->
@@ -61,25 +60,25 @@
                                             <i class="fa fa-angle-down"></i>
                                             <ul class="dropdown-list">
                                                 <li><a href="#"><img src="assets/img/icon/en.png" alt="flag"> English</a></li>
-                                                <li><a href="#"><img src="assets/img/icon/fr.png" alt="flag"> French</a></li>
+                                                <li><a href="#"><img src="assets/img/icon/fr.png" alt="flag"> Việt nam</a></li>
                                             </ul>
                                         </li>
                                         <li class="curreny-wrap">
                                             $ Currency
                                             <i class="fa fa-angle-down"></i>
                                             <ul class="dropdown-list curreny-list">
-                                                <li><a href="#">$ USD</a></li>
-                                                <li><a href="#">€ EURO</a></li>
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#"></a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                                 <ul class="user-info-block">
-                                    <li><a href="my-account.html"><i class="fa fa-user-circle"></i><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : 'My accoutnt'?></a></li>
+                                    <li><a href="my-account.html"><i class="fa fa-user-circle"></i><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : ''?></a></li>
 
-                                    <li <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>><a href="?role=client&mod=signUp"><i class="fa fa-credit-card" ></i>Sign up</a></li>
+                                    <li <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>><a href="?role=client&mod=signUp"><i class="fa fa-credit-card" ></i>Đăng ký</a></li>
 
-                                    <li><a href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=logout' : '?role=client&mod=auth'?>"><i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Log out' : 'Sign in'?></a></li>
+                                    <li><a href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=logout' : '?role=client&mod=auth'?>"><i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Đăng xuất' : 'Đăng nhập'?></a></li>
                                 </ul>
                             </div>
                         </div>

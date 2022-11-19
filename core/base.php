@@ -189,10 +189,12 @@ function get_template_part($name) {
     }
 }
 //validate sign up
-function validator($email, $password) {
+function validator($email, $password, $name = 1, $rpw = 1) {
     $flag = true;
     $invalidEmail = validateEmail($email);
     $invalidPassword = validatePassword($password);
+    $invalidFullname = validateFullname($name);
+    $invalidRpw = validateRpw($rpw);
 //    var_dump($invalidPassword, $invalidEmail);die();
     //
     $_SESSION['notification'] = [];
@@ -200,6 +202,8 @@ function validator($email, $password) {
     $msg['type'] = 'danger';
     $msg['email'] ='';
     $msg['password'] = '';
+    $msg['rpw'] = '';
+    $msg['name'] = '';
     if($invalidEmail) {
         $msg['email'] = 'Để trống email hoặc nhập sai định dạng email!';
         $flag = false;
@@ -208,9 +212,19 @@ function validator($email, $password) {
         $msg['password'] = 'Để trống password!';
         $flag = false;
     }
+    if($name === '' || $invalidFullname) {
+        $msg['name'] = 'Để trống trường tên!';
+        $flag = false;
+    }
+    if($rpw === '' || $invalidRpw) {
+        $msg['rpw'] = 'Để trống nhập lại mật khẩu!';
+        $flag = false;
+    }
     $_SESSION['notification'][] = $msg;
-    echo '<pre>';
+//    echo '<pre>';
 //    var_dump($msg);die();
+//    var_dump($flag);
+//    die();
     return $flag;
 }
 function validateEmail($email) {
@@ -220,12 +234,27 @@ function validateEmail($email) {
     }
     return false;
 }
+
+function validateFullname($name) {
+    if(empty($name)) {
+        return true;//Full name khong hop le
+    }
+    return false;
+}
+function validateRpw($rpw) {
+    if(empty($rpw)) {
+        return true;//Full name khong hop le
+    }
+    return false;
+}
+
 function validatePassword($password) {
     if(empty($password)) {
         return true;//Pass word khong hop le
     }
     return false;
 }
+
 function push_notification_user() {
     $_SESSION['notification'] = [];
     $msg['type'] ='danger';
