@@ -167,15 +167,14 @@
 							<!--begin::Header Nav-->
 							<ul class="menu-nav">
 								<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active" data-menu-toggle="click" aria-haspopup="true">
-									<a href="javascript:;" class="menu-link menu-toggle">
-										<span class="menu-text">Trang quản trị</span>
+									<a href="?role=admin" class="" target="">
+										<span class="text-danger menu-text">Trang quản trị</span>
 										<i class="menu-arrow"></i>
 									</a>
 								</li>
 								<li class="menu-item menu-item-submenu" data-menu-toggle="click" aria-haspopup="true">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="?role=client" class="" target="_blank">
 										<span class="menu-text">Trang khách hàng</span>
-										<i class="menu-arrow"></i>
 									</a>
 								</li>
 							</ul>

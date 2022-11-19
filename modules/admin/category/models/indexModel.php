@@ -11,7 +11,7 @@ function get_cate_by_id($id) {
 
 }
 function createCate($name) {
-    $sql = 'INSERT INTO categories(name) VALUES(?)';
+    $sql = 'INSERT INTO categories(cate_name) VALUES(?)';
     pdo_execute($sql,$name);
 }
 function deleteCate($id) {
@@ -19,7 +19,7 @@ function deleteCate($id) {
     pdo_execute($sql, $id);
 }
 function updateCate($id, $name) {
-    $sql = 'UPDATE categories SET name= ? WHERE id = ?';
+    $sql = 'UPDATE categories SET cate_name= ? WHERE id = ?';
     pdo_execute($sql,$name, $id);
 }
 
