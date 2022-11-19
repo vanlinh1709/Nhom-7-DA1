@@ -25,6 +25,7 @@ function indexPostAction() {
         header('Location: ?role=client&mod=auth');
         exit();
     }
+
     //Xác thực có tồn tại user.
     $auth = get_auth_user($email, $password);
     if ($auth) {

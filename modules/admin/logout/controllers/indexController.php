@@ -5,6 +5,6 @@ function indexAction()
 {
     if (isset($_SESSION['auth'])) {
         unset($_SESSION["auth"]);
-        header('Location: ?role=client');
+        header('Location: ?role=admin');
     }
 }
