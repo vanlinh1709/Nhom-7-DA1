@@ -225,13 +225,20 @@ function validatePassword($password) {
     }
     return false;
 }
-function push_notification() {
+function push_notification_user() {
     $_SESSION['notification'] = [];
     $msg['type'] ='danger';
     $msg['email'] ='';
     $msg['password'] = '';
     $msg['user']= 'Tài khoản không tồn tại';
     $_SESSION['notification'][] = $msg;
+}
+function push_notification($type, $msgs) {
+    if (!isset($_SESSION["notification"])) $_SESSION["notification"] = [];
+    $data = [];
+    $data["type"] = $type;
+    $data["msgs"] = $msgs;
+    $_SESSION["notification"][] = $data;
 }
 //Push cảnh báo đăng nhập admin
 function get_notification() {

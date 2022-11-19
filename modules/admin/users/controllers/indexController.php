@@ -34,7 +34,7 @@ function createPostAction() {
 //    var_dump($avatar['name']);
 //    die();
     if (isset($avatar)) {
-        move_uploaded_file($avatar['tmp_name'], "C:/xampp/htdocs/pullman.com/public/uploads/images/user/" . $avatar['name']);
+        move_uploaded_file($avatar['tmp_name'], "C:/xampp/htdocs/Nhom_7_DA1/public/uploads/images/user/" . $avatar['name']);
     }
     createUser($name, $email, $phone_number, $address, $password, $role_id, $avatar['name']);
     push_notification('success', ['Tạo mới tài khoản thành công']);
@@ -86,7 +86,7 @@ function updatePostAction() {
     }
     if($_FILES['avatar']['name'] != '') {
         $avatar = $_FILES['avatar']['name'];
-        move_uploaded_file($_FILES['avatar']['tmp_name'], "C:/xampp/htdocs/pullman.com/public/uploads/images/user/" . $avatar);
+        move_uploaded_file($_FILES['avatar']['tmp_name'], "C:/xampp/htdocs/Nhom_7_DA1/public/uploads/images/user/" . $avatar);
     }
     updateUser($id ,$name, $email, $phone_number, $address, $password, $role_id, $avatar);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);

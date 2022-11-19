@@ -28,7 +28,7 @@ function indexPostAction() {
 //        echo '1';
         header('Location: ?role=admin');//Chạy về modules home
     } else {
-        push_notification('danger', ['Tài khoản hoặc mật khẩu không chính xác']);
+        push_notification_usser('danger', ['Tài khoản hoặc mật khẩu không chính xác']);
         header('Location: ?role=admin&mod=auth');
     }
 }

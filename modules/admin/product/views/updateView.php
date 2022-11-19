@@ -36,7 +36,7 @@
                         <div class="form-group">
                             <label>Danh mục sản phẩm</label><br>
                             <select class="selectpicker" name="category_id">
-                                <option value="<?php echo $categoryOfProduct['id']?> checked"><?php echo $categoryOfProduct['cate_name']?></option>
+                                <option value="<?php echo $categoryOfProduct['id']?>" checked><?php echo $categoryOfProduct['cate_name']?></option>
                                 <?php foreach($list_cates as $cate):?>
                                     <?php if($cate['id'] != $categoryOfProduct['id']):?>
                                     <option value="<?php echo $cate['id']?>"><?php echo $cate['cate_name']?></option>
@@ -48,7 +48,7 @@
                         <div class="form-group">
                             <label>Nhãn hiệu</label><br>
                             <select class="selectpicker" name="brand_id">
-                                <option value="<?php echo $brandOfProduct['id']?> checked"><?php echo $brandOfProduct['brand_name']?></option>
+                                <option value="<?php echo $brandOfProduct['id']?>" checked><?php echo $brandOfProduct['brand_name']?></option>
                                 <?php foreach($list_brands as $brand):?>
                                     <?php if($brand['id'] != $brandOfProduct['id']):?>
                                     <option value="<?php echo $brand['id']?>"><?php echo $brand['brand_name']?></option>
