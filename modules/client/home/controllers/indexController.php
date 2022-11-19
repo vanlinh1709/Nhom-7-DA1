@@ -5,5 +5,7 @@ function construct() {
 }
 
 function indexAction() {
-    load_view('index');
+    $categories = get_list_categories();
+//    var_dump($categories);
+    load_view('index', ['categories' => $categories]);
 }

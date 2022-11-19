@@ -1,4 +1,5 @@
 <?php get_header('', 'Trang chủ') ?>
+<?php //var_dump($categories);?>
 <main>
     <!-- slider area start -->
     <section class="hero-slider hero-slider--style-4">
@@ -12,113 +13,10 @@
                         </div>
                         <nav class="category-menu">
                             <ul class="categories-list">
-                                <li class="menu-item-has-children"><a href="shop.html">Fruits & Vegetables</a>
-                                    <!-- Mega Category Menu Start -->
-                                    <ul class="category-mega-menu dropdown">
-                                        <li class="menu-item-has-children">
-                                            <a href="shop.html">Smartphone</a>
-                                            <ul class="dropdown">
-                                                <li><a href="shop.html">Samsome</a></li>
-                                                <li><a href="shop.html">GL Stylus</a></li>
-                                                <li><a href="shop.html">Uawei</a></li>
-                                                <li><a href="shop.html">Cherry Berry</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="shop.html">headphone</a>
-                                            <ul class="dropdown">
-                                                <li><a href="shop.html">Desktop Headphone</a></li>
-                                                <li><a href="shop.html">Mobile Headphone</a></li>
-                                                <li><a href="shop.html">Wireless Headphone</a></li>
-                                                <li><a href="shop.html">LED Headphone</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="shop.html">accessories</a>
-                                            <ul class="dropdown">
-                                                <li><a href="shop.html">Power Bank</a></li>
-                                                <li><a href="shop.html">Data Cable</a></li>
-                                                <li><a href="shop.html">Power Cable</a></li>
-                                                <li><a href="shop.html">Battery</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="shop.html">headphone</a>
-                                            <ul class="dropdown">
-                                                <li><a href="shop.html">Desktop Headphone</a></li>
-                                                <li><a href="shop.html">Mobile Headphone</a></li>
-                                                <li><a href="shop.html">Wireless Headphone</a></li>
-                                                <li><a href="shop.html">LED Headphone</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul><!-- Mega Category Menu End -->
+                                <?php foreach($categories as $c):?>
+                                <li class="menu-item-has-children"><a href="?role=client&mod=category&id_cate=?"><?php echo $c['cate_name']?></a>
                                 </li>
-                                <li class="menu-item-has-children"><a href="shop.html">Fresh Meat</a>
-                                    <!-- Mega Category Menu Start -->
-                                    <ul class="category-mega-menu dropdown three-column">
-                                        <li class="menu-item-has-children">
-                                            <a href="shop.html">Smartphone</a>
-                                            <ul class="dropdown">
-                                                <li><a href="shop.html">Samsome</a></li>
-                                                <li><a href="shop.html">GL Stylus</a></li>
-                                                <li><a href="shop.html">Uawei</a></li>
-                                                <li><a href="shop.html">Cherry Berry</a></li>
-                                                <li><a href="shop.html">uPhone</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="shop.html">headphone</a>
-                                            <ul class="dropdown">
-                                                <li><a href="shop.html">Desktop Headphone</a></li>
-                                                <li><a href="shop.html">Mobile Headphone</a></li>
-                                                <li><a href="shop.html">Wireless Headphone</a></li>
-                                                <li><a href="shop.html">LED Headphone</a></li>
-                                                <li><a href="shop.html">Over-ear</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="shop.html">accessories</a>
-                                            <ul class="dropdown">
-                                                <li><a href="shop.html">Power Bank</a></li>
-                                                <li><a href="shop.html">Data Cable</a></li>
-                                                <li><a href="shop.html">Power Cable</a></li>
-                                                <li><a href="shop.html">Battery</a></li>
-                                                <li><a href="shop.html">OTG Cable</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul><!-- Mega Category Menu End -->
-                                </li>
-                                <li class="menu-item-has-children"><a href="shop.html">dairy & eggs</a>
-                                    <!-- Mega Category Menu Start -->
-                                    <ul class="category-mega-menu dropdown two-column">
-                                        <li class="menu-item-has-children">
-                                            <a href="shop.html">Smartphone</a>
-                                            <ul class="dropdown">
-                                                <li><a href="shop.html">Samsome</a></li>
-                                                <li><a href="shop.html">GL Stylus</a></li>
-                                                <li><a href="shop.html">Uawei</a></li>
-                                                <li><a href="shop.html">Cherry Berry</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="shop.html">headphone</a>
-                                            <ul class="dropdown">
-                                                <li><a href="shop.html">Desktop Headphone</a></li>
-                                                <li><a href="shop.html">Mobile Headphone</a></li>
-                                                <li><a href="shop.html">Wireless Headphone</a></li>
-                                                <li><a href="shop.html">LED Headphone</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul><!-- Mega Category Menu End -->
-                                </li>
-                                <li><a href="shop.html">Frozen</a></li>
-                                <li><a href="shop.html">Grocery</a></li>
-                                <li><a href="shop.html">Kitchenware</a></li>
-                                <li><a href="shop.html">Tools</a></li>
-                                <li><a href="shop.html">Electronics</a></li>
-                                <li><a href="shop.html">Kitchenware</a></li>
-                                <li><a href="shop.html">Fashion</a></li>
-                                <li><a href="shop.html">Fashion</a></li>
+                                <?php endforeach;?>
                             </ul>
                         </nav>
                     </div>

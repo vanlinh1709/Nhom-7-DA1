@@ -1,11 +1,11 @@
 <?php
 
 function get_list_products() {
-    $result = pdo_query("SELECT * FROM brand as b JOIN products as p ON b.id = p.brand_id JOIN categories as c ON 
-                            p.category_id = c.id");
+//    $result = pdo_query("SELECT * FROM brand as b JOIN products as p ON b.id = p.brand_id JOIN categories as c ON
+//                            p.category_id = c.id");
+    $result = pdo_query("SELECT * FROM (products as p JOIN categories as c ON p.category_id = c.id)  JOIN brand as b ON 
+                            p.brand_id = b.id");
 //    echo '<pre>';
-////    var_dump($result);
-//    array_push($result, $result_1);
 //    var_dump($result);
 //    die();
     return $result;
@@ -20,7 +20,7 @@ function get_category0fProduct_by_id($id) {
     return pdo_query_one($sql, $id);
 }
 function get_brandOfProduct_by_id($id) {
-    $sql = 'SELECT b.id, b.brand_name FROM brand as b JOIN products as p ON b.id = p.category_id  WHERE p.id = ? ';
+    $sql = 'SELECT b.id, b.brand_name FROM brand as b JOIN products as p ON b.id = p.brand_id  WHERE p.id = ? ';
     return pdo_query_one($sql, $id);
 }
 
