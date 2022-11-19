@@ -189,7 +189,7 @@ function get_template_part($name) {
     }
 }
 //validate sign up
-function validator($email, $password, $name = 1, $rpw = 1) {
+function validator($email, $password = 1, $name = 1, $rpw = 1) {
     $flag = true;
     $invalidEmail = validateEmail($email);
     $invalidPassword = validatePassword($password);
@@ -218,6 +218,10 @@ function validator($email, $password, $name = 1, $rpw = 1) {
     }
     if($rpw === '' || $invalidRpw) {
         $msg['rpw'] = 'Để trống nhập lại mật khẩu!';
+        $flag = false;
+    }
+    if(!checkMatchPassWord($password, $rpw) && $name != 1) {
+        $msg['rpw'] = 'Không trùng mật khẩu';
         $flag = false;
     }
     $_SESSION['notification'][] = $msg;
@@ -254,7 +258,12 @@ function validatePassword($password) {
     }
     return false;
 }
-
+function checkMatchPassWord($pw, $rpw){
+    if($pw !== $rpw) {
+        return false;//Không trùng
+    }
+    return true;
+}
 function push_notification_user() {
     $_SESSION['notification'] = [];
     $msg['type'] ='danger';
