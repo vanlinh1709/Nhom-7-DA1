@@ -30,6 +30,7 @@ function get_action() {
     $action = isset($_GET['action']) ? $_GET['action'] : $config['default_action'];
     return $action;
 }
+//
 
 /*
  * -------------------------------

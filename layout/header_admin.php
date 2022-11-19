@@ -11,6 +11,7 @@
 	<!--end::Logo-->
 	<!--begin::Toolbar-->
 	<div class="d-flex align-items-center">
+
 		<!--begin::Aside Mobile Toggle-->
 		<button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_t oggle">
 			<span></span>

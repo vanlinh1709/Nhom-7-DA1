@@ -77,7 +77,7 @@
                                 <ul class="user-info-block">
                                     <li><a href="my-account.html"><i class="fa fa-user-circle"></i><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : 'My accoutnt'?></a></li>
 
-                                    <li <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>><a href=""><i class="fa fa-credit-card" ></i>Sign up</a></li>
+                                    <li <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>><a href="?role=client&mod=signUp"><i class="fa fa-credit-card" ></i>Sign up</a></li>
 
                                     <li><a href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=logout' : '?role=client&mod=auth'?>"><i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Log out' : 'Sign in'?></a></li>
                                 </ul>
