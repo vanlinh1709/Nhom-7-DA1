@@ -54,24 +54,7 @@
                             </div>
                             <div class="col-lg-9 d-flex justify-content-end">
                                 <div class="top-left-navigation pl-0">
-                                    <ul class="nav align-items-center">
-                                        <li class="language">
-                                            <img src="assets/img/icon/en.png" alt="flag"> English
-                                            <i class="fa fa-angle-down"></i>
-                                            <ul class="dropdown-list">
-                                                <li><a href="#"><img src="assets/img/icon/en.png" alt="flag"> English</a></li>
-                                                <li><a href="#"><img src="assets/img/icon/fr.png" alt="flag"> Việt nam</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="curreny-wrap">
-                                            $ Currency
-                                            <i class="fa fa-angle-down"></i>
-                                            <ul class="dropdown-list curreny-list">
-                                                <li><a href="#"></a></li>
-                                                <li><a href="#"></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                  
                                 </div>
                                 <ul class="user-info-block">
                                     <li><a href="my-account.html"><i class="fa fa-user-circle"></i><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : ''?></a></li>
