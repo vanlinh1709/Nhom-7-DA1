@@ -34,9 +34,9 @@ function deleteProduct($id) {
 }
 function updateProduct($id,$category_id, $brand_id, $name, $price, $number, $promo_price,
                             $thumbnail, $description, $status) {
-    $sql = 'UPDATE products SET category_id = ?, brand_id = ?, title = ?, price = ?, number = ?, promo_price = ?, view = ?, 
+    $sql = 'UPDATE products SET category_id = ?, brand_id = ?, title = ?, price = ?, number = ?, promo_price = ?,  
                         thumbnail = ?, description = ?, status = ? WHERE id = ?';
-    pdo_execute($sql,$category_id, $brand_id, $name, $price, $number, $promo_price, $view,
+    pdo_execute($sql,$category_id, $brand_id, $name, $price, $number, $promo_price,
         $thumbnail, $description, $status, $id);
 }
 //
