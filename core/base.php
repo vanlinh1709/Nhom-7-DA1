@@ -300,7 +300,20 @@ function request_auth($isLogin = true)
         die;
     }
 }
-function log_out() {
-
+//Add to cart
+function push_to_session($product)
+{
+    array_push($_SESSION['cart'], $product);
 }
+function check_has_product_in_session($id) {
+    foreach ($_SESSION['cart'] as $product) {
+        if($id == $product['id']);
+        return true;
+    }
+}
+function check_has_session_cart() {
+    if(!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
+    }
+};
 ?>

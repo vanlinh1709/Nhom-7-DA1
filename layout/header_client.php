@@ -106,7 +106,7 @@
                                                     </form>
                                                 </li>
                                                 <li class="mini-cart-wrap">
-                                                    <a href="#" class="minicart-btn minicart-btn-style_2">
+                                                    <a href="?role=client&mod=cart" class="minicart-btn minicart-btn-style_2">
                                                         <i class="fa fa-shopping-cart"></i>
                                                         <span class="notification">2</span>
                                                     </a>
