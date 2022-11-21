@@ -81,7 +81,7 @@
                                 <!-- start logo area -->
                                 <div class="col-lg-4">
                                     <div class="logo-2">
-                                        <a href="index-5.html">
+                                        <a href="?role=client">
                                             <img src="assets/img/logo/logo-2.png" alt="Brand Logo">
                                         </a>
                                     </div>

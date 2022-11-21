@@ -5,5 +5,12 @@ function construct() {
 }
 
 function indexAction() {
-    load_view('index');
+    $categories = get_list_categories();
+    $list_newest_product = get_list_product_newest();
+    $list_bestseller_product = get_list_product_bestSeller();
+    $list_featured_product = get_list_product_featured();
+//   var_dump($categories);
+//   var_dump($list_newest_product[0]['thumbnail']);
+//   die();
+    load_view('index', compact('categories', 'list_newest_product', 'list_bestseller_product', 'list_featured_product'));
 }
