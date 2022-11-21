@@ -307,9 +307,11 @@ function push_to_session($product)
 }
 function check_has_product_in_session($id) {
     foreach ($_SESSION['cart'] as $product) {
-        if($id == $product['id']);
-        return true;
+        if($id == $product['id']){
+            return true;
+        }
     }
+    return false;
 }
 function check_has_session_cart() {
     if(!isset($_SESSION['cart'])) {
