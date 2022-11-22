@@ -316,6 +316,16 @@ function check_has_product_in_session($id) {
 function check_has_session_cart() {
     if(!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = [];
+        $_SESSION['final_total_money'] = 0;
     }
 };
+function final_total_money(){
+    if(!isset($_SESSION['cart'])) {
+        return false;
+    }
+    $_SESSION['final_total_money'] = 0;
+        foreach ($_SESSION['cart'] as $product) {
+            $_SESSION['final_total_money'] += $product['amount'] * $product['promo_price'];
+        }
+}
 ?>

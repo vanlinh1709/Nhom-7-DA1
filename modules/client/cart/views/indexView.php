@@ -51,7 +51,7 @@
                                             <td class="pro-quantity">
                                                 <div class="pro-qty"><input name="<?php echo $product['id']?>" type="number" value="<?php echo $product['amount']?>"></div>
                                             </td>
-                                            <td class="pro-subtotal"><span><?php echo currency_format($product['amount'] *  $product['promo_price'], 'đ')?></span></td>
+                                            <td class="pro-subtotal"><span><?php echo currency_format($product['total_money'], 'đ')?></span></td>
                                             <td class="pro-remove"><a href="?role=client&mod=cart&id_product=<?php echo $product['id']?>&action=del"><i class="fa fa-trash-o"></i></a></td>
                                         </tr>
                                     <?php endforeach?>
@@ -67,11 +67,12 @@
 <!--                                    </form>-->
                                 </div>
                                 <div class="cart-update">
-                                    <button class="btn btn-sqr">Cập nhập giỏ hàng</button>
+                                            <a href="#update_cart">
+                                                <button  class="btn btn-sqr">Cập nhập giỏ hàng</button>
+                                            </a>
                                 </div>
                             </div>
                         </div>
-                        </form>
                     </div>
                     <div class="row">
                         <div class="col-lg-5 ms-auto">
@@ -80,26 +81,30 @@
                                 <div class="cart-calculate-items">
                                     <h6>Cart Totals</h6>
                                     <div class="table-responsive">
-                                        <table class="table">
+                                        <table class="table" id="#update_cart">
                                             <tr>
                                                 <td>Tổng tiền</td>
-                                                <td>total_price</td>
+                                                <td>
+                                                    <?php echo currency_format($_SESSION['final_total_money'], 'đ')?>
                                             </tr>
-<!--                                            <tr>-->
-<!--                                                <td>Shipping</td>-->
-<!--                                                <td>$70</td>-->
-<!--                                            </tr>-->
+                                            <tr>
+                                                <td>Phí vận chuyển</td>
+                                                <td>0</td>
+                                            </tr>
                                             <tr class="total">
                                                 <td>Total</td>
-                                                <td class="total-amount">$300</td>
+                                                <td class="total-amount">
+                                                    <?php echo currency_format($_SESSION['final_total_money'], 'đ')?>
+                                                </td>
                                             </tr>
                                         </table>
                                     </div>
                                 </div>
-                                <a href="checkout.html" class="btn btn-sqr d-block">Proceed Checkout</a>
+                                <a href="?role=client&mod=order" class="btn btn-sqr d-block">Mua hàng</a>
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

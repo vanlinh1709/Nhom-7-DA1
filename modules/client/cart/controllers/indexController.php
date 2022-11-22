@@ -12,17 +12,17 @@ function addAction() {
     $id = $_GET['id_product'];
     $sentedMod = $_GET['currentMod'];
 //    var_dump($id);
-    $product = get_product_by_id($id);#
-//        //
+    $product = get_product_by_id($id);
     $product['amount'] = 1;
     $product['total_money'] = $product['promo_price'];
+
 //    var_dump($data);
     //check product has been cart?
 
     $hasProduct = check_has_product_in_session($id);
 //    var_dump($hasProduct);
     if($hasProduct) {
-        echo 'da co product';
+//        echo 'da co product';
         if($sentedMod == 'productDetail') {
             header('Location: ?role=client&' . 'mod='.$sentedMod . '&id=' .$id);
         } elseif($sentedMod == 'category') {
@@ -38,6 +38,7 @@ function addAction() {
         }
     } else {
         push_to_session($product);//push product len sesion[cart]
+        final_total_money();
 //        echo '<pre>';
 //        var_dump($_SESSION['cart']);
         if($sentedMod == 'productDetail' ) {
@@ -62,6 +63,7 @@ function delAction() {
             array_splice($_SESSION['cart'], $index, 1);
         }
     }
+    final_total_money();
     header('Location: ?role=client&mod=cart');
 }
 function updateCartPostAction() {
@@ -70,6 +72,7 @@ function updateCartPostAction() {
     $value_amount = $_POST;
     foreach ($_SESSION['cart'] as $index => $product) {
         $_SESSION['cart'][$index]['amount'] = (int)$value_amount[$product['id']];
+        $_SESSION['cart'][$index]['total_money'] = (int)$value_amount[$product['id']] * $product['promo_price'];
 //        echo '<pre>';
 //        echo $product['amount'];
 //        die();
@@ -77,6 +80,7 @@ function updateCartPostAction() {
 //    echo $product['amount'];
 //    var_dump($_SESSION['cart']);
 //    die();
+    final_total_money();
     header('Location: ?role=client&mod=cart');
 }
 function delAllAction() {
