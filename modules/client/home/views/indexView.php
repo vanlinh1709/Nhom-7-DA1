@@ -8,13 +8,13 @@
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="category-toggle-wrap categories-style-5">
                         <div class="category-toggle">
-                            CATEGORIES
+                            Danh mục sản phẩm
                             <i class="fa fa-angle-down"></i>
                         </div>
                         <nav class="category-menu">
                             <ul class="categories-list">
                                 <?php foreach($categories as $c):?>
-                                <li class="menu-item-has-children"><a href="?role=client&mod=category&id_cate=?"><?php echo $c['cate_name']?></a>
+                                <li class="menu-item-has-children"><a href="?role=client&mod=category&id=<?php echo $c['id']?>"><?php echo $c['cate_name']?></a>
                                 </li>
                                 <?php endforeach;?>
                             </ul>
@@ -204,7 +204,7 @@
                         <!-- product single item start -->
                         <div class="product-item">
                             <div class="product-thumb">
-                                <a href="<?php echo $newProduct['id']?>">
+                                <a href="?role=client&mod=productDetail&id=<?php echo $newProduct['id']?>">
                                     <img src="./public/uploads/images/product/<?php echo $newProduct['thumbnail']?>" alt="product thumb">
                                 </a>
                                 <div class="button-group">
@@ -221,13 +221,13 @@
                             <div class="product-content">
                                 <div class="product-caption">
                                     <h6 class="product-name">
-                                        <a href="product-details.html"><?php echo $newProduct['title']?></a>
+                                        <a href="?role=client&mod=productDetail&id=<?php echo $newProduct['id']?>"><?php echo $newProduct['title']?></a>
                                     </h6>
                                     <div class="price-box">
                                         <span class="price-old"><del><?php echo $newProduct['price']?> đ</del></span>
                                         <span class="price-regular"><?php echo $newProduct['promo_price']?> đ</span>
                                     </div>
-                                    <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                    <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $newProduct['id']?>&currentMod=<?php echo get_module()?>"><i class="fa fa-shopping-cart"></i></a>
                                 </div>
                                 <div class="ratings">
                                     <span><i class="fa fa-star"></i></span>

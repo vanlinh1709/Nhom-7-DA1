@@ -53,7 +53,7 @@ get_header('','Trang đăng ký');
                                 <div class="col-lg-5">
                                     <div class="product-large-slider">
                                         <div class="pro-large-img img-zoom">
-                                            <img src="assets/img/product/product-details-img1.jpg" alt="product-details" />
+                                            <img src="./public/uploads/images/product/<?php echo $product['thumbnail']?>" alt="product-details" />
                                         </div>
                                         <div class="pro-large-img img-zoom">
                                             <img src="assets/img/product/product-details-img2.jpg" alt="product-details" />
@@ -67,7 +67,7 @@ get_header('','Trang đăng ký');
                                     </div>
                                     <div class="pro-nav slick-row-10 slick-arrow-style">
                                         <div class="pro-nav-thumb">
-                                            <img src="assets/img/product/product-details-img1.jpg" alt="product-details" />
+                                            <img src="./public/uploads/images/product/<?php echo $product['thumbnail']?>" alt="product-details" />
                                         </div>
                                         <div class="pro-nav-thumb">
                                             <img src="assets/img/product/product-details-img2.jpg" alt="product-details" />
@@ -101,7 +101,7 @@ get_header('','Trang đăng ký');
 <!--                                        <div class="product-countdown" data-countdown="2021/09/20"></div>-->
                                         <div class="availability">
                                             <i class="fa fa-check-circle"></i>
-                                            <span>200 sản phẩm có sẵn</span>
+                                            <span><?php echo $product['number']?> sản phẩm có sẵn</span>
                                         </div>
                                         <p class="pro-desc"><?php echo $product['description']?></p>
                                         <div class="quantity-cart-box d-flex align-items-center">
@@ -110,7 +110,7 @@ get_header('','Trang đăng ký');
                                                 <div class="pro-qty"><input type="text" value="1"></div>
                                             </div>
                                             <div class="action_link">
-                                                <a class="btn btn-cart2" href="#">Add To Cart</a>
+                                                <a class="btn btn-cart2" href="?role=client&mod=cart&action=add&id_product=<?php echo $product['id']?>&currentMod=<?php echo get_module()?>">Thêm vào giỏ hàng</a>
                                             </div>
                                         </div>
                                         <div class="useful-links">
@@ -138,28 +138,20 @@ get_header('','Trang đăng ký');
                                     <div class="product-review-info">
                                         <ul class="nav review-tab">
                                             <li>
-                                                <a class="active" data-bs-toggle="tab" href="#tab_one">description</a>
+                                                <a class="active" data-bs-toggle="tab" href="#tab_one">Mô tả</a>
                                             </li>
                                             <li>
-                                                <a data-bs-toggle="tab" href="#tab_two">information</a>
+                                                <a data-bs-toggle="tab" href="#tab_two">Thông tin sản phẩm</a>
                                             </li>
                                             <li>
-                                                <a data-bs-toggle="tab" href="#tab_three">reviews (1)</a>
+                                                <a data-bs-toggle="tab" href="#tab_three">Đánh giá</a>
                                             </li>
                                         </ul>
                                         <div class="tab-content reviews-tab">
                                             <div class="tab-pane fade show active" id="tab_one">
                                                 <div class="tab-one">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                                                        fringilla augue nec est tristique auctor. Ipsum metus feugiat
-                                                        sem, quis fermentum turpis eros eget velit. Donec ac tempus
-                                                        ante. Fusce ultricies massa massa. Fusce aliquam, purus eget
-                                                        sagittis vulputate, sapien libero hendrerit est, sed commodo
-                                                        augue nisi non neque.Cras neque metus, consequat et blandit et,
-                                                        luctus a nunc. Etiam gravida vehicula tellus, in imperdiet
-                                                        ligula euismod eget. Pellentesque habitant morbi tristique
-                                                        senectus et netus et malesuada fames ac turpis egestas. Nam
-                                                        erat mi, rutrum at sollicitudin rhoncus
+                                                    <p>
+                                                        <?php echo $product['description']?>
                                                     </p>
                                                 </div>
                                             </div>
@@ -205,27 +197,23 @@ get_header('','Trang đăng ký');
                                                     <div class="form-group row">
                                                         <div class="col">
                                                             <label class="col-form-label"><span class="text-danger">*</span>
-                                                                Your Name</label>
+                                                                Tên của bạn</label>
                                                             <input type="text" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col">
                                                             <label class="col-form-label"><span class="text-danger">*</span>
-                                                                Your Email</label>
+                                                                Email của bạn</label>
                                                             <input type="email" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col">
                                                             <label class="col-form-label"><span class="text-danger">*</span>
-                                                                Your Review</label>
+                                                                Đánh giá của bạn</label>
                                                             <textarea class="form-control" required></textarea>
-                                                            <div class="help-block pt-10"><span
-                                                                    class="text-danger">Note:</span>
-                                                                HTML is not translated!
                                                             </div>
-                                                        </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <div class="col">

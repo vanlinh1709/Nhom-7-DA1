@@ -32,8 +32,7 @@ $autoload['lib'] = array();
  */
 
 
-$autoload['helper'] = array('data');
-
+$autoload['helper'] = ['format'];
 
 
 
