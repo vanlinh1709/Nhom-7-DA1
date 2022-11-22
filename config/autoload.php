@@ -30,8 +30,6 @@ $autoload['lib'] = array();
  * Ví dụ:
  * $autoload['helper'] = array('data','string');
  */
-
-
 $autoload['helper'] = ['format'];
 
 

@@ -2,11 +2,11 @@
 
 function construct() {
 //    echo "DÙng chung, load đầu tiên";
+    request_auth();
     load_model('index');
 }
 
 function indexAction() {
-    load('helper','format');
     $list_products = get_list_products();
 //    show_array($list_products);
     $data['list_products'] = $list_products;

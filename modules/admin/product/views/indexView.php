@@ -117,7 +117,7 @@
                                 </td>
                                 <td><?php echo ($product['brand_name']) ?></td>
                                 <td><?php echo ($product['number']) ?></td>
-                                <td><?php echo ($product['promo_price']) ?></td>
+                                <td><?php echo currency_format($product['promo_price'], 'đ') ?></td>
                                 <td><?php echo ($product['sales']) ?></td>
                                 <td><?php echo ($product['views']) ?></td>
                                 <td>
