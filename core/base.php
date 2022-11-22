@@ -188,7 +188,7 @@ function get_template_part($name) {
         echo "Không tìm thấy {$path}";
     }
 }
-//validate sign up
+//validate sign up and login
 function validator($email, $password, $name = 1, $rpw = 1) {
     $flag = true;
     $invalidEmail = validateEmail($email);
@@ -204,6 +204,7 @@ function validator($email, $password, $name = 1, $rpw = 1) {
     $msg['password'] = '';
     $msg['rpw'] = '';
     $msg['name'] = '';
+    $msg['noMatchPw'] = '';
     if($invalidEmail) {
         $msg['email'] = 'Để trống email hoặc nhập sai định dạng email!';
         $flag = false;
@@ -220,6 +221,12 @@ function validator($email, $password, $name = 1, $rpw = 1) {
         $msg['rpw'] = 'Để trống nhập lại mật khẩu!';
         $flag = false;
     }
+    if($rpw != $password && $rpw !=1 ) {
+        $msg['noMatchPw'] = 'Mật khẩu không khớp';
+        $flag = false;
+    }
+//    var_dump($flag);
+//    die();
     $_SESSION['notification'][] = $msg;
 //    echo '<pre>';
 //    var_dump($msg);die();
@@ -295,7 +302,7 @@ function get_auth()
 
 function request_auth($isLogin = true)
 {
-    if (is_auth() !== $isLogin) {
+    if (is_auth() !== $isLogin) {//Neu chua ton tai $_Session['auth']
         header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
         die;
     }

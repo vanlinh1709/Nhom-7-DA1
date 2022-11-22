@@ -108,60 +108,60 @@
                                                 <li class="mini-cart-wrap">
                                                     <a href="?role=client&mod=cart" class="minicart-btn minicart-btn-style_2">
                                                         <i class="fa fa-shopping-cart"></i>
-                                                        <span class="notification">2</span>
+                                                        <span class="notification"><?php echo count($_SESSION['cart'])?></span>
                                                     </a>
-                                                    <div class="cart-list-wrapper">
-                                                        <ul class="cart-list">
-                                                            <li>
-                                                                <div class="cart-img">
-                                                                    <a href="product-details.html"><img src="assets/img/cart/cart-1.jpg" alt=""></a>
-                                                                </div>
-                                                                <div class="cart-info">
-                                                                    <h6 class="product-name"><a href="product-details.html">7th Generation classic</a></h6>
-                                                                    <span class="cart-qty">Qty: 1</span>
-                                                                    <span class="item-price">$60.00</span>
-                                                                </div>
-                                                                <div class="del-icon">
-                                                                    <i class="fa fa-times"></i>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="cart-img">
-                                                                    <a href="product-details.html"><img src="assets/img/cart/cart-2.jpg" alt=""></a>
-                                                                </div>
-                                                                <div class="cart-info">
-                                                                    <h6 class="product-name"><a href="product-details.html">Digital 8th generation</a></h6>
-                                                                    <span class="cart-qty">Qty: 2</span>
-                                                                    <span class="item-price">$70.00</span>
-                                                                </div>
-                                                                <div class="del-icon">
-                                                                    <i class="fa fa-times"></i>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="minicart-pricing-box">
-                                                            <li>
-                                                                <span>Sub-Total</span>
-                                                                <span><strong>$300.00</strong></span>
-                                                            </li>
-                                                            <li>
-                                                                <span>Eco Tax (-2.00)</span>
-                                                                <span><strong>$10.00</strong></span>
-                                                            </li>
-                                                            <li>
-                                                                <span>VAT (20%)</span>
-                                                                <span><strong>$60.00</strong></span>
-                                                            </li>
-                                                            <li class="total">
-                                                                <span>Total</span>
-                                                                <span><strong>$370.00</strong></span>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="minicart-button">
-                                                            <a href="cart.html"><i class="fa fa-shopping-cart"></i> View Cart</a>
-                                                            <a href="cart.html"><i class="fa fa-share"></i> Checkout</a>
-                                                        </div>
-                                                    </div>
+<!--                                                    <div class="cart-list-wrapper">-->
+<!--                                                        <ul class="cart-list">-->
+<!--                                                            <li>-->
+<!--                                                                <div class="cart-img">-->
+<!--                                                                    <a href="product-details.html"><img src="assets/img/cart/cart-1.jpg" alt=""></a>-->
+<!--                                                                </div>-->
+<!--                                                                <div class="cart-info">-->
+<!--                                                                    <h6 class="product-name"><a href="product-details.html">7th Generation classic</a></h6>-->
+<!--                                                                    <span class="cart-qty">Qty: 1</span>-->
+<!--                                                                    <span class="item-price">$60.00</span>-->
+<!--                                                                </div>-->
+<!--                                                                <div class="del-icon">-->
+<!--                                                                    <i class="fa fa-times"></i>-->
+<!--                                                                </div>-->
+<!--                                                            </li>-->
+<!--                                                            <li>-->
+<!--                                                                <div class="cart-img">-->
+<!--                                                                    <a href="product-details.html"><img src="assets/img/cart/cart-2.jpg" alt=""></a>-->
+<!--                                                                </div>-->
+<!--                                                                <div class="cart-info">-->
+<!--                                                                    <h6 class="product-name"><a href="product-details.html">Digital 8th generation</a></h6>-->
+<!--                                                                    <span class="cart-qty">Qty: 2</span>-->
+<!--                                                                    <span class="item-price">$70.00</span>-->
+<!--                                                                </div>-->
+<!--                                                                <div class="del-icon">-->
+<!--                                                                    <i class="fa fa-times"></i>-->
+<!--                                                                </div>-->
+<!--                                                            </li>-->
+<!--                                                        </ul>-->
+<!--                                                        <ul class="minicart-pricing-box">-->
+<!--                                                            <li>-->
+<!--                                                                <span>Sub-Total</span>-->
+<!--                                                                <span><strong>$300.00</strong></span>-->
+<!--                                                            </li>-->
+<!--                                                            <li>-->
+<!--                                                                <span>Eco Tax (-2.00)</span>-->
+<!--                                                                <span><strong>$10.00</strong></span>-->
+<!--                                                            </li>-->
+<!--                                                            <li>-->
+<!--                                                                <span>VAT (20%)</span>-->
+<!--                                                                <span><strong>$60.00</strong></span>-->
+<!--                                                            </li>-->
+<!--                                                            <li class="total">-->
+<!--                                                                <span>Total</span>-->
+<!--                                                                <span><strong>$370.00</strong></span>-->
+<!--                                                            </li>-->
+<!--                                                        </ul>-->
+<!--                                                        <div class="minicart-button">-->
+<!--                                                            <a href="cart.html"><i class="fa fa-shopping-cart"></i> View Cart</a>-->
+<!--                                                            <a href="cart.html"><i class="fa fa-share"></i> Checkout</a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
                                                 </li>
                                             </ul>
                                         </div>

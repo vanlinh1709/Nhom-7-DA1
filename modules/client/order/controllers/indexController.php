@@ -30,7 +30,6 @@ function indexPostAction() {
     $customer_email = $_POST['email'];
     $customer_address = $_POST['address'];
     $total_price = $_SESSION['final_total_money'];
-
 //    echo '<pre>';
 //    var_dump($id, $id_user, $customer_name, $customer_phone_number, $customer_email, $customer_address,
 //        $total_price);
@@ -46,8 +45,11 @@ function indexPostAction() {
         $total_money = $product['total_money'];
         createOrderDetail($order_id, $product_id, $quantity_product, $total_money);
     }
-    echo 'Thanh toan thanh cong';
-    return false;
+    header('Location: ?role=client&mod=order&action=successOrder');
     //Đưa chi tiết đơn hàng vào order detail
-
+}
+function successOrderAction() {
+    unset($_SESSION['cart']);
+    $_SESSION['cart'] = [];
+    load_view('successOrder');
 }

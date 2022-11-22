@@ -50,6 +50,7 @@ get_header('','Trang đăng ký');
                                             <li class="text-<?php echo $msg['type'] ?> "><?php echo $msg['email'] ?></li>
                                             <li class="text-<?php echo $msg['type'] ?> "><?php echo $msg['password'] ?></li>
                                             <li class="text-<?php echo $msg['type'] ?> "><?php echo $msg['rpw'] ?></li>
+                                            <li class="text-<?php echo $msg['type'] ?> "><?php echo $msg['noMatchPw'] ?></li>
                                         <?php endforeach; ?>
                                     </ul>
                                     </div>
