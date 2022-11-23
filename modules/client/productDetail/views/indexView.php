@@ -94,8 +94,8 @@ get_header('','Trang đăng ký');
                                             </div>
                                         </div>
                                         <div class="price-box">
-                                            <span class="price-old"><del><?php echo $product['promo_price']?> đ</del></span>
-                                            <span class="price-regular"><?php echo $product['price']?> đ</span>
+                                            <span class="price-old"><del><?php echo currency_format($product['promo_price'])?></del></span>
+                                            <span class="price-regular"><?php echo currency_format($product['price'])?></span>
                                         </div>
 <!--                                        <h5 class="offer-text"><strong>Nhanh lên</strong>! offer ends in:</h5>-->
 <!--                                        <div class="product-countdown" data-countdown="2021/09/20"></div>-->

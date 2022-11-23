@@ -224,8 +224,8 @@
                                         <a href="?role=client&mod=productDetail&id=<?php echo $newProduct['id']?>"><?php echo $newProduct['title']?></a>
                                     </h6>
                                     <div class="price-box">
-                                        <span class="price-old"><del><?php echo $newProduct['price']?> đ</del></span>
-                                        <span class="price-regular"><?php echo $newProduct['promo_price']?> đ</span>
+                                        <span class="price-old"><del><?php echo currency_format($newProduct['price'], 'đ')?></del></span>
+                                        <span class="price-regular"><?php echo currency_format($newProduct['promo_price'], 'đ')?></span>
                                     </div>
                                     <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $newProduct['id']?>&currentMod=<?php echo get_module()?>"><i class="fa fa-shopping-cart"></i></a>
                                 </div>
@@ -396,8 +396,8 @@
                                                     <a href="product-details.html"><?php echo $newProduct['title']?></a>
                                                 </h6>
                                                 <div class="price-box">
-                                                    <span class="price-old"><del><?php echo $newProduct['price']?> đ</del></span>
-                                                    <span class="price-regular"><?php echo $newProduct['promo_price']?> đ</span>
+                                                    <span class="price-old"><del><?php echo currency_format($newProduct['price'], 'đ')?></del></span>
+                                                    <span class="price-regular"><?php echo currency_format($newProduct['promo_price'], 'đ')?></span>
                                                 </div>
                                                 <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                                             </div>
@@ -443,8 +443,8 @@
                                                         <a href="product-details.html"><?php echo $bestSellerProduct['title']?></a>
                                                     </h6>
                                                     <div class="price-box">
-                                                        <span class="price-old"><del><?php echo $bestSellerProduct['price']?> đ</del></span>
-                                                        <span class="price-regular"><?php echo $bestSellerProduct['promo_price']?> đ</span>
+                                                        <span class="price-old"><del><?php echo currency_format($bestSellerProduct['price'], 'đ')?></del></span>
+                                                        <span class="price-regular"><?php echo currency_format($bestSellerProduct['promo_price'], 'đ')?></span>
                                                     </div>
                                                     <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                                                 </div>
@@ -490,8 +490,8 @@
                                                         <a href="product-details.html"><?php echo $featuredProduct['title']?></a>
                                                     </h6>
                                                     <div class="price-box">
-                                                        <span class="price-old"><del><?php echo $featuredProduct['price']?> đ</del></span>
-                                                        <span class="price-regular"><?php echo $featuredProduct['promo_price']?> đ</span>
+                                                        <span class="price-old"><del><?php echo currency_format($featuredProduct['price'])?></del></span>
+                                                        <span class="price-regular"><?php echo currency_format($featuredProduct['promo_price'])?></span>
                                                     </div>
                                                     <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                                                 </div>
@@ -539,8 +539,8 @@
                                         <div class="group-desc">
                                             <h6 class="group-pro-name"><a href="product-details.html"><?php echo $newProduct['title']?></a></h6>
                                             <div class="price-box">
-                                                <span class="price-old"><del><?php echo $newProduct['price']?></del></span>
-                                                <span class="price-regular"><?php echo $newProduct['promo_price']?></span>
+                                                <span class="price-old"><del><?php echo currency_format($newProduct['price'])?></del></span>
+                                                <span class="price-regular"><?php echo currency_format($newProduct['promo_price'])?></span>
                                             </div>
                                             <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
@@ -576,8 +576,8 @@
                                             <div class="group-desc">
                                                 <h6 class="group-pro-name"><a href="product-details.html"><?php echo $bestsellerProduct['title']?></a></h6>
                                                 <div class="price-box">
-                                                    <span class="price-old"><del><?php echo $bestsellerProduct['price']?> đ</del></span>
-                                                    <span class="price-regular"><?php echo $bestsellerProduct['promo_price']?> đ</span>
+                                                    <span class="price-old"><del><?php echo currency_format($bestsellerProduct['price'])?></del></span>
+                                                    <span class="price-regular"><?php echo currency_format($bestsellerProduct['promo_price'])?></span>
                                                 </div>
                                                 <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                                             </div>
@@ -613,8 +613,8 @@
                                             <div class="group-desc">
                                                 <h6 class="group-pro-name"><a href="product-details.html"><?php echo $featureProduct['title']?></a></h6>
                                                 <div class="price-box">
-                                                    <span class="price-old"><del><?php echo $featureProduct['price']?> đ</del></span>
-                                                    <span class="price-regular"><?php echo $featureProduct['promo_price']?> đ</span>
+                                                    <span class="price-old"><del><?php echo currency_format($featureProduct['price'])?></del></span>
+                                                    <span class="price-regular"><?php echo currency_format($featureProduct['promo_price'])?></span>
                                                 </div>
                                                 <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                                             </div>

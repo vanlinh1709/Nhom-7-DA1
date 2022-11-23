@@ -295,8 +295,8 @@
                                                 <a href="?role=client&mod=productDetail&id=<?php echo $product['id']?>"><?php echo $product['title']?></a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-old"><del><?php echo $product['promo_price']?></del></span>
-                                                <span class="price-regular"><?php echo $product['price']?></span>
+                                                <span class="price-old"><del><?php echo currency_format($product['promo_price'])?></del></span>
+                                                <span class="price-regular"><?php echo currency_format($product['price'])?></span>
                                             </div>
                                             <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $product['id']?>&currentMod=<?php echo get_module()?>&cate_id=<?php echo $cate_id ?>"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
