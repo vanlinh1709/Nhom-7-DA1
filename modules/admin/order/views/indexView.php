@@ -82,12 +82,30 @@
                                     </span>
 
                                    </td>
-                                   <td><?php echo ($order['id_status']) ?></td>
+                                   <td><?php
+                                       $status = $order['id_status'];
+                                       switch($status) {
+                                           case '0':
+                                               echo 'Đã hủy';
+                                               break;
+                                           case '1':
+                                               echo 'Chờ xác nhận';
+                                               break;
+                                           case '2':
+                                               echo 'Đang vận chuyển';
+                                               break;
+                                           case '3':
+                                               echo 'Giao hàng thành công';
+                                               break;
+                                           default:
+                                               break;
+                                       }
+                                       ?></td>
                                    <td><?php echo ($order['customer_name']) ?></td>
                                    <td><?php echo ($order['customer_phone_number']) ?></td>
                                    <td>
                                     <span style="overflow: visible; position: relative; width: 125px;">
-                                            <a href="" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details">
+                                            <a href="?role=admin&mod=order&action=update&id_order=<?php echo $order['id']?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details">
                                                 <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                         <svg stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                             <rect x="0" y="0" width="24" height="24"></rect>
