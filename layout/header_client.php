@@ -108,7 +108,7 @@
                                                 <li class="mini-cart-wrap">
                                                     <a href="?role=client&mod=cart" class="minicart-btn minicart-btn-style_2">
                                                         <i class="fa fa-shopping-cart"></i>
-                                                        <span class="notification"><?php echo count($_SESSION['cart'])?></span>
+                                                        <span class="notification"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?></span>
                                                     </a>
 <!--                                                    <div class="cart-list-wrapper">-->
 <!--                                                        <ul class="cart-list">-->

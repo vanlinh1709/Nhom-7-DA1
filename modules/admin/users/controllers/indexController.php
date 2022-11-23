@@ -2,6 +2,7 @@
 
 function construct() {
 //    echo "DÙng chung, load đầu tiên";
+    request_auth();
     load_model('index');
 }
 
