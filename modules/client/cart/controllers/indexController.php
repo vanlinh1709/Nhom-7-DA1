@@ -23,6 +23,14 @@ function addAction() {
 //    var_dump($hasProduct);
     if($hasProduct) {
 //        echo 'da co product';
+//        var_dump($_SESSION['cart']);
+//        die();
+        foreach($_SESSION['cart'] as $index => $product) {
+            if($product['id'] == $id) {
+                $_SESSION['cart'][$index]['amount']++;
+                $_SESSION['cart'][$index]['total_money'] += $_SESSION['cart'][$index]['promo_price'];
+            }
+        }
         if($sentedMod == 'productDetail') {
             header('Location: ?role=client&' . 'mod='.$sentedMod . '&id=' .$id);
         } elseif($sentedMod == 'category') {
