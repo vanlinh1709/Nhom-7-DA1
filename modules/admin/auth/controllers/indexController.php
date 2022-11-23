@@ -6,6 +6,7 @@ function construct() {
 }
 
 function indexAction() {
+//    request_auth(false);
     $notifications = get_notification();
     load_view('index', [
         "notifications" => $notifications

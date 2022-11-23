@@ -5,7 +5,8 @@
  * app path
  * --------------------------------------------------------------------
  */
-const BASE_URL = 'http://localhost/pullman.com/';
+//require_once './helper/format.php';
+const BASE_URL = 'http://localhost/Nhom_7_DA1.com/';
 $app_path = dirname(__FILE__);
 define('APPPATH', $app_path);
 /*

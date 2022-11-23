@@ -116,7 +116,7 @@ x1
                                 <td><?php echo ($user['address']) ?></td>
                                 <td><?php echo ($user['role_id'] == 1 ? 'User' : 'Admin') ?></td>
                                 <!--                                --><?php //var_dump(__FILE__);?>
-                                <td><img src= "http://localhost/pullman.com/public/uploads/images/user/<?php echo $user['avatar']?>" alt="thumbnail" width="100" height="100"></td>
+                                <td><img src= "./public/uploads/images/user/<?php echo $user['avatar']?>" alt="thumbnail" width="100" height="100"></td>
                                 <td><?php echo ($user['created_at']) ?></td>
                                 <td><?php echo ($user['updated_at']) ?></td>
                                 <td><?php echo 'abc' ?></td>

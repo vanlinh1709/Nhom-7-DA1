@@ -188,7 +188,7 @@ function get_template_part($name) {
         echo "Không tìm thấy {$path}";
     }
 }
-//validate sign up
+//validate sign up and login
 function validator($email, $password, $name = 1, $rpw = 1) {
     $flag = true;
     $invalidEmail = validateEmail($email);
@@ -204,6 +204,7 @@ function validator($email, $password, $name = 1, $rpw = 1) {
     $msg['password'] = '';
     $msg['rpw'] = '';
     $msg['name'] = '';
+    $msg['noMatchPw'] = '';
     if($invalidEmail) {
         $msg['email'] = 'Để trống email hoặc nhập sai định dạng email!';
         $flag = false;
@@ -220,6 +221,12 @@ function validator($email, $password, $name = 1, $rpw = 1) {
         $msg['rpw'] = 'Để trống nhập lại mật khẩu!';
         $flag = false;
     }
+    if($rpw != $password && $rpw !=1 ) {
+        $msg['noMatchPw'] = 'Mật khẩu không khớp';
+        $flag = false;
+    }
+//    var_dump($flag);
+//    die();
     $_SESSION['notification'][] = $msg;
 //    echo '<pre>';
 //    var_dump($msg);die();
@@ -292,12 +299,24 @@ function get_auth()
 {
     return $_SESSION["auth"];
 }
-
+function is_admin()
+{
+    return is_auth() && get_auth()['role_id'] == 2;
+}
 function request_auth($isLogin = true)
 {
+    $request_role = get_role() === 'admin' ? 2 : 1;
     if (is_auth() !== $isLogin) {
-        header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
+        $auth = get_auth();
+        header("Location: " . ($isLogin ? '?role='. ($auth['role_id'] == 1 ? 'client' : 'admin') . '&mod=auth' : '?role=' . ($auth['role_id   '] == 1 ? 'client' : 'admin')));
         die;
+    }
+    if (is_auth()) {
+        $auth = get_auth();
+        if ($auth['role_id'] != $request_role) {
+            header("Location: ?role=" . ($auth['role_id'] == 1 ? 'client' : 'admin'));
+            die;
+        }
     }
 }
 //Add to cart
@@ -316,6 +335,16 @@ function check_has_product_in_session($id) {
 function check_has_session_cart() {
     if(!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = [];
+        $_SESSION['final_total_money'] = 0;
     }
 };
+function final_total_money(){
+    if(!isset($_SESSION['cart'])) {
+        return false;
+    }
+    $_SESSION['final_total_money'] = 0;
+        foreach ($_SESSION['cart'] as $product) {
+            $_SESSION['final_total_money'] += $product['amount'] * $product['promo_price'];
+        }
+}
 ?>

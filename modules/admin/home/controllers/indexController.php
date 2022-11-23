@@ -2,6 +2,8 @@
 
 function construct() {
     request_auth();
+//    echo '1';
+//    die();
     load_model('index');
 }
 
