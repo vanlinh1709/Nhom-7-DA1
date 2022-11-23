@@ -57,7 +57,11 @@
                                   
                                 </div>
                                 <ul class="user-info-block">
-                                    <li><a href="my-account.html"><i class="fa fa-user-circle"></i><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : ''?></a></li>
+                                    <li><a href="?role=admin" target="_blank" class="text-warning">
+                                            <?php echo is_admin() == true ? 'Trang quản trị' : ''?>
+                                        </a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-user-circle"></i><span class="text-info"><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : ''?></span></a></li>
 
                                     <li <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>><a href="?role=client&mod=signUp"><i class="fa fa-credit-card" ></i>Đăng ký</a></li>
 

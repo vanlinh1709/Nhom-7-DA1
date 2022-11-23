@@ -299,12 +299,24 @@ function get_auth()
 {
     return $_SESSION["auth"];
 }
-
+function is_admin()
+{
+    return is_auth() && get_auth()['role_id'] == 2;
+}
 function request_auth($isLogin = true)
 {
-    if (is_auth() !== $isLogin) {//Neu chua ton tai $_Session['auth']
-        header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
+    $request_role = get_role() === 'admin' ? 2 : 1;
+    if (is_auth() !== $isLogin) {
+        $auth = get_auth();
+        header("Location: " . ($isLogin ? '?role='. ($auth['role_id'] == 1 ? 'client' : 'admin') . '&mod=auth' : '?role=' . ($auth['role_id   '] == 1 ? 'client' : 'admin')));
         die;
+    }
+    if (is_auth()) {
+        $auth = get_auth();
+        if ($auth['role_id'] != $request_role) {
+            header("Location: ?role=" . ($auth['role_id'] == 1 ? 'client' : 'admin'));
+            die;
+        }
     }
 }
 //Add to cart
