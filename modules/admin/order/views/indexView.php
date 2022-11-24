@@ -70,7 +70,7 @@
                                    <td><?php echo ($order['id']) ?></td>
                                    <td>
                                     <span class="text-center" style="overflow: visible; position: relative; width: 125px;">
-                                            <a href="" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details">
+                                            <a href="?role=admin&mod=order&action=orders_detail&id_order=<?php echo $order['id']?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details">
                                                 <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-medical" viewBox="0 0 16 16">
                                                              <path d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317V5.5zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>

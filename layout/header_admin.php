@@ -49,8 +49,8 @@
 			<!--begin::Brand-->
 			<div class="brand flex-column-auto" id="kt_brand">
 				<!--begin::Logo-->
-				<a href="index.html" class="brand-logo">
-					<img alt="Logo" src="assets/media/logos/logo-light.png" />
+				<a href="?role=admin" class="brand-logo">
+					<img alt="Logo" src="./public/images/logo.png" />
 				</a>
 				<!--end::Logo-->
 				<!--begin::Toggle-->

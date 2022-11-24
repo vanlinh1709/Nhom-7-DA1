@@ -38,7 +38,7 @@
                                         <div class="single-input-item">
                                             <label for="f_name" class="required">Họ và tên</label>
                                             <input type="text" id="f_name" placeholder="Họ và tên" name="name" value="<?php echo $info_user['fullname']?>"/>
-                                            <input type="hidden" name="id" value="<?php echo $info_user['id']?>">
+                                            <input type="hidden" name="id" value="<?php echo $info_user['id'] ? $info_user['id'] : 0?>">
                                         </div>
                                     </div>
                                 </div>

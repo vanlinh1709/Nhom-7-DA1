@@ -24,7 +24,7 @@ function indexPostAction() {
     //Đưa thông tin order vào bảng order
 //    var_dump($_POST);
     $id = rand(1,10000);
-    $id_user = $_POST['id'];
+    $id_user = $_POST['id'] ? $_POST['id'] : null;
     $customer_name = $_POST['name'];
     $customer_phone_number = $_POST['phone'];
     $customer_email = $_POST['email'];
