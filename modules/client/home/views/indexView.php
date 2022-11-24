@@ -92,14 +92,15 @@
             <div class="row">
                 <div class="col-12">
                     <div class="special-product-carousel slick-arrow-style slick-row-15">
+                    <?php foreach($list_salest_products as $p):?>
                         <div class="sp-product-item">
                             <div class="sp-product-thumb">
-                                <a href="product-details.html">
-                                    <img src="assets/img/product/product-details-img1.jpg" alt="product thumb">
+                                <a href="?role=client&mod=productDetail&id=<?php echo $p['id']?>">
+                                    <img src="./public/uploads/images/product/<?php echo $p['thumbnail']?>" alt="product thumb" width="600">
                                 </a>
                             </div>
                             <div class="sp-product-content">
-                                <h2 class="sp-title"><a href="product-details.html">Top Mens slippers</a></h2>
+                                <h2 class="sp-title"><a href="?role=client&mod=productDetail&id=<?php echo $p['id']?>"><?php echo $p['title']?></a></h2>
                                 <div class="ratings">
                                     <span><i class="fa fa-star"></i></span>
                                     <span><i class="fa fa-star"></i></span>
@@ -109,61 +110,14 @@
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="price-box">
-                                        <span class="price-regular">$70.00</span>
+                                        <span class="price-regular"><?php echo currency_format($p['price'])?></span>
                                     </div>
                                     <a class="btn btn-large hover-color" href="shop.html">Thêm vào giỏ hàng</a>
                                 </div>
                             </div>
-                            <div class="product-countdown product-countdown--sp-product" data-countdown="2021/10/10"></div>
+
                         </div>
-                        <div class="sp-product-item">
-                            <div class="sp-product-thumb">
-                                <a href="product-details.html">
-                                    <img src="assets/img/product/product-details-img3.jpg" alt="product thumb">
-                                </a>
-                            </div>
-                            <div class="sp-product-content">
-                                <h2 class="sp-title"><a href="product-details.html">Primitive Mens shoes</a></h2>
-                                <div class="ratings">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="price-box">
-                                        <span class="price-regular">$30.00</span>
-                                    </div>
-                                    <a class="btn btn-large hover-color" href="shop.html">Thêm vào giỏ hàng</a>
-                                </div>
-                            </div>
-                            <div class="product-countdown product-countdown--sp-product" data-countdown="2021/11/15"></div>
-                        </div>
-                        <div class="sp-product-item">
-                            <div class="sp-product-thumb">
-                                <a href="product-details.html">
-                                    <img src="assets/img/product/product-details-img2.jpg" alt="product thumb">
-                                </a>
-                            </div>
-                            <div class="sp-product-content">
-                                <h2 class="sp-title"><a href="product-details.html">Rexpo Womens shoes</a></h2>
-                                <div class="ratings">
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                    <span><i class="fa fa-star"></i></span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="price-box">
-                                        <span class="price-regular">$50.00</span>
-                                    </div>
-                                    <a class="btn btn-large hover-color" href="shop.html">Thêm vào giỏ hàng</a>
-                                </div>
-                            </div>
-                            <div class="product-countdown product-countdown--sp-product" data-countdown="2021/12/25"></div>
-                        </div>
+                    <?php endforeach;?>
                     </div>
                 </div>
             </div>
