@@ -22,3 +22,23 @@ function updatePostAction() {
     update_status_order($new_id_status, $id_order);
     header('Location: ?role=admin&mod=order');
 }
+function orders_detailAction() {
+    $order_id = $_GET['id_order'];
+    $order = get_order_by_id($order_id);
+    $orders_detail = get_orders_detail_by_id($order_id);
+//    var_dump($orders_detail);
+//    die();
+    $product_of_orders_detail = [];
+    foreach($orders_detail as $od) {
+        $info_products = get_info_product_of_order_detail($od['id']);
+//        echo '<pre>';
+//        var_dump($info_products);
+        array_push($product_of_orders_detail, $info_products);
+    }
+//    echo '<pre>';
+//    var_dump($product_of_orders_detail);
+//    echo '<hr>';
+//    var_dump($orders_detail);
+//    die();
+    load_view('orderDetail', compact('orders_detail', 'product_of_orders_detail', 'order'));
+}
