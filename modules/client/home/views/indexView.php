@@ -178,7 +178,6 @@
                 <div class="col-12">
                     <div class="section-title text-center">
                         <h3 class="title text-white">SẢN PHẨM MỚI NHẤT</h3>
-                        <h4 class="sub-title text-muted">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</h4>
                     </div>
                 </div>
             </div>
@@ -246,7 +245,6 @@
                     <div class="promotion-banner">
                         <h1 class="promotion-title">Sale</h1>
                         <h2 class="promotion-subtitle">Rexoo Mens shoes</h2>
-                        <h4 class="promotion-desc">Investigationes demonstraverunt lectores legere</h4>
                         <a href="#" class="btn btn-large btn-bg">Shop Now</a>
                     </div>
                 </div>
@@ -262,7 +260,6 @@
                 <div class="col-12">
                     <div class="section-title text-center">
                         <h3 class="title text-white">SHOP BY CATEGORIES PULLMAN</h3>
-                        <h4 class="sub-title text-white">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</h4>
                     </div>
                 </div>
             </div>
@@ -335,7 +332,6 @@
                 <div class="col-12">
                     <div class="section-title text-center">
                         <h3 class="title">OUR IN STORE</h3>
-                        <h4 class="sub-title">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</h4>
                     </div>
                 </div>
             </div>
@@ -361,7 +357,7 @@
                                     <!-- product single item start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="<?php echo $newProduct['id']?>">
+                                            <a href="?role=client&mod=productDetail&id=<?php echo $newProduct['id']?>">
                                                 <img src="./public/uploads/images/product/<?php echo $newProduct['thumbnail']?>" alt="product thumb">
                                             </a>
                                             <div class="button-group">
@@ -378,7 +374,7 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html"><?php echo $newProduct['title']?></a>
+                                                    <a href="?role=client&mod=productDetail&id=<?php echo $newProduct['id']?>"><?php echo $newProduct['title']?></a>
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del><?php echo currency_format($newProduct['price'], 'đ')?></del></span>
@@ -408,7 +404,7 @@
                                         <!-- product single item start -->
                                         <div class="product-item">
                                             <div class="product-thumb">
-                                                <a href="<?php echo $bestSellerProduct['id']?>">
+                                                <a href="?role=client&mod=productDetail&id=<?php echo $bestSellerProduct['id']?>">
                                                     <img src="./public/uploads/images/product/<?php echo $bestSellerProduct['thumbnail']?>" alt="product thumb">
                                                 </a>
                                                 <div class="button-group">
@@ -416,7 +412,7 @@
                                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
                                                 </div>
                                                 <div class="product-label">
-                                                    <span>Hàng mới</span>
+                                                    <span>Hàng bán chạy</span>
                                                 </div>
                                                 <div class="discount-label">
                                                     <span>-10% giảm giá</span>
@@ -425,7 +421,7 @@
                                             <div class="product-content">
                                                 <div class="product-caption">
                                                     <h6 class="product-name">
-                                                        <a href="product-details.html"><?php echo $bestSellerProduct['title']?></a>
+                                                        <a href="?role=client&mod=productDetail&id=<?php echo $bestSellerProduct['id']?>"><?php echo $bestSellerProduct['title']?></a>
                                                     </h6>
                                                     <div class="price-box">
                                                         <span class="price-old"><del><?php echo currency_format($bestSellerProduct['price'], 'đ')?></del></span>
@@ -455,7 +451,7 @@
                                         <!-- product single item start -->
                                         <div class="product-item">
                                             <div class="product-thumb">
-                                                <a href="<?php echo $featuredProduct['id']?>">
+                                                <a href="?role=client&mod=productDetail&id=<?php echo $featuredProduct['id']?>">
                                                     <img src="./public/uploads/images/product/<?php echo $featuredProduct['thumbnail']?>" alt="product thumb">
                                                 </a>
                                                 <div class="button-group">
@@ -463,7 +459,7 @@
                                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quick_view"><span data-bs-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
                                                 </div>
                                                 <div class="product-label">
-                                                    <span>Hàng mới</span>
+                                                    <span>Hàng nổi bật</span>
                                                 </div>
                                                 <div class="discount-label">
                                                     <span>-10% giảm giá</span>
@@ -472,7 +468,7 @@
                                             <div class="product-content">
                                                 <div class="product-caption">
                                                     <h6 class="product-name">
-                                                        <a href="product-details.html"><?php echo $featuredProduct['title']?></a>
+                                                        <a href="?role=client&mod=productDetail&id=<?php echo $featuredProduct['id']?>"><?php echo $featuredProduct['title']?></a>
                                                     </h6>
                                                     <div class="price-box">
                                                         <span class="price-old"><del><?php echo currency_format($featuredProduct['price'])?></del></span>
@@ -517,12 +513,12 @@
                                 <div class="slide-item">
                                     <div class="group-item">
                                         <div class="group-thumb">
-                                            <a href="product-details.html">
+                                            <a href="?role=client&mod=productDetail&id=<?php echo $newProduct['id']?>">
                                                 <img src="./public/uploads/images/product/<?php echo $newProduct['thumbnail']?>" alt="product thumb">
                                             </a>
                                         </div>
                                         <div class="group-desc">
-                                            <h6 class="group-pro-name"><a href="product-details.html"><?php echo $newProduct['title']?></a></h6>
+                                            <h6 class="group-pro-name"><a href="?role=client&mod=productDetail&id=<?php echo $newProduct['id']?>"><?php echo $newProduct['title']?></a></h6>
                                             <div class="price-box">
                                                 <span class="price-old"><del><?php echo currency_format($newProduct['price'])?></del></span>
                                                 <span class="price-regular"><?php echo currency_format($newProduct['promo_price'])?></span>
@@ -554,12 +550,12 @@
                                     <div class="slide-item">
                                         <div class="group-item">
                                             <div class="group-thumb">
-                                                <a href="product-details.html">
+                                                <a href="?role=client&mod=productDetail&id=<?php echo $bestSellerProduct['id']?>">
                                                     <img src="./public/uploads/images/product/<?php echo $bestsellerProduct['thumbnail']?>" alt="product thumb">
                                                 </a>
                                             </div>
                                             <div class="group-desc">
-                                                <h6 class="group-pro-name"><a href="product-details.html"><?php echo $bestsellerProduct['title']?></a></h6>
+                                                <h6 class="group-pro-name"><a href="?role=client&mod=productDetail&id=<?php echo $bestSellerProduct['id']?>"><?php echo $bestsellerProduct['title']?></a></h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del><?php echo currency_format($bestsellerProduct['price'])?></del></span>
                                                     <span class="price-regular"><?php echo currency_format($bestsellerProduct['promo_price'])?></span>
@@ -591,12 +587,12 @@
                                     <div class="slide-item">
                                         <div class="group-item">
                                             <div class="group-thumb">
-                                                <a href="product-details.html">
+                                                <a href="?role=client&mod=productDetail&id=<?php echo $featuredProduct['id']?>">
                                                     <img src="./public/uploads/images/product/<?php echo $featureProduct['thumbnail']?>" alt="product thumb">
                                                 </a>
                                             </div>
                                             <div class="group-desc">
-                                                <h6 class="group-pro-name"><a href="product-details.html"><?php echo $featureProduct['title']?></a></h6>
+                                                <h6 class="group-pro-name"><a href="?role=client&mod=productDetail&id=<?php echo $featuredProduct['id']?>"><?php echo $featureProduct['title']?></a></h6>
                                                 <div class="price-box">
                                                     <span class="price-old"><del><?php echo currency_format($featureProduct['price'])?></del></span>
                                                     <span class="price-regular"><?php echo currency_format($featureProduct['promo_price'])?></span>
