@@ -19,3 +19,7 @@ function get_list_product_featured() {
     return $result;
 
 }
+function get_list_slide_and_product_name() {
+    $sql = 'SELECT * FROM slideshow as s JOIN products as p ON s.product_id = p.id';
+    return pdo_query($sql);
+}

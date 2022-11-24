@@ -24,15 +24,16 @@
                 <div class="col-lg-9">
                     <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
                         <!-- single slider item start -->
+                        <?php foreach ($list_slide_show as $ls):?>
                         <div class="hero-single-slide">
-                            <div class="hero-slider-item bg-img" data-bg="assets/img/slider/home6-slide1.jpg">
+                            <div class="hero-slider-item bg-img" data-bg="./public/uploads/images/slideshow/<?php echo $ls['slideshow_img']?>">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="hero-slider-content slide-1 row">
-                                               <div class="col-md-6">
-                                                   <h6 class="slide-title text-muted">GIÀY PUMA SOFTRIDE FEEL</h6>
-                                                   <a href="shop.html" class="btn btn-large btn-bg">Shop Now</a>
+                                               <div class="col-md-7">
+                                                   <h6 class="slide-title text-white"><?php echo $ls['title']?></h6>
+                                                   <a href="?role=client&mod=productDetail&id=<?php echo $ls['id']?>" class="btn btn-large btn-bg">Shop Now</a>
                                                </div>
                                             </div>
                                         </div>
@@ -40,23 +41,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- single slider item start -->
-                        <!-- single slider item start -->
-                        <div class="hero-single-slide">
-                            <div class="hero-slider-item bg-img" data-bg="assets/img/slider/slider-2.jpg">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="hero-slider-content slide-2">
-                                                <h2 class="slide-title text-white">Calzature LOUIS<span>Sneaker Archlight</span></h2>
-                                                <a href="shop.html" class="btn btn-large btn-bg">Shop Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single slider item start -->
+                        <?php endforeach?>
                     </div>
                 </div>
             </div>
