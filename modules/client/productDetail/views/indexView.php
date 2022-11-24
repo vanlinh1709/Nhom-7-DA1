@@ -1,5 +1,5 @@
 <?php
-get_header('','Trang đăng ký');
+get_header('','Trang chi tiết sản phẩm');
 ?>
     <!-- offcanvas search form start -->
     <div class="offcanvas-search-wrapper">

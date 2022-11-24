@@ -33,7 +33,7 @@
                                             <div class="hero-slider-content slide-1 row">
                                                <div class="col-md-7">
                                                    <h6 class="slide-title text-white"><?php echo $ls['title']?></h6>
-                                                   <a href="?role=client&mod=productDetail&id=<?php echo $ls['id']?>" class="btn btn-large btn-bg">Shop Now</a>
+                                                   <a href="?role=client&mod=productDetail&id=<?php echo $ls['id']?>" class="btn btn-large btn-bg">MUA NGAY</a>
                                                </div>
                                             </div>
                                         </div>
@@ -111,7 +111,7 @@
                                     <div class="price-box">
                                         <span class="price-regular">$70.00</span>
                                     </div>
-                                    <a class="btn btn-large hover-color" href="shop.html">Add To Cart</a>
+                                    <a class="btn btn-large hover-color" href="shop.html">Thêm vào giỏ hàng</a>
                                 </div>
                             </div>
                             <div class="product-countdown product-countdown--sp-product" data-countdown="2021/10/10"></div>
@@ -135,7 +135,7 @@
                                     <div class="price-box">
                                         <span class="price-regular">$30.00</span>
                                     </div>
-                                    <a class="btn btn-large hover-color" href="shop.html">Add To Cart</a>
+                                    <a class="btn btn-large hover-color" href="shop.html">Thêm vào giỏ hàng</a>
                                 </div>
                             </div>
                             <div class="product-countdown product-countdown--sp-product" data-countdown="2021/11/15"></div>
@@ -159,7 +159,7 @@
                                     <div class="price-box">
                                         <span class="price-regular">$50.00</span>
                                     </div>
-                                    <a class="btn btn-large hover-color" href="shop.html">Add To Cart</a>
+                                    <a class="btn btn-large hover-color" href="shop.html">Thêm vào giỏ hàng</a>
                                 </div>
                             </div>
                             <div class="product-countdown product-countdown--sp-product" data-countdown="2021/12/25"></div>
@@ -245,7 +245,7 @@
                     <div class="promotion-banner">
                         <h1 class="promotion-title">Sale</h1>
                         <h2 class="promotion-subtitle">Rexoo Mens shoes</h2>
-                        <a href="#" class="btn btn-large btn-bg">Shop Now</a>
+                        <a href="#" class="btn btn-large btn-bg">MUA NGAY</a>
                     </div>
                 </div>
             </div>
@@ -259,7 +259,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h3 class="title text-white">SHOP BY CATEGORIES PULLMAN</h3>
+                        <h3 class="title text-white">GIÀY TỪ THƯƠNG HIỆU NỔI TIẾNG</h3>
                     </div>
                 </div>
             </div>
@@ -268,7 +268,7 @@
                     <div class="catagory-carousel-active slick-row-15">
                         <div class="single-category-item">
                             <div class="category-title">
-                                <a href="shop.html">MEN</a>
+                                <a href="shop.html">NIKE</a>
                             </div>
                             <div class="category-thumb">
                                 <a href="shop.html">
@@ -276,12 +276,12 @@
                                 </a>
                             </div>
                             <div class="shop-collection text-center">
-                                <a class="shop-btn" href="shop.html">Shop Collections</a>
+                                <a class="shop-btn" href="shop.html">XEM DANH MUC</a>
                             </div>
                         </div>
                         <div class="single-category-item">
                             <div class="category-title">
-                                <a href="shop.html">WOMEN</a>
+                                <a href="shop.html">ADIDAS</a>
                             </div>
                             <div class="category-thumb">
                                 <a href="shop.html">
@@ -289,35 +289,10 @@
                                 </a>
                             </div>
                             <div class="shop-collection text-center">
-                                <a class="shop-btn" href="shop.html">Shop Collections</a>
+                                <a class="shop-btn" href="shop.html">XEM DANH MUC</a>
                             </div>
                         </div>
-                        <div class="single-category-item">
-                            <div class="category-title">
-                                <a href="shop.html">QUICKIIN</a>
-                            </div>
-                            <div class="category-thumb">
-                                <a href="shop.html">
-                                    <img src="assets/img/category/category-3.png" alt="category thumb">
-                                </a>
-                            </div>
-                            <div class="shop-collection text-center">
-                                <a class="shop-btn" href="shop.html">Shop Collections</a>
-                            </div>
-                        </div>
-                        <div class="single-category-item">
-                            <div class="category-title">
-                                <a href="shop.html">Kids</a>
-                            </div>
-                            <div class="category-thumb">
-                                <a href="shop.html">
-                                    <img src="assets/img/category/category-2.png" alt="category thumb">
-                                </a>
-                            </div>
-                            <div class="shop-collection text-center">
-                                <a class="shop-btn" href="shop.html">Shop Collections</a>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -331,7 +306,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h3 class="title">OUR IN STORE</h3>
+                        <h3 class="title">TRONG CỬA HÀNG CỦA CHÚNG TÔI</h3>
                     </div>
                 </div>
             </div>
@@ -341,9 +316,9 @@
                         <!-- product tab menu start -->
                         <div class="product-tab-menu">
                             <ul class="nav justify-content-center">
-                                <li><a href="#tab1" class="active" data-bs-toggle="tab">New Arrival</a></li>
-                                <li><a href="#tab2" data-bs-toggle="tab">Best Seller</a></li>
-                                <li><a href="#tab3" data-bs-toggle="tab">Featured Products</a></li>
+                                <li><a href="#tab1" class="active" data-bs-toggle="tab">Mới nhất</a></li>
+                                <li><a href="#tab2" data-bs-toggle="tab">Bán chạy nhất</a></li>
+                                <li><a href="#tab3" data-bs-toggle="tab">Yêu thích nhất</a></li>
                             </ul>
                         </div>
                         <!-- product tab menu end -->

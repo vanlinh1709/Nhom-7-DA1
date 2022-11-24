@@ -101,7 +101,7 @@
                                                     <div class="call-icon">
                                                         <i class="fa fa-phone"></i>
                                                     </div>
-                                                    <span>Liên hệ:<a href="tel:0123456789"></a></span>
+                                                    <span>ĐIỆN THOẠI:<a href="tel:0123456789"></a></span>
                                                 </li>
                                                 <li class="search-wrapper-inner">
                                                     <form class="search-box-2">
