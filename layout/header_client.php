@@ -65,7 +65,7 @@
 
                                     <li <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>><a href="?role=client&mod=signUp"><i class="fa fa-credit-card" ></i>Đăng ký</a></li>
 
-                                    <li <?php echo is_admin() ? 'hidden' : ''?>><a href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=logout' : '?role=client&mod=auth'?>"><i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Đăng xuất' : 'Đăng nhập'?></a></li>
+                                    <li <?php echo is_admin() ? 'hidden' : ''?>><a href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=auth&controller=logOut' : '?role=client&mod=auth'?>"><i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Đăng xuất' : 'Đăng nhập'?></a></li>
                                 </ul>
                             </div>
                         </div>

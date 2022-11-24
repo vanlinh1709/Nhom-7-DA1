@@ -1,6 +1,6 @@
 <?php
 
-function construct() {
+function construct($action_name = '') {
     request_auth(false);
     load_model('index');
 }

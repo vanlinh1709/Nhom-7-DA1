@@ -1,10 +1,12 @@
 <?php
-function construct() {}
+function construct() {
 
-function indexAction()
-{
+}
+function indexAction() {
     if (isset($_SESSION['auth'])) {
         unset($_SESSION["auth"]);
+//        echo 1;
+//        die();
         header('Location: ?role=admin');
     }
 }

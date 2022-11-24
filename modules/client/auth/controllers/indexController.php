@@ -36,3 +36,9 @@ function indexPostAction() {
         header('Location: ?role=client&mod=auth');
     }
 }
+function logOutAction() {
+    if (isset($_SESSION['auth'])) {
+        unset($_SESSION["auth"]);
+        header('Location: ?role=client');
+    }
+}
