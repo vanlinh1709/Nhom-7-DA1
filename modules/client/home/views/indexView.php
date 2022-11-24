@@ -29,9 +29,11 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="hero-slider-content slide-1">
-                                                <h2 class="slide-title text-white">Calzature LOUIS<span>Sneaker Archlight</span></h2>
-                                                <a href="shop.html" class="btn btn-large btn-bg">Shop Now</a>
+                                            <div class="hero-slider-content slide-1 row">
+                                               <div class="col-md-6">
+                                                   <h6 class="slide-title text-muted">GIÀY PUMA SOFTRIDE FEEL</h6>
+                                                   <a href="shop.html" class="btn btn-large btn-bg">Shop Now</a>
+                                               </div>
                                             </div>
                                         </div>
                                     </div>
@@ -39,7 +41,6 @@
                             </div>
                         </div>
                         <!-- single slider item start -->
-
                         <!-- single slider item start -->
                         <div class="hero-single-slide">
                             <div class="hero-slider-item bg-img" data-bg="assets/img/slider/slider-2.jpg">
