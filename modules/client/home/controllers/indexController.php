@@ -12,5 +12,6 @@ function indexAction() {
 //   var_dump($categories);
 //   var_dump($list_newest_product[0]['thumbnail']);
 //   die();
+
     load_view('index', compact('categories', 'list_newest_product', 'list_bestseller_product', 'list_featured_product'));
 }

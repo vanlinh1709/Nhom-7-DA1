@@ -99,8 +99,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h3 class="title">DEAL OF THE DAYS</h3>
-                        <h4 class="sub-title">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</h4>
+                        <h3 class="title">GIÁ SỐC HÔM NAY</h3>
                     </div>
                 </div>
             </div>
@@ -192,7 +191,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h3 class="title text-white">NEW ARRIVALS PRODUCTS</h3>
+                        <h3 class="title text-white">SẢN PHẨM MỚI NHẤT</h3>
                         <h4 class="sub-title text-muted">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</h4>
                     </div>
                 </div>
