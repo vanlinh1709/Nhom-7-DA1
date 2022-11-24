@@ -9,8 +9,11 @@ function indexAction() {
     $list_newest_product = get_list_product_newest();
     $list_bestseller_product = get_list_product_bestSeller();
     $list_featured_product = get_list_product_featured();
+    $list_slide_show = get_list_slide_and_product_name();
 //   var_dump($categories);
 //   var_dump($list_newest_product[0]['thumbnail']);
 //   die();
-    load_view('index', compact('categories', 'list_newest_product', 'list_bestseller_product', 'list_featured_product'));
+
+    load_view('index', compact('categories', 'list_newest_product',
+        'list_bestseller_product', 'list_featured_product', 'list_slide_show'));
 }
