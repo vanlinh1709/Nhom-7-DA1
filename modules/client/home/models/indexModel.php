@@ -23,3 +23,7 @@ function get_list_slide_and_product_name() {
     $sql = 'SELECT * FROM slideshow as s JOIN products as p ON s.product_id = p.id';
     return pdo_query($sql);
 }
+function get_list_salest_products() {
+    $sql = 'SELECT * FROM products ORDER BY products.promo_price/products.price  LIMIT 3';
+    return pdo_query($sql);
+}

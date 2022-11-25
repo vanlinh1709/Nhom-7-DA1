@@ -65,7 +65,7 @@
 
                                     <li <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>><a href="?role=client&mod=signUp"><i class="fa fa-credit-card" ></i>Đăng ký</a></li>
 
-                                    <li <?php echo is_admin() ? 'hidden' : ''?>><a href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=logout' : '?role=client&mod=auth'?>"><i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Đăng xuất' : 'Đăng nhập'?></a></li>
+                                    <li <?php echo is_admin() ? 'hidden' : ''?>><a href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=auth&controller=logOut' : '?role=client&mod=auth'?>"><i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Đăng xuất' : 'Đăng nhập'?></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                                                     <div class="call-icon">
                                                         <i class="fa fa-phone"></i>
                                                     </div>
-                                                    <span>ĐIỆN THOẠI:<a href="tel:0123456789"></a></span>
+                                                    <span>ĐIỆN THOẠI: <?php echo $data['phone']?><a href="tel:0123456789"></a></span>
                                                 </li>
                                                 <li class="search-wrapper-inner">
                                                     <form class="search-box-2">
@@ -191,12 +191,12 @@
                                         <!-- main menu navbar start -->
                                         <nav class="desktop-menu">
                                             <ul>
-                                                <li class="active"><a href="index.html">Trang chủ<i class="fa"></i></a>
+                                                <li class="active"><a href="?role=client">Trang chủ<i class="fa"></i></a>
                                                 </li>
-                                                <li><a href="blog-left-sidebar.html">Tin tức<i class="fa"></i></a>
+                                                <li><a href="?role=client&mod=news">Tin tức<i class="fa"></i></a>
                                                 </li>
-                                                <li><a href="contact-us.html">Về cửa hàng</a></li>
-                                                <li><a href="contact-us.html">Liên hệ</a></li>
+                                                <li><a href="?role=client&mod=contact">Về cửa hàng</a></li>
+                                                <li><a href="?role=client&mod=about">Liên hệ</a></li>
                                             </ul>
                                         </nav>
                                         <!-- main menu navbar end -->
