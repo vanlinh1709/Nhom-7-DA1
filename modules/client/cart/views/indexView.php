@@ -60,15 +60,17 @@
                             <!-- Cart Update Option -->
                             <div class="cart-update-option d-block d-md-flex justify-content-between">
                                 <div class="apply-coupon-wrapper">
-<!--                                    <form action="#" method="post" class=" d-block d-md-flex">-->
-<!--                                        <input type="text" placeholder="Enter Your Coupon Code" required />-->
-<!--                                        <button class="btn btn-sqr">Nhập mã giảm giá</button>-->
-<!--                                    </form>-->
+                                    <a href="?role=client&mod=cart&action=delCart" style="background: indianred; color: white; padding: 10px; margin: 7px; font-weight: bold">
+                                        Xóa giỏ hàng
+                                    </a>
                                 </div>
                                 <div class="cart-update">
-                                            <a href="#update_cart">
-                                                <button  class="btn btn-sqr">Cập nhập giỏ hàng</button>
-                                            </a>
+                                    <a href="?role=client" style="background: orange; color: white; padding: 10px; margin: 7px; font-weight: bold">
+                                       Mua tiếp
+                                    </a>
+                                    <a href="#update_cart">
+                                        <button  class="btn btn-sqr">Cập nhập giỏ hàng</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

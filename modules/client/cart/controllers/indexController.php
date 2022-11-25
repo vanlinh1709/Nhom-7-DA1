@@ -91,6 +91,7 @@ function updateCartPostAction() {
     final_total_money();
     header('Location: ?role=client&mod=cart');
 }
-function delAllAction() {
+function delCartAction() {
     unset($_SESSION['cart']);
+    header('Location: ?role=client&mod=cart');
 }
