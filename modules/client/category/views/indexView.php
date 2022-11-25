@@ -264,8 +264,6 @@
                             </div>
                         </div>
                         <!-- shop product top wrap start -->
-                        <?php var_dump($cate_id);?>
-
 <!--                        --><?php //var_dump($list_product); ?>
                         <!-- product item list wrapper start -->
                         <div class="shop-product-wrap grid-view row mbn-30">
@@ -275,7 +273,7 @@
                                 <!-- product grid start -->
                                 <div class="product-item">
                                     <div class="product-thumb">
-                                        <a href="?role=client&mod=productDetail&id=<?php echo $product['id']?>">
+                                        <a href="?role=client&mod=productDetail&id=<?php if($cate_id != '') echo $product['id']; else echo $product[0]?>">
                                             <img src="./public/uploads/images/product/<?php echo $product['thumbnail']?>" alt="product thumb">
                                         </a>
                                         <div class="button-group">
@@ -298,7 +296,7 @@
                                                 <span class="price-old"><del><?php echo currency_format($product['promo_price'])?></del></span>
                                                 <span class="price-regular"><?php echo currency_format($product['price'])?></span>
                                             </div>
-                                            <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $product['id']?>&currentMod=<?php echo get_module()?>&cate_id=<?php echo $cate_id ?>"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $product['id']?>&currentMod=<?php echo get_module()?><?php if($cate_id != '') echo '&cate_id=' . $cate_id ;else echo '&brand_id=' . $brand_id?>"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                         <div class="ratings">
                                             <span><i class="fa fa-star"></i></span>

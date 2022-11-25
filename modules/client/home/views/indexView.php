@@ -230,7 +230,7 @@
                                 </a>
                             </div>
                             <div class="shop-collection text-center">
-                                <a class="shop-btn" href="shop.html">XEM DANH MUC</a>
+                                <a class="shop-btn" href="?role=client&mod=category&brand_id=1">XEM DANH MUC</a>
                             </div>
                         </div>
                         <div class="single-category-item">
@@ -243,11 +243,24 @@
                                 </a>
                             </div>
                             <div class="shop-collection text-center">
-                                <a class="shop-btn" href="shop.html">XEM DANH MUC</a>
+                                <a class="shop-btn" href="?role=client&mod=category&brand_id=2">XEM DANH MUC</a>
                             </div>
                         </div>
 
-                    </div>
+                            <div class="single-category-item">
+                                <div class="category-title">
+                                    <a href="shop.html">PUMA</a>
+                                </div>
+                                <div class="category-thumb">
+                                    <a href="shop.html">
+                                        <img src="assets/img/category/category-1.png" alt="category thumb">
+                                    </a>
+                                </div>
+                                <div class="shop-collection text-center">
+                                    <a class="shop-btn" href="?role=client&mod=category&brand_id=3">XEM DANH MUC</a>
+                                </div>
+                            </div>
+
                 </div>
             </div>
         </div>
