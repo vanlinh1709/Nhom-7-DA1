@@ -97,20 +97,20 @@
                         </div>
                         <address class="address-info d-flex align-items-center">
                             <i class="fa fa-map-marker"></i>
-                            <p><span>ĐỊA CHỈ : </span> Your address goes here</p>
+                            <p><span>ĐỊA CHỈ :  </span><?php echo $data['address']?></p>
                         </address>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <address class="address-info email mt-30">
                         <i class="fa fa-envelope"></i>
-                        <p><span>EMAIL : </span><a href="emailto:demo@examplecom">demo@examplecom</a></p>
+                        <p><span>EMAIL : </span><a href="emailto:demo@examplecom"><?php echo $data['email']?></a></p>
                     </address>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <address class="address-info email mt-30">
                         <i class="fa fa-phone"></i>
-                        <p><span>ĐIỆN THOẠI : </span><a href="tel:0123456789">0123456789</a></p>
+                        <p><span>ĐIỆN THOẠI : </span><a href="tel:0123456789"><?php echo $data['phone']?></a></p>
                     </address>
                 </div>
             </div>

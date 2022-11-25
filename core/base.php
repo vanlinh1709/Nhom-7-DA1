@@ -113,9 +113,14 @@ function load_model($name) {
         echo "Không tìm thấy {$path}";
     }
 }
-
+function get_info_shop() {
+    $sql = 'SELECT * FROM info_shop';
+    $info = pdo_query_one($sql);
+    return $info;
+}
 function get_header($name = '', $title = '') {
     global $data;
+    $data = get_info_shop();
     if (empty($name)) {
         $name = 'header';
     } else {
@@ -136,6 +141,7 @@ function get_header($name = '', $title = '') {
 
 function get_footer($name = '') {
     global $data;
+    $data = get_info_shop();
     if (empty($name)) {
         $name = 'footer';
     } else {
