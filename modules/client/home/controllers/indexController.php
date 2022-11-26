@@ -5,6 +5,8 @@ function construct() {
 }
 
 function indexAction() {
+//    var_dump($_SESSION['auth']);
+//    die();
     $categories = get_list_categories();
     $list_newest_product = get_list_product_newest();
     $list_bestseller_product = get_list_product_bestSeller();
