@@ -6,7 +6,9 @@ function indexAction() {
     $id = $_GET['id'];
 //    var_dump($id);
     $product = getProduct($id);
-//    var_dump($product);
+    $product_cate_id = $product['category_id'];
+    $list_related_products = getRelatedProducts($product_cate_id);
+//    var_dump($list_related_products);
 //    die();
     load_view('index');
 }
