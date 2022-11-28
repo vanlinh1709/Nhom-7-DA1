@@ -228,7 +228,6 @@ function pdo_get_connection()
     $servername = "localhost";
     $username = "root";
     $password = "";
-
     try {
         $conn = new PDO("mysql:host=$servername;dbname=da1_nhom7", $username, $password);
         // set the PDO error mode to exception
