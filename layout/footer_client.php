@@ -58,7 +58,7 @@
                 <div class="footer-middle-area">
                     <div class="footer-logo">
                         <a href="index.html">
-                            <img src="../assets/img/logo/logo.png" alt="Brand Logo">
+                            <img src="./layout/assets/img/logo/logo.png" alt="Brand Logo">
                         </a>
                     </div>
                     <div class="footer-contact">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="footer-payment">
                     <div class="payment">
-                        <img src="../assets/img/payment-2.png" alt="payment method">
+                        <img src="./layout/assets/img/payment-2.png" alt="payment method">
                     </div>
                     <div class="footer-link">
                         <a href="#">SITE MAP</a>
