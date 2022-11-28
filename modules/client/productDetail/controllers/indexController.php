@@ -5,7 +5,8 @@ function construct() {
 function indexAction() {
     $id = $_GET['id'];
 //    var_dump($id);
-    $product = getProduct($id)[0];
+    $product = getProduct($id);
+//    echo '<pre>';
 //    var_dump($product);
 //    die();
     load_view('index', compact('product'));
