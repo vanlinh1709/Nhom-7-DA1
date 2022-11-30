@@ -58,7 +58,7 @@
             <h3>CATEGORIES</h3>
             <ul>
                 <?php foreach($categories as $c):?>
-                    <li><a href="#"><?php echo $c['cate_name']?></a></li>
+                    <li><a href="?role=client&mod=category&id=<?php echo $c['id'] ?>"><?php echo $c['cate_name']?></a></li>
                 <?php endforeach?>
             </ul>
         </div>
@@ -82,11 +82,13 @@
         foreach($list_salest_products as $l):?>
         <div class="product-salient">
             <div class="product-img">
-                <img src="./layout/assets/img/product/<?php echo $l['thumbnail'] ?>" alt="">
+                <a href="?role=client&mod=productDetail&id=<?php echo $l['id'] ?>">
+                <img src="./layout/assets/img/product/<?php echo $l['thumbnail'] ?>" alt=""></a>
             </div>
             <div class="product-infor">
                 <div class="product-name">
-                    <p> <?php echo $l['title'] ?></p>
+                    <a href="?role=client&mod=productDetail&id=<?php echo $l['id'] ?>">
+                    <p> <?php echo $l['title'] ?></p></a>
                 </div>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -95,7 +97,8 @@
                 <i class="fa fa-star"></i>
                 <div class="price-buy">
                     <div class="product-price"><span><?php echo $l['price'] ?></span><span>VNĐ</span></div>
-                    <button>Add To Cart</button>
+                    <a href="?role=client&mod=productDetail&id=<?php echo $l['id'] ?>">
+                    <button>Add To Cart</button></a>
                 </div>
             </div>
         </div>                   
@@ -118,7 +121,7 @@
         <?php foreach($list_newest_product as $p):?>
             <div class="product-item">
                 <div class="product-thumb">
-                    <a href="#">
+                    <a href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>">
                         <img src="./layout/assets/img/product/<?php echo $p['thumbnail']?>" alt="product thumb">
                     </a>
                     <div class="button-group">
@@ -129,13 +132,13 @@
                 <div class="product-content">
                     <div class="product-caption">
                         <h6 class="product-name">
-                            <a href="#"><?php echo $p['title']?></a>
+                            <a href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>"><?php echo $p['title']?></a>
                         </h6>
                         <div class="price-box">
                             <span class="price-old"><del><?php echo currency_format($p['price'])?></del></span>
                             <span class="price-regular"><?php echo currency_format($p['promo_price'])?></span>
                         </div>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                        <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
                     </div>
                     <div class="ratings">
                         <span><i class="fa fa-star"></i></span>
@@ -157,7 +160,7 @@
         <?php foreach($list_bestseller_product as $s):?>
             <div class="product-item">
                 <div class="product-thumb">
-                    <a href="#">
+                    <a href="?role=client&mod=productDetail&id=<?php echo $s['id'] ?>">
                         <img src="./layout/assets/img/product/<?php echo $s['thumbnail']?>" alt="product thumb">
                     </a>
                     <div class="button-group">
@@ -168,13 +171,13 @@
                 <div class="product-content">
                     <div class="product-caption">
                         <h6 class="product-name">
-                            <a href="#"><?php echo $s['title']?></a>
+                            <a href="?role=client&mod=productDetail&id=<?php echo $s['id'] ?>"><?php echo $s['title']?></a>
                         </h6>
                         <div class="price-box">
                             <span class="price-old"><del><?php echo currency_format($s['price'])?></del></span>
                             <span class="price-regular"><?php echo currency_format($s['promo_price'])?></span>
                         </div>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                        <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $s['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
                     </div>
                     <div class="ratings">
                         <span><i class="fa fa-star"></i></span>
@@ -196,7 +199,7 @@
         <?php foreach($list_featured_product as $f):?>
             <div class="product-item">
                 <div class="product-thumb">
-                    <a href="#">
+                    <a href="?role=client&mod=productDetail&id=<?php echo $f['id'] ?>">
                         <img src="./layout/assets/img/product/<?php echo $f['thumbnail']?>" alt="product thumb">
                     </a>
                     <div class="button-group">
@@ -207,13 +210,13 @@
                 <div class="product-content">
                     <div class="product-caption">
                         <h6 class="product-name">
-                            <a href="#"><?php echo $f['title']?></a>
+                            <a href="?role=client&mod=productDetail&id=<?php echo $f['id'] ?>"><?php echo $f['title']?></a>
                         </h6>
                         <div class="price-box">
                             <span class="price-old"><del><?php echo currency_format($f['price'])?></del></span>
                             <span class="price-regular"><?php echo currency_format($f['promo_price'])?></span>
                         </div>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                        <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $f['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
                     </div>
                     <div class="ratings">
                         <span><i class="fa fa-star"></i></span>

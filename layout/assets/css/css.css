@@ -167,6 +167,9 @@ html a{
     /* text-decoration: none; */
     color: black ;
 }
+.cat ul li a:hover{
+    text-decoration: underline;
+}
 .banner{
     margin-right: 346px;
 }
@@ -359,7 +362,7 @@ main{
     font-size: 18px;
     position: absolute;
     margin-left: 280px;
-    margin-top: -50px;
+    margin-top: -25px;
 }
 .add-to-cart :hover i{
     cursor: pointer;

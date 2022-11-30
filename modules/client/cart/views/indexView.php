@@ -1,4 +1,4 @@
-<?php get_header('', 'Trang giỏ hàng') ?>
+<?php get_header('', '') ?>
 <main>
         <!-- breadcrumb area start -->
         <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="assets/img/banner/shop.jpg">

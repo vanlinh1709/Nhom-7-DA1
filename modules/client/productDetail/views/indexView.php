@@ -61,13 +61,14 @@ get_header('','');
     </div>
 </header>
 <main>
+   
     <div class="product-detail">
         <div class="product-detail-img">
-            <img src="../assets/img/product/product-10.jpg" alt="">
+            <img src="./layout/assets/img/product/<?php echo $product['thumbnail'] ?>" alt="">
         </div>
         <div class="product-detail-infor">
             <div class="product-detail-name">
-                <p>tên sản phẩm</p>
+                <p><?php echo $product['title'] ?></p>
             </div>
             <div class="detail-star">
                 <i class="fa fa-star"></i>
@@ -77,14 +78,14 @@ get_header('','');
                 <i class="fa fa-star"></i>
             </div>
             <div class="product-detail-price">
-                <del>VNĐ 90.000</del><span>VNĐ 70.000</span>
+                <del><?php echo $product['price'] ?></del><span><?php echo $product['promo_price'] ?></span>
             </div>
             <div class="number-in-stock">
                 <i class="fa fa-check"></i>
-                <span>200 IN STOCK</span>
+                <span><?php echo $product['number'] ?> IN STOCK</span>
             </div>
             <div class="detail-des">
-                <span>mô tả sản phẩm ở đây</span>
+                <span><?php echo $product['description'] ?></span>
             </div>
             <div class="quantity">
                 <div class="quantity-text"><span>Qty:</span></div>
@@ -136,15 +137,15 @@ get_header('','');
     <div class="related-product">
         <div class="related-product-title">
             <h3> SẢN PHẨM LIÊN QUAN</h3>
-            <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</p>
         </div>
     </div>
     <div class="product-sale">
         <div class="product-sale-content">
+        <?php foreach($list_related_products as $key): ?>
             <div class="product-item">
                 <div class="product-thumb">
-                    <a href="#">
-                        <img src="../assets/img/product/product-1.jpg" alt="product thumb">
+                    <a href="?role=client&mod=productDetail&id=<?php echo $key['id'] ?>">
+                        <img src="./layout/assets/img/product/<?php echo $key['thumbnail'] ?>" alt="product thumb">
                     </a>
                     <div class="button-group">
                         <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
@@ -154,13 +155,13 @@ get_header('','');
                 <div class="product-content">
                     <div class="product-caption">
                         <h6 class="product-name">
-                            <a href="#">Quickiin Mens shoes</a>
+                            <a href="?role=client&mod=productDetail&id=<?php echo $key['id'] ?>"><?php echo $key['title'] ?></a>
                         </h6>
                         <div class="price-box">
-                            <span class="price-old"><del>$90.00</del></span>
-                            <span class="price-regular">$70.00</span>
+                            <span class="price-old"><del><?php echo $key['price'] ?></del></span>
+                            <span class="price-regular"><?php echo $key['promo_price'] ?></span>
                         </div>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                        <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $key['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
                     </div>
                     <div class="ratings">
                         <span><i class="fa fa-star"></i></span>
@@ -171,156 +172,7 @@ get_header('','');
                     </div>
                 </div>
             </div>
-            <div class="product-item">
-                <div class="product-thumb">
-                    <a href="#">
-                        <img src="../assets/img/product/product-1.jpg" alt="product thumb">
-                    </a>
-                    <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
-                    </div>
-                </div>
-                <div class="product-content">
-                    <div class="product-caption">
-                        <h6 class="product-name">
-                            <a href="#">Quickiin Mens shoes</a>
-                        </h6>
-                        <div class="price-box">
-                            <span class="price-old"><del>$90.00</del></span>
-                            <span class="price-regular">$70.00</span>
-                        </div>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                    </div>
-                    <div class="ratings">
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-thumb">
-                    <a href="#">
-                        <img src="../assets/img/product/product-1.jpg" alt="product thumb">
-                    </a>
-                    <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
-                    </div>
-                </div>
-                <div class="product-content">
-                    <div class="product-caption">
-                        <h6 class="product-name">
-                            <a href="#">Quickiin Mens shoes</a>
-                        </h6>
-                        <div class="price-box">
-                            <span class="price-old"><del>$90.00</del></span>
-                            <span class="price-regular">$70.00</span>
-                        </div>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                    </div>
-                    <div class="ratings">
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-thumb">
-                    <a href="#">
-                        <img src="../assets/img/product/product-1.jpg" alt="product thumb">
-                    </a>
-                    <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
-                    </div>
-                </div>
-                <div class="product-content">
-                    <div class="product-caption">
-                        <h6 class="product-name">
-                            <a href="#">Quickiin Mens shoes</a>
-                        </h6>
-                        <div class="price-box">
-                            <span class="price-old"><del>$90.00</del></span>
-                            <span class="price-regular">$70.00</span>
-                        </div>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                    </div>
-                    <div class="ratings">
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-thumb">
-                    <a href="#">
-                        <img src="../assets/img/product/product-1.jpg" alt="product thumb">
-                    </a>
-                    <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
-                    </div>
-                </div>
-                <div class="product-content">
-                    <div class="product-caption">
-                        <h6 class="product-name">
-                            <a href="#">Quickiin Mens shoes</a>
-                        </h6>
-                        <div class="price-box">
-                            <span class="price-old"><del>$90.00</del></span>
-                            <span class="price-regular">$70.00</span>
-                        </div>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                    </div>
-                    <div class="ratings">
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-thumb">
-                    <a href="#">
-                        <img src="../assets/img/product/product-1.jpg" alt="product thumb">
-                    </a>
-                    <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
-                    </div>
-                </div>
-                <div class="product-content">
-                    <div class="product-caption">
-                        <h6 class="product-name">
-                            <a href="#">Quickiin Mens shoes</a>
-                        </h6>
-                        <div class="price-box">
-                            <span class="price-old"><del>$90.00</del></span>
-                            <span class="price-regular">$70.00</span>
-                        </div>
-                        <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                    </div>
-                    <div class="ratings">
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </main>

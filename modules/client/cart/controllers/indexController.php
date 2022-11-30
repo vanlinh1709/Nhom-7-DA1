@@ -95,3 +95,4 @@ function delCartAction() {
     unset($_SESSION['cart']);
     header('Location: ?role=client&mod=cart');
 }
+load_view('index',compact(''));
