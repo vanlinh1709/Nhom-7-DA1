@@ -123,7 +123,7 @@
             <div class="acte-content">
                 <div class="name-cate">tên danh mục</div>
                 <div class="cate-img">
-                    <img src="./layout/assets/category/category-1.png" alt="">
+                    <img src="/layout/assets/img/category/category-1.png" alt="">
                 </div>
                 <button>xem chi tiết</button>
             </div>

@@ -13,6 +13,9 @@ html a{
     width: 100%;
     margin: auto;
 }
+.containers{
+    text-align: center;
+}
 .header{
     color: #999;
     height: 40px;
@@ -135,6 +138,8 @@ html a{
     text-decoration:underline;
 }
 .category-banner{
+    width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 32px;
@@ -182,8 +187,11 @@ html a{
     font-size: 25px;
     font-weight: 900;
 }
+.voucher img{
+    margin: 30px 10px;
+}
 main{
-    max-width: 1200px;
+    max-width:100%;
     margin-top: 40px;
     margin: auto;
     text-align: center;
@@ -191,6 +199,8 @@ main{
 .main-content{
     /* text-align: center; */
     margin-top: 30px;
+    width: 1200px;
+    margin: auto;
 }
 
 .main-content-tittle h3{
@@ -206,6 +216,8 @@ main{
     line-height: 20px;
 }
 .main-product{
+    width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
@@ -224,7 +236,7 @@ main{
 .product-name{
     font-weight: 600;
     color: #555555;
-    margin: 20px 0 10px 0;
+    padding: 20px 0 10px 0;
     font-size: 30px;
 }
 .product-infor i{
@@ -251,8 +263,38 @@ main{
     font-size: 20px;
     border-radius: 50px;
 }
+.new-arrival-product{
+    padding-bottom: 50px;
+    background-image: url(../img/bg/bg-testimonial.jpg);
+}
+.new-arrival-title{
+    width: 1200px;
+    margin: auto;
+}
+.new-arrival-title h4{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 800;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+.new-arrival-title span{
+    display: inline-block;
+    font-size: 20px;
+    color: #777777;
+    margin: 20px 250px;
+}
+.new-arrival-content{
+    width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap: 32px;
+    margin-bottom: 50px
+}
 .banner-sale{
-    background-color: rgb(243, 239, 239);
+    width: 1200px;
+    margin: auto;
     display: flex;
     margin-top: 40px;
 }
@@ -292,7 +334,64 @@ main{
 .banner-sale-content :hover button{
     background-color: black;
 }
+.categories{
+    height: 675px;
+    margin-top: 50px;
+    background-image: url(../img/bg/bg-listcate.jpg);
+    padding-top: 60px;
+    margin-bottom: 100px;
+}
+.categories-title{
+    width: 1200px;
+    margin: auto;
+    color: #fff;
+}
+.categories-title h4{
+    font-size: 20px;
+    font-weight: 800;
+}
+.categories-title span{
+    font-size: 17px;
+    display: inline-block;
+    margin: 30px 300px;
+    line-height: 25px;
+}
+.categories-main{
+    width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.cate-content{
+    background-image: url(../img/category/cat-bg.jpg);
+}
+.name-cate{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.categories-main button{
+    width: 200px;
+    height: 40px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: #3e3e3e;
+    color: #fff;
+    font-size: 20px;
+}
+.categories-main :hover{
+    background-image: url(../img/category/cat-hover.jpg);
+}
+.cate-content{
+    width: 370px;
+    height: 557px;
+}
+
 .product-sale{
+    width: 1200px;
+    margin: auto;
     padding-bottom: 74px;
     border-bottom: 1px solid #999999;
 }
@@ -319,11 +418,15 @@ main{
 .product-item img{
     width: 100%;
 }
+.product-content{
+    background-color: #ffffff;
+    padding-bottom: 10px;
+
+}
 .product-item {
     border: 1px solid #e5e5e5;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-    padding-bottom: 10px;
   }
   .product-item:hover {
     -webkit-box-shadow: 0 5px 20px 0 rgba(195, 195, 195, 0.6);
@@ -338,7 +441,6 @@ main{
             transform: scale(1);
   }
 .product-caption{
-    margin-top: 10px;
     margin-left: 10px;
 }
 .product-name a{
