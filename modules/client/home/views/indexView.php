@@ -43,11 +43,10 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">HOME <i class="fa fa-angle-down "></i></a></li>
-                    <li><a href="#">PAGE <i class="fa fa-angle-down "></i></a></li>
-                    <li><a href="#">SHOP <i class="fa fa-angle-down "></i></a></li>
-                    <li><a href="#">BLOG <i class="fa fa-angle-down "></i></a></li>
-                    <li><a href="#">CONTACT US </a></li>
+                    <li><a href="#">TRANG CHỦ <i class="fa fa-angle-down "></i></a></li>
+                    <li><a href="#">TIN TỨC <i class="fa fa-angle-down "></i></a></li>
+                    <li><a href="#">VỀ CỬA HÀNG <i class="fa fa-angle-down "></i></a></li>
+                    <li><a href="#">LIÊN HỆ <i class="fa fa-angle-down "></i></a></li>
                 </ul>
             </div>
 </header>
@@ -64,11 +63,6 @@
         </div>
         <div class="banner">
             <img src="./layout/assets/img/slider/home6-slide1.jpg" alt="">
-            <!-- <div class="banner-content">
-                <p>Calzature LOUIS</p>
-                <span>Sneaker Archlight</span>
-                <button>Shop Now</button>
-            </div> -->
         </div>
     </div>
     <div class="main-content">
@@ -111,6 +105,35 @@
             <p>Rexoo Mens shoes</p>
             <span>Investigationes demonstraverunt lectores legere</span>
             <button>Shop Now</button>
+        </div>
+    </div>
+    <div class="categories">
+        <div class="categories-title">
+            <h4>SHOP BY CATEGORIES PULLMAN</h4>
+            <span>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</span>
+        </div>
+        <div class="categories-main">
+            <div class="acte-content">
+                <div class="name-cate">tên danh mục</div>
+                <div class="cate-img">
+                    <img src="./layout/assets/category/category-1.png" alt="">
+                </div>
+                <button>xem chi tiết</button>
+            </div>
+            <div class="acte-content">
+                <div class="name-cate">tên danh mục</div>
+                <div class="cate-img">
+                    <img src="./layout/assets/category/category-1.png" alt="">
+                </div>
+                <button>xem chi tiết</button>
+            </div>
+            <div class="acte-content">
+                <div class="name-cate">tên danh mục</div>
+                <div class="cate-img">
+                    <img src="./layout/assets/category/category-1.png" alt="">
+                </div>
+                <button>xem chi tiết</button>
+            </div>
         </div>
     </div>
     <div class="product-sale">

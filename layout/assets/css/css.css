@@ -173,6 +173,15 @@ html a{
 .banner{
     margin-right: 346px;
 }
+.banner-content{
+    
+    margin-top: -406px;
+    margin-left: 50px;
+}
+.banner-content h4{
+    font-size: 25px;
+    font-weight: 900;
+}
 main{
     max-width: 1200px;
     margin-top: 40px;

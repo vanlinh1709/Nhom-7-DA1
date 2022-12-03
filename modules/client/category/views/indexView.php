@@ -46,11 +46,10 @@ get_header('','');
             </div>
             <div class="menu" style="background-color: #4d4949; ">
                 <ul>
-                    <li><a style="color: #fff;" href="#">HOME <i class="fa fa-angle-down "></i></a></li>
-                    <li><a style="color: #fff;" href="#">PAGE <i class="fa fa-angle-down "></i></a></li>
-                    <li><a style="color: #fff;" href="#">SHOP <i class="fa fa-angle-down "></i></a></li>
-                    <li><a style="color: #fff;" href="#">BLOG <i class="fa fa-angle-down "></i></a></li>
-                    <li><a style="color: #fff;" href="#">CONTACT US </a></li>
+                    <li><a style="color: #fff;" href="#">TRANG CHỦ <i class="fa fa-angle-down "></i></a></li>
+                    <li><a style="color: #fff;" href="#">TIN TỨC <i class="fa fa-angle-down "></i></a></li>
+                    <li><a style="color: #fff;" href="#">VỀ CỬA HÀNG <i class="fa fa-angle-down "></i></a></li>
+                    <li><a style="color: #fff;" href="#">LIÊN HỆ <i class="fa fa-angle-down "></i></a></li>
                 </ul>
             </div>
             <div class="main-detail">

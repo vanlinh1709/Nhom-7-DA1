@@ -23,7 +23,7 @@ get_header('','');
     </div>
     <div class="logo-phone" >
         <div class="logo">
-            <img src="../assets/img/logo/logo-2.png" alt="">
+            <img src="./layout/assets/img/logo/logo-2.png" alt="">
         </div>
 
         <div class="phone">
@@ -45,18 +45,17 @@ get_header('','');
     </div>
     <div class="menu" style="background-color: #4d4949; ">
         <ul>
-            <li><a style="color: #fff;" href="#">HOME <i class="fa fa-angle-down "></i></a></li>
-            <li><a style="color: #fff;" href="#">PAGE <i class="fa fa-angle-down "></i></a></li>
-            <li><a style="color: #fff;" href="#">SHOP <i class="fa fa-angle-down "></i></a></li>
-            <li><a style="color: #fff;" href="#">BLOG <i class="fa fa-angle-down "></i></a></li>
-            <li><a style="color: #fff;" href="#">CONTACT US </a></li>
+            <li><a style="color: #fff;" href="?role=client">TRANG CHỦ <i class="fa fa-angle-down "></i></a></li>
+            <li><a style="color: #fff;" href="#">TIN TỨC <i class="fa fa-angle-down "></i></a></li>
+            <li><a style="color: #fff;" href="#">VỀ CỬA HÀNG <i class="fa fa-angle-down "></i></a></li>
+            <li><a style="color: #fff;" href="#">LIÊN HỆ <i class="fa fa-angle-down "></i></a></li>
         </ul>
     </div>
     <div class="main-detail">
         <div class="detail-banner">
             <p>PRODUCT</p>
-            <a href="./trang-chu.html"><i class="fa fa-home"></i></a>
-            <a href="./shop.html">Shop</a>
+            <a href="?role=client"><i class="fa fa-home"></i></a>
+            <span >Shop</span>
         </div>
     </div>
 </header>
@@ -78,7 +77,7 @@ get_header('','');
                 <i class="fa fa-star"></i>
             </div>
             <div class="product-detail-price">
-                <del><?php echo $product['price'] ?></del><span><?php echo $product['promo_price'] ?></span>
+                <del><?php echo currency_format( $product['price']) ?></del><span><?php echo currency_format( $product['promo_price']) ?></span>
             </div>
             <div class="number-in-stock">
                 <i class="fa fa-check"></i>
