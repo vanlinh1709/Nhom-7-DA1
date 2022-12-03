@@ -65,6 +65,11 @@
             <img src="./layout/assets/img/slider/home6-slide1.jpg" alt="">
         </div>
     </div>
+    <div class="voucher">
+                <img src="../assets/img/banner/cms_3.1.jpg" alt="">
+                <img src="../assets/img/banner/cms_3.2.jpg" alt="">
+                <img src="../assets/img/banner/cms_3.3.jpg" alt="">
+            </div>
     <div class="main-content">
         <div class="main-content-tittle">
             <h3>DEAL OF THE DAYS</h3>
@@ -98,6 +103,104 @@
         </div>                   
         <?php endforeach?>
     </div>
+    <div class="new-arrival-product">
+                <div class="new-arrival-title">
+                    <h4>NEW ARRIVALS PRODUCTS</h4>
+                    <span>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</span>
+                </div>
+                <div class="new-arrival-content">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <a href="#">
+                                <img src="../assets/img/product/product-1.jpg" alt="product thumb">
+                            </a>
+                            <div class="button-group">
+                                <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                               <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-caption">
+                                <h6 class="product-name">
+                                    <a href="#">Quickiin Mens shoes</a>
+                                </h6>
+                                <div class="price-box">
+                                    <span class="price-old"><del>$90.00</del></span>
+                                    <span class="price-regular">$70.00</span>
+                                </div>
+                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                            </div>
+                            <div class="ratings">
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <a href="#">
+                                <img src="../assets/img/product/product-1.jpg" alt="product thumb">
+                            </a>
+                            <div class="button-group">
+                                <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                               <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-caption">
+                                <h6 class="product-name">
+                                    <a href="#">Quickiin Mens shoes</a>
+                                </h6>
+                                <div class="price-box">
+                                    <span class="price-old"><del>$90.00</del></span>
+                                    <span class="price-regular">$70.00</span>
+                                </div>
+                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                            </div>
+                            <div class="ratings">
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <a href="#">
+                                <img src="../assets/img/product/product-1.jpg" alt="product thumb">
+                            </a>
+                            <div class="button-group">
+                                <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                               <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-caption">
+                                <h6 class="product-name">
+                                    <a href="#">Quickiin Mens shoes</a>
+                                </h6>
+                                <div class="price-box">
+                                    <span class="price-old"><del>$90.00</del></span>
+                                    <span class="price-regular">$70.00</span>
+                                </div>
+                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                            </div>
+                            <div class="ratings">
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     <div class="banner-sale">
         <img src="./layout/assets/img/banner/cms_4.png" alt="">
         <div class="banner-sale-content">
@@ -108,34 +211,34 @@
         </div>
     </div>
     <div class="categories">
-        <div class="categories-title">
-            <h4>SHOP BY CATEGORIES PULLMAN</h4>
-            <span>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</span>
-        </div>
-        <div class="categories-main">
-            <div class="acte-content">
-                <div class="name-cate">tên danh mục</div>
-                <div class="cate-img">
-                    <img src="./layout/assets/category/category-1.png" alt="">
+                <div class="categories-title">
+                    <h4>SHOP BY CATEGORIES PULLMAN</h4>
+                    <span>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</span>
                 </div>
-                <button>xem chi tiết</button>
-            </div>
-            <div class="acte-content">
-                <div class="name-cate">tên danh mục</div>
-                <div class="cate-img">
-                    <img src="/layout/assets/img/category/category-1.png" alt="">
+                <div class="categories-main">
+                    <div class="cate-content">
+                        <div class="name-cate">tên danh mục</div>
+                        <div class="cate-img">
+                            <img src="../assets/img/category/category-1.png" alt="">
+                        </div>
+                        <button>xem chi tiết</button>
+                    </div>
+                    <div class="cate-content">
+                        <div class="name-cate">tên danh mục</div>
+                        <div class="cate-img">
+                            <img src="../assets/img/category/category-1.png" alt="">
+                        </div>
+                        <button>xem chi tiết</button>
+                    </div>
+                    <div class="cate-content">
+                        <div class="name-cate">tên danh mục</div>
+                        <div class="cate-img">
+                            <img src="../assets/img/category/category-1.png" alt="">
+                        </div>
+                        <button>xem chi tiết</button>
+                    </div>
                 </div>
-                <button>xem chi tiết</button>
             </div>
-            <div class="acte-content">
-                <div class="name-cate">tên danh mục</div>
-                <div class="cate-img">
-                    <img src="./layout/assets/category/category-1.png" alt="">
-                </div>
-                <button>xem chi tiết</button>
-            </div>
-        </div>
-    </div>
     <div class="product-sale">
         <div class="product-sale-tittle">
             <h3>SẢN PHẨM MỚI NHẤT</h3>
