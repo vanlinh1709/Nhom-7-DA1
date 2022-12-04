@@ -19,5 +19,16 @@ function indexAction() {
     array_splice($list_related_products, $indexOfProduct, 1);
 //    var_dump($list_related_products);
 //    die();
-    load_view('index',compact('product','list_related_products'));
+    $listComments = getCommentsOfProduct($id);
+//    var_dump($listComments);
+    load_view('index',compact('product','list_related_products', 'listComments'));
+}
+function sendCommentPostAction() {
+    $data = $_POST;
+    $name_sender = $_POST['name_sender'];
+    $email_sender = $_POST['email_sender'];
+    $id_sp = $_GET['id_product'];
+    $contents = $_POST['contents'];
+    addComment($name_sender, $email_sender, $id_sp, $contents);
+    header('Location: ?role=client&mod=productDetail&id='.$_GET['id_product']);
 }

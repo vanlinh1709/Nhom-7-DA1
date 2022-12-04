@@ -49,14 +49,14 @@
         </div>
     </section>
     <!-- slider area end -->
-    <div class="voucher">
+    <div class="voucher" style="text-align: center">
                 <img src="./assets/img/banner/cms_3.1.jpg" alt="">
                 <img src="./assets/img/banner/cms_3.2.jpg" alt="">
                 <img src="./assets/img/banner/cms_3.3.jpg" alt="">
             </div>
     <div class="main-content">
         <hr>
-        <div class="main-content-tittle">
+        <div class="main-content-tittle text-center">
             <h2>GIẢM SỐC HÔM NAY</h2>
         </div>
     </div>
@@ -80,7 +80,7 @@
                 <i class="fa fa-star"></i>
                 <div class="price-buy">
                     <div class="product-price"><span><?php echo currency_format($l['price']) ?></span><span></span></div>
-                    <a href="?role=client&mod=productDetail&id=<?php echo $l['id'] ?>">
+                    <a href="?role=client&mod=cart&action=add&id_product=<?php echo $l['id']?>&currentMod=<?php echo get_module()?>">
                     <button>Thêm vào giỏ hàng</button></a>
                 </div>
             </div>
@@ -89,7 +89,7 @@
     </div>
     <div class="new-arrival-product">
                 <div class="new-arrival-title">
-                    <h4 style="font-size: 30px">GỢI Ý CHO BẠN</h4>
+                    <h4 style="font-size: 30px " class="text-center">GỢI Ý CHO BẠN</h4>
                     <br>
                 </div>
                 <div class="new-arrival-content">
@@ -114,7 +114,7 @@
                                         <span class="price-old"><del><?php echo currency_format($p['price'])?></del></span>
                                         <span class="price-regular"><?php echo currency_format($p['promo_price'])?></span>
                                     </div>
-                                    <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
+                                    <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $p['id']?>&currentMod=<?php echo get_module()?>"><i class="fa fa-shopping-cart"></i></a>
                                 </div>
                                 <div class="ratings">
                                     <span><i class="fa fa-star"></i></span>
@@ -154,7 +154,7 @@
                                 <span class="price-old"><del><?php echo currency_format($p['price'])?></del></span>
                                 <span class="price-regular"><?php echo currency_format($p['promo_price'])?></span>
                             </div>
-                            <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
+                            <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $p['id']?>&currentMod=<?php echo get_module()?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                         <div class="ratings">
                             <span><i class="fa fa-star"></i></span>
@@ -193,7 +193,7 @@
                                 <span class="price-old"><del><?php echo currency_format($s['price'])?></del></span>
                                 <span class="price-regular"><?php echo currency_format($s['promo_price'])?></span>
                             </div>
-                            <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $s['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
+                            <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $s['id']?>&currentMod=<?php echo get_module()?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                         <div class="ratings">
                             <span><i class="fa fa-star"></i></span>
@@ -232,7 +232,7 @@
                                 <span class="price-old"><del><?php echo currency_format($f['price'])?></del></span>
                                 <span class="price-regular"><?php echo currency_format($f['promo_price'])?></span>
                             </div>
-                            <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $f['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
+                            <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $f['id']?>&currentMod=<?php echo get_module()?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                         <div class="ratings">
                             <span><i class="fa fa-star"></i></span>
@@ -246,7 +246,7 @@
             <?php endforeach?>
         </div>
     </div>
-    <div class="categories">
+    <div class="categories text-center">
                 <div class="categories-title">
                     <h2>GIÀY TỪ THƯƠNG HIỆU NỔI TIẾNG</h2>
                     <br>
