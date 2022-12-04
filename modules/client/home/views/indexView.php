@@ -1,55 +1,5 @@
 <?php get_header('', '')?>
-<header>
-            <div class="header">
-                <div class="information">
-                    <div class="contact">
-                        <i class="fa fa-facebook"></i>
-                        <i class="fa fa-twitter"></i>
-                        <i class="fa fa-instagram"></i>
-                        <i class="fa fa-pinterest"></i>
-                    </div>
 
-                    <div class="menu-header">
-                        <i class="fa fa-user-circle"></i>
-                        <a href="#"><span>My Account</span></a>
-                        <i class="fa fa-credit-card"></i>
-                        <a href="#"><span>Checkout</span></a>
-                        <i class="fa fa-sign-in"></i>
-                        <a href="#"><span>Sign in</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="logo-phone">
-                <div class="logo">
-                    <img src="./layout/assets/img/logo/logo-2.png" alt="">
-                </div>
-
-                <div class="phone">
-                    <div class="phone-icon">
-                        <i class="fa fa-phone"></i>
-                    </div>
-                    <div class="my-phone">
-                        <p>PHONE:</p>
-                        <span>0123456789</span>
-                    </div>
-                </div>
-                <div class="search">
-                    <input type="text" placeholder="Search Our Catalog">
-                    <button><i class="fa fa-search"></i></button>
-                </div>
-                <div class="cart">
-                    <button><i class="fa fa-cart-plus	"></i></button>
-                </div>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">TRANG CHỦ <i class="fa fa-angle-down "></i></a></li>
-                    <li><a href="#">TIN TỨC <i class="fa fa-angle-down "></i></a></li>
-                    <li><a href="#">VỀ CỬA HÀNG <i class="fa fa-angle-down "></i></a></li>
-                    <li><a href="#">LIÊN HỆ <i class="fa fa-angle-down "></i></a></li>
-                </ul>
-            </div>
-</header>
 <main>
     
     <div class="category-banner">
