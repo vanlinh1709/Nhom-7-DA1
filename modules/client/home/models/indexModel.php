@@ -24,6 +24,6 @@ function get_list_slide_and_product_name() {
     return pdo_query($sql);
 }
 function get_list_salest_products() {
-    $sql = 'SELECT * FROM products ORDER BY products.promo_price/products.price  LIMIT 3';
+    $sql = 'SELECT * FROM products ORDER BY products.promo_price/products.price  LIMIT 2';
     return pdo_query($sql);
 }
