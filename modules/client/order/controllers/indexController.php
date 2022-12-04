@@ -53,3 +53,6 @@ function successOrderAction() {
     $_SESSION['cart'] = [];
     load_view('successOrder');
 }
+function showMyOrderAction() {
+    load_view('buyedOrder');
+}
