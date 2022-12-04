@@ -1,65 +1,7 @@
 <?php
 get_header('','');
 ?>
-<div class="container">
-        <header>
-            <div class="header">
-                <div class="information">
-                    <div class="contact">
-                        <i class="fa fa-facebook"></i>
-                        <i class="fa fa-twitter"></i>
-                        <i class="fa fa-instagram"></i>
-                        <i class="fa fa-pinterest"></i>
-                    </div>
 
-                    <div class="menu-header">
-                        <i class="fa fa-user-circle"></i>
-                        <a href="#"><span>My Account</span></a>
-                        <i class="fa fa-credit-card"></i>
-                        <a href="#"><span>Checkout</span></a>
-                        <i class="fa fa-sign-in"></i>
-                        <a href="#"><span>Sign in</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="logo-phone" >
-                <div class="logo">
-                    <img src="./layout/assets/img/logo/logo-2.png" alt="">
-                </div>
-
-                <div class="phone">
-                    <div class="phone-icon">
-                        <i class="fa fa-phone"></i>
-                    </div>
-                    <div class="my-phone">
-                        <p>PHONE:</p>
-                        <span>0123456789</span>
-                    </div>
-                </div>
-                <div class="search">
-                    <input type="text" placeholder="Search Our Catalog">
-                    <button><i class="fa fa-search"></i></button>
-                </div>
-                <div class="cart">
-                    <button><i class="fa fa-cart-plus	"></i></button>
-                </div>
-            </div>
-            <div class="menu" style="background-color: #4d4949; ">
-                <ul>
-                    <li><a style="color: #fff;" href="#">TRANG CHỦ <i class="fa fa-angle-down "></i></a></li>
-                    <li><a style="color: #fff;" href="#">TIN TỨC <i class="fa fa-angle-down "></i></a></li>
-                    <li><a style="color: #fff;" href="#">VỀ CỬA HÀNG <i class="fa fa-angle-down "></i></a></li>
-                    <li><a style="color: #fff;" href="#">LIÊN HỆ <i class="fa fa-angle-down "></i></a></li>
-                </ul>
-            </div>
-            <div class="main-detail">
-                <div class="detail-banner">
-                    <p>list product</p>
-                    <a href="./trang-chu.html"><i class="fa fa-home"></i></a>
-                    <a href="./shop.html">Shop</a>
-                </div>
-            </div>
-        </header>
         <main>
             <div class="product-sale">
                 <div class="product-list-title">

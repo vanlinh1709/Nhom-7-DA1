@@ -1,29 +1,63 @@
 <?php get_header('', '')?>
 
 <main>
-    
-    <div class="category-banner">
-        <div class="cat">
-            <h3>CATEGORIES</h3>
-            <ul>
-                <?php foreach($categories as $c):?>
-                    <li><a href="?role=client&mod=category&id=<?php echo $c['id'] ?>"><?php echo $c['cate_name']?></a></li>
-                <?php endforeach?>
-            </ul>
+
+    <!-- slider area start -->
+    <section class="hero-slider hero-slider--style-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="category-toggle-wrap categories-style-5">
+                        <div class="category-toggle">
+                            Danh mục sản phẩm
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <nav class="category-menu">
+                            <ul class="categories-list">
+                                <?php foreach($categories as $c):?>
+                                    <li class="menu-item-has-children"><a href="?role=client&mod=category&id=<?php echo $c['id']?>"><?php echo $c['cate_name']?></a>
+                                    </li>
+                                <?php endforeach;?>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
+                        <!-- single slider item start -->
+                        <?php foreach ($list_slide_show as $ls):?>
+                            <div class="hero-single-slide">
+                                <div class="hero-slider-item bg-img" data-bg="./public/uploads/images/slideshow/<?php echo $ls['slideshow_img']?>">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="hero-slider-content slide-1 row">
+                                                    <div class="col-md-7">
+                                                        <h6 class="slide-title text-white"><?php echo $ls['title']?></h6>
+                                                        <a href="?role=client&mod=productDetail&id=<?php echo $ls['id']?>" class="btn btn-large btn-bg">MUA NGAY</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach?>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="banner">
-            <img src="./layout/assets/img/slider/home6-slide1.jpg" alt="">
-        </div>
-    </div>
+    </section>
+    <!-- slider area end -->
     <div class="voucher">
-                <img src="../assets/img/banner/cms_3.1.jpg" alt="">
-                <img src="../assets/img/banner/cms_3.2.jpg" alt="">
-                <img src="../assets/img/banner/cms_3.3.jpg" alt="">
+                <img src="./assets/img/banner/cms_3.1.jpg" alt="">
+                <img src="./assets/img/banner/cms_3.2.jpg" alt="">
+                <img src="./assets/img/banner/cms_3.3.jpg" alt="">
             </div>
     <div class="main-content">
+        <hr>
         <div class="main-content-tittle">
-            <h3>DEAL OF THE DAYS</h3>
-            <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</p>
+            <h2>GIẢM SỐC HÔM NAY</h2>
         </div>
     </div>
     <div class="main-product">
@@ -45,9 +79,9 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <div class="price-buy">
-                    <div class="product-price"><span><?php echo $l['price'] ?></span><span>VNĐ</span></div>
+                    <div class="product-price"><span><?php echo currency_format($l['price']) ?></span><span></span></div>
                     <a href="?role=client&mod=productDetail&id=<?php echo $l['id'] ?>">
-                    <button>Add To Cart</button></a>
+                    <button>Thêm vào giỏ hàng</button></a>
                 </div>
             </div>
         </div>                   
@@ -55,138 +89,44 @@
     </div>
     <div class="new-arrival-product">
                 <div class="new-arrival-title">
-                    <h4>NEW ARRIVALS PRODUCTS</h4>
-                    <span>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</span>
+                    <h4 style="font-size: 30px">GỢI Ý CHO BẠN</h4>
+                    <br>
                 </div>
                 <div class="new-arrival-content">
-                    <div class="product-item">
-                        <div class="product-thumb">
-                            <a href="#">
-                                <img src="../assets/img/product/product-1.jpg" alt="product thumb">
-                            </a>
-                            <div class="button-group">
-                                <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                               <a href="#"><span><i class="fa fa-eye"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-caption">
-                                <h6 class="product-name">
-                                    <a href="#">Quickiin Mens shoes</a>
-                                </h6>
-                                <div class="price-box">
-                                    <span class="price-old"><del>$90.00</del></span>
-                                    <span class="price-regular">$70.00</span>
+                    <?php foreach($list_newest_product as $index => $p):?>
+                    <?php if($index == 3) break?>
+                        <div class="product-item">
+                            <div class="product-thumb">
+                                <a href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>">
+                                    <img src="./layout/assets/img/product/<?php echo $p['thumbnail']?>" alt="product thumb">
+                                </a>
+                                <div class="button-group">
+                                    <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                                    <a href="#"><span><i class="fa fa-eye"></i></span></a>
                                 </div>
-                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
                             </div>
-                            <div class="ratings">
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-thumb">
-                            <a href="#">
-                                <img src="../assets/img/product/product-1.jpg" alt="product thumb">
-                            </a>
-                            <div class="button-group">
-                                <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                               <a href="#"><span><i class="fa fa-eye"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-caption">
-                                <h6 class="product-name">
-                                    <a href="#">Quickiin Mens shoes</a>
-                                </h6>
-                                <div class="price-box">
-                                    <span class="price-old"><del>$90.00</del></span>
-                                    <span class="price-regular">$70.00</span>
+                            <div class="product-content">
+                                <div class="product-caption">
+                                    <h6 class="product-name">
+                                        <a href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>"><?php echo $p['title']?></a>
+                                    </h6>
+                                    <div class="price-box">
+                                        <span class="price-old"><del><?php echo currency_format($p['price'])?></del></span>
+                                        <span class="price-regular"><?php echo currency_format($p['promo_price'])?></span>
+                                    </div>
+                                    <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
                                 </div>
-                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                            </div>
-                            <div class="ratings">
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-thumb">
-                            <a href="#">
-                                <img src="../assets/img/product/product-1.jpg" alt="product thumb">
-                            </a>
-                            <div class="button-group">
-                                <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                               <a href="#"><span><i class="fa fa-eye"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-caption">
-                                <h6 class="product-name">
-                                    <a href="#">Quickiin Mens shoes</a>
-                                </h6>
-                                <div class="price-box">
-                                    <span class="price-old"><del>$90.00</del></span>
-                                    <span class="price-regular">$70.00</span>
+                                <div class="ratings">
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
                                 </div>
-                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                            </div>
-                            <div class="ratings">
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
-                                <span><i class="fa fa-star"></i></span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-    <div class="banner-sale">
-        <img src="./layout/assets/img/banner/cms_4.png" alt="">
-        <div class="banner-sale-content">
-            <h2>Sale</h2>
-            <p>Rexoo Mens shoes</p>
-            <span>Investigationes demonstraverunt lectores legere</span>
-            <button>Shop Now</button>
-        </div>
-    </div>
-    <div class="categories">
-                <div class="categories-title">
-                    <h4>SHOP BY CATEGORIES PULLMAN</h4>
-                    <span>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</span>
-                </div>
-                <div class="categories-main">
-                    <div class="cate-content">
-                        <div class="name-cate">tên danh mục</div>
-                        <div class="cate-img">
-                            <img src="../assets/img/category/category-1.png" alt="">
-                        </div>
-                        <button>xem chi tiết</button>
-                    </div>
-                    <div class="cate-content">
-                        <div class="name-cate">tên danh mục</div>
-                        <div class="cate-img">
-                            <img src="../assets/img/category/category-1.png" alt="">
-                        </div>
-                        <button>xem chi tiết</button>
-                    </div>
-                    <div class="cate-content">
-                        <div class="name-cate">tên danh mục</div>
-                        <div class="cate-img">
-                            <img src="../assets/img/category/category-1.png" alt="">
-                        </div>
-                        <button>xem chi tiết</button>
-                    </div>
+                    <?php endforeach?>
+
                 </div>
             </div>
     <div class="product-sale">
@@ -194,116 +134,158 @@
             <h3>SẢN PHẨM MỚI NHẤT</h3>
         </div>
         <div class="product-sale-content">
-        <?php foreach($list_newest_product as $p):?>
-            <div class="product-item">
-                <div class="product-thumb">
-                    <a href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>">
-                        <img src="./layout/assets/img/product/<?php echo $p['thumbnail']?>" alt="product thumb">
-                    </a>
-                    <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
-                    </div>
-                </div>
-                <div class="product-content">
-                    <div class="product-caption">
-                        <h6 class="product-name">
-                            <a href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>"><?php echo $p['title']?></a>
-                        </h6>
-                        <div class="price-box">
-                            <span class="price-old"><del><?php echo currency_format($p['price'])?></del></span>
-                            <span class="price-regular"><?php echo currency_format($p['promo_price'])?></span>
+            <?php foreach($list_newest_product as $p):?>
+                <div class="product-item">
+                    <div class="product-thumb">
+                        <a href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>">
+                            <img src="./layout/assets/img/product/<?php echo $p['thumbnail']?>" alt="product thumb">
+                        </a>
+                        <div class="button-group">
+                            <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                            <a href="#"><span><i class="fa fa-eye"></i></span></a>
                         </div>
-                        <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
                     </div>
-                    <div class="ratings">
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
+                    <div class="product-content">
+                        <div class="product-caption">
+                            <h6 class="product-name">
+                                <a href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>"><?php echo $p['title']?></a>
+                            </h6>
+                            <div class="price-box">
+                                <span class="price-old"><del><?php echo currency_format($p['price'])?></del></span>
+                                <span class="price-regular"><?php echo currency_format($p['promo_price'])?></span>
+                            </div>
+                            <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $p['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
+                        </div>
+                        <div class="ratings">
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php endforeach?>
         </div>
     </div>
     <div class="product-sale">
         <div class="product-sale-tittle">
-            <h3>SẢN PHẨM SALE</h3>
+            <h3>SẢN PHẨM BÁN CHẠY NHẤT</h3>
         </div>
         <div class="product-sale-content">
-        <?php foreach($list_bestseller_product as $s):?>
-            <div class="product-item">
-                <div class="product-thumb">
-                    <a href="?role=client&mod=productDetail&id=<?php echo $s['id'] ?>">
-                        <img src="./layout/assets/img/product/<?php echo $s['thumbnail']?>" alt="product thumb">
-                    </a>
-                    <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
-                    </div>
-                </div>
-                <div class="product-content">
-                    <div class="product-caption">
-                        <h6 class="product-name">
-                            <a href="?role=client&mod=productDetail&id=<?php echo $s['id'] ?>"><?php echo $s['title']?></a>
-                        </h6>
-                        <div class="price-box">
-                            <span class="price-old"><del><?php echo currency_format($s['price'])?></del></span>
-                            <span class="price-regular"><?php echo currency_format($s['promo_price'])?></span>
+            <?php foreach($list_bestseller_product as $s):?>
+                <div class="product-item">
+                    <div class="product-thumb">
+                        <a href="?role=client&mod=productDetail&id=<?php echo $s['id'] ?>">
+                            <img src="./layout/assets/img/product/<?php echo $s['thumbnail']?>" alt="product thumb">
+                        </a>
+                        <div class="button-group">
+                            <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                            <a href="#"><span><i class="fa fa-eye"></i></span></a>
                         </div>
-                        <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $s['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
                     </div>
-                    <div class="ratings">
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
+                    <div class="product-content">
+                        <div class="product-caption">
+                            <h6 class="product-name">
+                                <a href="?role=client&mod=productDetail&id=<?php echo $s['id'] ?>"><?php echo $s['title']?></a>
+                            </h6>
+                            <div class="price-box">
+                                <span class="price-old"><del><?php echo currency_format($s['price'])?></del></span>
+                                <span class="price-regular"><?php echo currency_format($s['promo_price'])?></span>
+                            </div>
+                            <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $s['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
+                        </div>
+                        <div class="ratings">
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php endforeach?>
         </div>
     </div>
     <div class="product-sale">
         <div class="product-sale-tittle">
-            <h3>SẢN PHẨM BÁN CHẠY</h3>
+            <h3>SẢN PHẨM ĐƯỢC YÊU THÍCH NHẤT</h3>
         </div>
         <div class="product-sale-content">
-        <?php foreach($list_featured_product as $f):?>
-            <div class="product-item">
-                <div class="product-thumb">
-                    <a href="?role=client&mod=productDetail&id=<?php echo $f['id'] ?>">
-                        <img src="./layout/assets/img/product/<?php echo $f['thumbnail']?>" alt="product thumb">
-                    </a>
-                    <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
+            <?php foreach($list_featured_product as $f):?>
+                <div class="product-item">
+                    <div class="product-thumb">
+                        <a href="?role=client&mod=productDetail&id=<?php echo $f['id'] ?>">
+                            <img src="./layout/assets/img/product/<?php echo $f['thumbnail']?>" alt="product thumb">
+                        </a>
+                        <div class="button-group">
+                            <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                            <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-caption">
+                            <h6 class="product-name">
+                                <a href="?role=client&mod=productDetail&id=<?php echo $f['id'] ?>"><?php echo $f['title']?></a>
+                            </h6>
+                            <div class="price-box">
+                                <span class="price-old"><del><?php echo currency_format($f['price'])?></del></span>
+                                <span class="price-regular"><?php echo currency_format($f['promo_price'])?></span>
+                            </div>
+                            <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $f['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
+                        </div>
+                        <div class="ratings">
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                        </div>
                     </div>
                 </div>
-                <div class="product-content">
-                    <div class="product-caption">
-                        <h6 class="product-name">
-                            <a href="?role=client&mod=productDetail&id=<?php echo $f['id'] ?>"><?php echo $f['title']?></a>
-                        </h6>
-                        <div class="price-box">
-                            <span class="price-old"><del><?php echo currency_format($f['price'])?></del></span>
-                            <span class="price-regular"><?php echo currency_format($f['promo_price'])?></span>
+            <?php endforeach?>
+        </div>
+    </div>
+    <div class="categories">
+                <div class="categories-title">
+                    <h2>GIÀY TỪ THƯƠNG HIỆU NỔI TIẾNG</h2>
+                    <br>
+                </div>
+                <div class="categories-main">
+                    <div class="cate-content">
+                        <div class="name-cate">Nike</div>
+                        <div class="cate-img">
+                            <img src="./assets/img/category/category-1.png" alt="">
                         </div>
-                        <a class="add-to-cart" href="?role=client&mod=productDetail&id=<?php echo $f['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
+                        <br><a class="shop-btn" href="?role=client&mod=category&brand_id=1">XEM DANH MUC</a>
+
                     </div>
-                    <div class="ratings">
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
-                        <span><i class="fa fa-star"></i></span>
+                    <div class="cate-content">
+                        <div class="name-cate">Adidas</div>
+                        <div class="cate-img">
+                            <img src="./assets/img/category/category-2.png" alt="">
+                        </div>
+                        <br><a class="shop-btn" href="?role=client&mod=category&brand_id=2">XEM DANH MUC</a>
+
+                    </div>
+                    <div class="cate-content">
+                        <div class="name-cate">Pulma</div>
+                        <div class="cate-img">
+                            <img src="./assets/img/category/category-3.png" alt="">
+                        </div>
+                        <br>
+                        <a class="shop-btn" href="?role=client&mod=category&brand_id=3">XEM DANH MUC</a>
+
                     </div>
                 </div>
             </div>
-            <?php endforeach?>
+
+    <div class="banner-sale">
+        <img src="./layout/assets/img/banner/cms_4.png" alt="">
+        <div class="banner-sale-content">
+            <h2>Giảm 50%</h2>
+            <p>GIÀY NIKE METCON 8</p>
+            <button>Đặt ngay</button>
         </div>
     </div>
 </main>

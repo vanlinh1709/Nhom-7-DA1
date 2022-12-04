@@ -1,99 +1,147 @@
-<footer>
-            <div  class="footer-container">
-                <div class="footer-title">
-                    <p>JOIN OUR NEWSLETTER</p>
-                    <form>
-                        <input type="email" class="news-field" id="mc-email" autocomplete="off"
-                            placeholder="Enter your email address">
-                        <button class="news-btn" id="mc-submit">Subscribe</button>
-                    </form>
-                    <h6>To get the latest news from us please subscribe your email.</h6>
-                </div>
-                <div class="footer-main">
-                    <div class="footer-category">
-                        <h6>CUSTOM LINKS</h6>
-                        <ul class="usefull-links">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Order Status</a></li>
-                            <li><a href="#">Returns & Exchanges</a></li>
-                            <li><a href="#">Size Guide</a></li>
-                            <li><a href="#">Cart</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-category">
-                        <h6>PRODUCTS</h6>
-                        <ul class="usefull-links">
-                            <li><a href="#">Prices drop</a></li>
-                            <li><a href="#">New products</a></li>
-                            <li><a href="#">Best sales</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Sitemap</a></li>
-                            <li><a href="#">Stores</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-category">
-                        <h6>OUR COMPANY</h6>
-                        <ul class="usefull-links">
-                            <li><a href="#">Delivery</a></li>
-                            <li><a href="#">Legal Notice</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Secure payment</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Sitemap</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-category">
-                        <h6>YOUR ACCOUNT</h6>
-                        <ul class="usefull-links">
-                            <li><a href="#">Personal info</a></li>
-                            <li><a href="#">Orders</a></li>
-                            <li><a href="#">Credit slips</a></li>
-                            <li><a href="#">Addresses</a></li>
-                            <li><a href="#">Stores</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-middle-area">
-                    <div class="footer-logo">
-                        <a href="index.html">
-                            <img src="./layout/assets/img/logo/logo.png" alt="Brand Logo">
-                        </a>
-                    </div>
-                    <div class="footer-contact">
-                        <i class="fa fa-map-marker"></i>
-                        <p><span>ADDRESS : </span> Your address goes here</p>
 
-                    </div>
-                    <div class="footer-contact">
-                        <i class="fa fa-envelope"></i>
-                        <p><span>EMAIL : </span>demo@examplecom</p>
-                    </div>
-                    <div class="footer-contact">
-                        <i class="fa fa-phone"></i>
-                        <p><span>PHONE : </span>0123456789</p>
-                    </div>
-                </div>
-                <div class="footer-payment">
-                    <div class="payment">
-                        <img src="./layout/assets/img/payment-2.png" alt="payment method">
-                    </div>
-                    <div class="footer-link">
-                        <a href="#">SITE MAP</a>
-                        <a href="#">SEARCH TERMS</a>
-                        <a href="#">ADVANCED SEARCH</a>
-                        <a href="#">ORDERS AND RETURNS</a>
-                        <a href="#">CONTACT US</a>
-                    </div>
-                    <div class="copyright">
-                        <p>© 2021 <b >Pullman</b> Made with <i class="fa fa-heart text-danger"></i> by <a
-                                href="https://hasthemes.com/">HasThemes</a></p>
+<!-- footer area start -->
+<footer class="black-bg">
+    <!-- newsletter area start -->
+    <section class="newsletter-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsletter-wrapper text-center">
+                        <h3 class="title text-white">ĐĂNG KÝ NHẬN KHUYẾN MÃI</h3>
+                        <form class="newsletter-inner" id="mc-form">
+                            <input type="email" class="news-field" id="mc-email" autocomplete="off" placeholder="Nhập địa chỉ email">
+                            <button class="news-btn" id="mc-submit">Gửi</button>
+                        </form>
+                        <h6 class="newsletter-subtitle">Để nhận được những khuyến mãi khủng nhất hãy đăng ký email với chúng tôi</h6>
+                        <!-- mailchimp-alerts Start -->
+                        <div class="mailchimp-alerts">
+                            <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                            <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                            <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                        </div>
+                        <!-- mailchimp-alerts end -->
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
+    <!-- newsletter area end -->
+    <div class="footer-widget-area">
+        <div class="container">
+            <div class="row mtn-30">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget-item mt-30">
+                        <h6 class="widget-title">HỖ TRỢ KHÁCH HÀNG</h6>
+                        <ul class="usefull-links">
+                            <li><a href="#">Chính sách vận chuyển</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                            <li><a href="#">Quy định hình thức thanh toán</a></li>
+                            <li><a href="#">Bảo hành sản phẩm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget-item mt-30">
+                        <h6 class="widget-title">SẢN PHẨM</h6>
+                        <ul class="usefull-links">
+                            <li><a href="#">Sản phẩm mới nập</a></li>
+                            <li><a href="#">Sản phẩm bán chạy</a></li>
+                            <li><a href="#">Sản phẩm nổi bật</a></li>
+                            <li><a href="#">Giày Nike</a></li>
+                            <li><a href="#">Giày Adidas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget-item mt-30">
+                        <h6 class="widget-title">VỀ SHOP</h6>
+                        <ul class="usefull-links">
+                            <li><a href="#">Vận chuyển</a></li>
+                            <li><a href="#">Legal Notice</a></li>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Bảo mật thanh toán</a></li>
+                            <li><a href="#">Liên hệ với chúng tôi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget-item mt-30">
+                        <h6 class="widget-title">TÀI KHOẢN CỦA BẠN</h6>
+                        <ul class="usefull-links">
+                            <li><a href="#">Thông tin cá nhân</a></li>
+                            <li><a href="#">Đơn hàng đã đặt</a></li>
+                            <li><a href="#">Sản phẩm yêu thích</a></li>
+                            <li><a href="#">Khuyến mãi dành riêng</a></li>
+                            <li><a href="#">Địa chỉ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-middle-area">
+        <div class="container">
+            <div class="row mtn-30">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="address-block mt-30">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <address class="address-info d-flex align-items-center">
+                            <i class="fa fa-map-marker"></i>
+                            <p><span>ĐỊA CHỈ :  </span><?php echo $data['address']?></p>
+                        </address>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <address class="address-info email mt-30">
+                        <i class="fa fa-envelope"></i>
+                        <p><span>EMAIL : </span><a href="emailto:demo@examplecom"><?php echo $data['email']?></a></p>
+                    </address>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <address class="address-info email mt-30">
+                        <i class="fa fa-phone"></i>
+                        <p><span>ĐIỆN THOẠI : </span><a href="tel:0123456789"><?php echo $data['phone']?></a></p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer area end -->
+<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+<!-- jQuery JS -->
+<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+<!-- slick Slider JS -->
+<script src="assets/js/plugins/slick.min.js"></script>
+<!-- Countdown JS -->
+<script src="assets/js/plugins/countdown.min.js"></script>
+<!-- Nice Select JS -->
+<script src="assets/js/plugins/nice-select.min.js"></script>
+<!-- jquery UI JS -->
+<script src="assets/js/plugins/jqueryui.min.js"></script>
+<!-- Image zoom JS -->
+<script src="assets/js/plugins/image-zoom.min.js"></script>
+<!-- image loaded js -->
+<script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+<!-- masonry  -->
+<script src="assets/js/plugins/masonry.pkgd.min.js"></script>
+<!-- mailchimp active js -->
+<script src="assets/js/plugins/ajaxchimp.js"></script>
+<!-- contact form dynamic js -->
+<script src="assets/js/plugins/ajax-mail.js"></script>
+<!-- google map api -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
+<!-- google map active js -->
+<script src="assets/js/plugins/google-map.js"></script>
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>

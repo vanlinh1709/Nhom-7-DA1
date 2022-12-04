@@ -12,65 +12,198 @@
     <link rel="stylesheet" href="./layout/assets/css/css.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title><?php echo $title?></title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,700,800,900%7CPoppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/plugins/animate.css">
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <!-- jquery UI css -->
+    <link rel="stylesheet" href="assets/css/plugins/jqueryui.min.css">
+    <!-- main style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div class="header">
-                <div class="information">
-                    <div class="contact">
-                        <i class="fa fa-facebook"></i>
-                        <i class="fa fa-twitter"></i>
-                        <i class="fa fa-instagram"></i>
-                        <i class="fa fa-pinterest"></i>
-                    </div>
+<!-- Start Header Area -->
+<header class="header-area header-style__3 header-box header-box__3">
+    <!-- main header start -->
+    <div class="main-header d-none d-lg-block">
+        <!-- header top start -->
+        <div class="header-top p-0 black-bg">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="header-social-link">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 d-flex justify-content-end">
+                                <div class="top-left-navigation pl-0">
 
-                    <div class="menu-header">
-                        <a href="#"><i class="fa fa-user-circle"></i><span class="text-info"><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : ''?></span></a>
-                        <a href="?role=admin" target="_blank" class="text-warning">
-                            <?php echo is_admin() == true ? 'Trang quản trị' : ''?>
-                        </a>
-                        <a href="?role=client&mod=signUp" <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>><i class="fa fa-credit-card" ></i>Đăng ký</a>
-                        <a<?php echo is_admin() ? 'hidden' : ''?> href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=auth&controller=logOut' : '?role=client&mod=auth'?>">
-                             <i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Đăng xuất' : 'Đăng nhập'?></a>
+                                </div>
+                                <ul class="user-info-block">
+                                    <li><a href="?role=admin" target="_blank" class="text-warning">
+                                            <?php echo is_admin() == true ? 'Trang quản trị' : ''?>
+                                        </a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-user-circle"></i><span class="text-info"><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : ''?></span></a></li>
+                                    <li <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>><a href="?role=client&mod=signUp"><i class="fa fa-credit-card" ></i>Đăng ký</a></li>
 
+                                    <li <?php echo is_admin() ? 'hidden' : ''?>><a href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=auth&controller=logOut' : '?role=client&mod=auth'?>"><i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Đăng xuất' : 'Đăng nhập'?></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="logo-phone">
-                <div class="logo">
-                    <img src="./layout/assets/img/logo/logo-2.png" alt="">
-                </div>
+        </div>
+        <!-- header top end -->
 
-                <div class="phone">
-                    <div class="phone-icon">
-                        <i class="fa fa-phone"></i>
+        <!-- header middle area start -->
+        <div class="header-middle-area p-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="white-bg">
+                            <div class="row">
+                                <!-- start logo area -->
+                                <div class="col-lg-4">
+                                    <div class="logo-2">
+                                        <a href="?role=client">
+                                            <img src="assets/img/logo/logo-2.png" alt="Brand Logo">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- start logo area -->
+
+                                <!-- mini cart area start -->
+                                <div class="col-lg-8">
+                                    <div class="header-right">
+                                        <div class="header-configure-area">
+                                            <ul class="nav justify-content-between">
+                                                <li class="header-call d-flex align-items-center">
+                                                    <div class="call-icon">
+                                                        <i class="fa fa-phone"></i>
+                                                    </div>
+                                                    <span>ĐIỆN THOẠI: <?php echo $data['phone']?><a href="tel:0123456789"></a></span>
+                                                </li>
+                                                <li class="search-wrapper-inner">
+                                                    <form class="search-box-2">
+                                                        <input type="text" class="search-field-2" placeholder="Tìm kiếm sản phẩm">
+                                                        <button class="search-btn-2"><i class="fa fa-search"></i></button>
+                                                    </form>
+                                                </li>
+                                                <li class="mini-cart-wrap">
+                                                    <a href="?role=client&mod=cart" class="minicart-btn minicart-btn-style_2">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                        <span class="notification"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?></span>
+                                                    </a>
+                                                    <!--                                                    <div class="cart-list-wrapper">-->
+                                                    <!--                                                        <ul class="cart-list">-->
+                                                    <!--                                                            <li>-->
+                                                    <!--                                                                <div class="cart-img">-->
+                                                    <!--                                                                    <a href="product-details.html"><img src="assets/img/cart/cart-1.jpg" alt=""></a>-->
+                                                    <!--                                                                </div>-->
+                                                    <!--                                                                <div class="cart-info">-->
+                                                    <!--                                                                    <h6 class="product-name"><a href="product-details.html">7th Generation classic</a></h6>-->
+                                                    <!--                                                                    <span class="cart-qty">Qty: 1</span>-->
+                                                    <!--                                                                    <span class="item-price">$60.00</span>-->
+                                                    <!--                                                                </div>-->
+                                                    <!--                                                                <div class="del-icon">-->
+                                                    <!--                                                                    <i class="fa fa-times"></i>-->
+                                                    <!--                                                                </div>-->
+                                                    <!--                                                            </li>-->
+                                                    <!--                                                            <li>-->
+                                                    <!--                                                                <div class="cart-img">-->
+                                                    <!--                                                                    <a href="product-details.html"><img src="assets/img/cart/cart-2.jpg" alt=""></a>-->
+                                                    <!--                                                                </div>-->
+                                                    <!--                                                                <div class="cart-info">-->
+                                                    <!--                                                                    <h6 class="product-name"><a href="product-details.html">Digital 8th generation</a></h6>-->
+                                                    <!--                                                                    <span class="cart-qty">Qty: 2</span>-->
+                                                    <!--                                                                    <span class="item-price">$70.00</span>-->
+                                                    <!--                                                                </div>-->
+                                                    <!--                                                                <div class="del-icon">-->
+                                                    <!--                                                                    <i class="fa fa-times"></i>-->
+                                                    <!--                                                                </div>-->
+                                                    <!--                                                            </li>-->
+                                                    <!--                                                        </ul>-->
+                                                    <!--                                                        <ul class="minicart-pricing-box">-->
+                                                    <!--                                                            <li>-->
+                                                    <!--                                                                <span>Sub-Total</span>-->
+                                                    <!--                                                                <span><strong>$300.00</strong></span>-->
+                                                    <!--                                                            </li>-->
+                                                    <!--                                                            <li>-->
+                                                    <!--                                                                <span>Eco Tax (-2.00)</span>-->
+                                                    <!--                                                                <span><strong>$10.00</strong></span>-->
+                                                    <!--                                                            </li>-->
+                                                    <!--                                                            <li>-->
+                                                    <!--                                                                <span>VAT (20%)</span>-->
+                                                    <!--                                                                <span><strong>$60.00</strong></span>-->
+                                                    <!--                                                            </li>-->
+                                                    <!--                                                            <li class="total">-->
+                                                    <!--                                                                <span>Total</span>-->
+                                                    <!--                                                                <span><strong>$370.00</strong></span>-->
+                                                    <!--                                                            </li>-->
+                                                    <!--                                                        </ul>-->
+                                                    <!--                                                        <div class="minicart-button">-->
+                                                    <!--                                                            <a href="cart.html"><i class="fa fa-shopping-cart"></i> View Cart</a>-->
+                                                    <!--                                                            <a href="cart.html"><i class="fa fa-share"></i> Checkout</a>-->
+                                                    <!--                                                        </div>-->
+                                                    <!--                                                    </div>-->
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- mini cart area end -->
+                            </div>
+                        </div>
                     </div>
-                    <div class="my-phone">
-                        <p>LIÊN HỆ:</p>
-                        <span><?php echo $data['phone']?></span>
-                    </div>
-                </div>
-                <div class="search">
-                    <input type="text" placeholder="Tìm kiếm sản phẩm">
-                    <button><i class="fa fa-search"></i></button>
-                </div>
-                <div class="cart">
-                    <a href="?role=client&mod=cart" class="minicart-btn minicart-btn-style_2">
-                        <button>
-                            <i class="fa fa-cart-plus"></i>
-                        </button>
-                    </a>
-                    <span class="notification"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?></span>
                 </div>
             </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">TRANG CHỦ <i class="fa fa-angle-down "></i></a></li>
-                    <li><a href="#">TIN TỨC <i class="fa fa-angle-down "></i></a></li>
-                    <li><a href="#">VỀ CỬA HÀNG <i class="fa fa-angle-down "></i></a></li>
-                    <li><a href="#">LIÊN HỆ <i class="fa fa-angle-down "></i></a></li>
-                </ul>
+        </div>
+        <!-- header middle area end -->
+        <div class="header-main-area sticky">
+            <div class="container">
+                <div class="row position-relative">
+                    <div class="col-12">
+                        <div class="row align-items-center">
+                            <div class="col-lg-12 position-static">
+                                <!-- main menu area start -->
+                                <div class="main-menu-area">
+                                    <div class="main-menu">
+                                        <!-- main menu navbar start -->
+                                        <nav class="desktop-menu">
+                                            <ul>
+                                                <li class="active"><a href="?role=client">Trang chủ<i class="fa"></i></a>
+                                                </li>
+                                                <li><a href="?role=client&mod=news">Tin tức<i class="fa"></i></a>
+                                                </li>
+                                                <li><a href="?role=client&mod=contact">Về cửa hàng</a></li>
+                                                <li><a href="?role=client&mod=about">Liên hệ</a></li>
+                                            </ul>
+                                        </nav>
+                                        <!-- main menu navbar end -->
+                                    </div>
+                                </div>
+                                <!-- main menu area end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </header>
+        </div>
+    </div>
+</header>
+<!-- end Header Area -->
