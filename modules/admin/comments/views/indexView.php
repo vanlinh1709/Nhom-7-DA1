@@ -56,7 +56,7 @@
                         <th title="Field #1">ID</th>
                         <th title="Field #2">Người gửi</th>
                         <th title="Field #2">Email người gửi</th>
-                        <th title="Field #3">Id sản phẩm</th>
+                        <th title="Field #3">Sản phẩm bình luận</th>
                         <th title="Field #4">Nội dung</th>
                         <th title="Field #4">Trạng thái</th>
                         <th title="Field #4">Phê duyệt</th>
@@ -72,7 +72,7 @@
                             <td><?php echo ($l['id']) ?></td>
                             <td><?php echo ($l['name_sender']) ?></td>
                             <td><?php echo ($l['email_sender']) ?></td>
-                            <td><?php echo ($l['id_sp']) ?></td>
+                            <td><a href="?role=client&mod=productDetail&id=<?php echo ($l['id_sp']) ?>"><?php echo ($l['product_name']) ?></a></td>
                             <td><?php echo ($l['contents']) ?></td>
                             <td><?php echo ($l['status'] == 0 ? 'Chưa duyệt' : 'Đã duyệt') ?></td>
                             <td>

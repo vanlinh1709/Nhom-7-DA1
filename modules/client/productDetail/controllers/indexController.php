@@ -29,6 +29,14 @@ function sendCommentPostAction() {
     $email_sender = $_POST['email_sender'];
     $id_sp = $_GET['id_product'];
     $contents = $_POST['contents'];
+    if(isset($_SESSION['auth'])) {
+        $name_sender = $_SESSION['auth']['fullname'];
+        $email_sender = $_SESSION['auth']['email'];
+        $id_sp = $_GET['id_product'];
+        $contents = $_POST['contents'];
+    }
     addComment($name_sender, $email_sender, $id_sp, $contents);
     header('Location: ?role=client&mod=productDetail&id='.$_GET['id_product']);
+
+
 }

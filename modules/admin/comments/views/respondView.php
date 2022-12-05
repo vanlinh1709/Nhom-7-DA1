@@ -40,26 +40,26 @@
                             <input type="text" name="sender_name" class="form-control"  value="<?php echo $comment['product_name']?>"/>
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
-                        <form method="post" action="?role=admin&mod=comment&action=respond&id_sp=<?php echo $comment['id_sp']?>">
                             <div class="form-group">
                                 <label>Nội dung bình luận</label>
                                 <textarea name="contents" class="form-control" ><?php echo $comment['contents']?></textarea>
                                 <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                             </div>
-                                <input name="">
                             <hr>
-                            <div class="form-group">
+                        <form method="post" action="?role=admin&mod=comments&action=respond&id_sp=<?php echo $comment['id_sp']?>">
+                        <div class="form-group">
                                 <label>Phản hồi</label>
-                                <textarea class="form-control" rows="10"></textarea>
+                                <textarea name="contents_respond" class="form-control" rows="10"></textarea>
                                 <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                             </div>
-                        </form>
                     </div>
 
 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary mr-2">Phản hồi</button>
                     </div>
+                </form>
+
                 <!--end::Form-->
             </div>
             <!--end::Card-->

@@ -77,18 +77,18 @@ get_header('','');
                                 </div>
                             <?php endforeach?>
                             <form action="?role=client&mod=productDetail&action=sendComment&id_product=<?php echo $product['id']?>" class="review-form" method="post">
-                                <div class="form-group row">
+                                <div class="form-group row" <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>>
                                     <div class="col">
                                         <label class="col-form-label"><span class="text-danger">*</span>
                                             Tên của bạn</label>
-                                        <input type="text`" name="name_sender" class="form-control" required>
+                                        <input type="text" name="name_sender" class="form-control" >
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row" <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>>
                                     <div class="col">
                                         <label class="col-form-label"><span class="text-danger">*</span>
                                             Email của bạn</label>
-                                        <input type="email" name="email_sender" class="form-control" required>
+                                        <input type="email" name="email_sender" class="form-control" >
                                     </div>
                                 </div>
                                 <div class="form-group row">
