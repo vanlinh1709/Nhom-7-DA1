@@ -5,7 +5,8 @@ get_header('','');
         <main>
             <div class="product-sale">
                 <div class="product-list-title">
-                    <p><?php echo $category_name['cate_name']?></p>
+                    <p><?php echo !empty($category_name) ? $category_name['cate_name'] : ''?></p>
+                    <p><?php echo !empty($brand_name) ? $brand_name['brand_name'] : ''?></p>
                 </div>
                 <div class="product-sale-content">
                     <?php foreach($list_product as $key): ?>

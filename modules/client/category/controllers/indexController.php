@@ -4,12 +4,14 @@ function construct() {
 }
 
 function indexAction() {
-
+    $brand_name = '';
+    $category_name = '';
     if(isset($_GET['brand_id'])) {
         $brand_id = $_GET['brand_id'];
         $list_product = get_list_product_of_brand($brand_id);
         if(!$list_product) echo 'Danh mục không tồn tại'; //Neu list product rong
         $cate_id = '';
+        $brand_name= get_brand_name_by_id($brand_id);
     //    var_dump($list_product);
     //    die();
     } else {
@@ -24,5 +26,5 @@ function indexAction() {
 //    echo '<pre>';
 //    var_dump($list_product);
 //    die();
-    load_view('index', compact('list_product', 'cate_id', 'brand_id','category_name'));
+    load_view('index', compact('list_product', 'cate_id', 'brand_id','category_name', 'brand_name'));
 }

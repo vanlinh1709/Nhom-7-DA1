@@ -11,3 +11,7 @@ function get_name_by_id($id){
     $sql = 'SELECT categories.cate_name FROM categories WHERE categories.id = ?';
     return pdo_query_one($sql, $id);
 }
+function get_brand_name_by_id($id) {
+    $sql = 'SELECT brand_name FROM brand WHERE id = ?';
+    return pdo_query_one($sql, $id);
+}

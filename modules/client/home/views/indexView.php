@@ -274,7 +274,7 @@
                             <img src="./assets/img/category/category-3.png" alt="">
                         </div>
                         <br>
-                        <a class="shop-btn" href="?role=client&mod=category&brand_id=3">XEM DANH MUC</a>
+                        <a class="shop-btn" href="?role=client&mod=category&brand_id=8">XEM DANH MUC</a>
 
                     </div>
                 </div>
