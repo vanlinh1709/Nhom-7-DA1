@@ -115,8 +115,14 @@
                                 <img src="../assets/img/product/product-1.jpg" alt="product thumb">
                             </a>
                             <div class="button-group">
-                                <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                               <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                                <div class="add">
+                                    <a href=""> <p>Thêm sản phẩm</p> </a>
+                                </div>
+                                <div class="eye">
+                                    <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                                    <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                                </div>
+                                
                             </div>
                         </div>
                         <div class="product-content">
@@ -145,8 +151,14 @@
                                 <img src="../assets/img/product/product-1.jpg" alt="product thumb">
                             </a>
                             <div class="button-group">
-                                <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                               <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                                <div class="add">
+                                    <a href=""> <p>Thêm sản phẩm</p> </a>
+                                </div>
+                                <div class="eye">
+                                    <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                                    <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                                </div>
+                                
                             </div>
                         </div>
                         <div class="product-content">
@@ -175,8 +187,14 @@
                                 <img src="../assets/img/product/product-1.jpg" alt="product thumb">
                             </a>
                             <div class="button-group">
-                                <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                               <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                                <div class="add">
+                                    <a href=""> <p>Thêm sản phẩm</p> </a>
+                                </div>
+                                <div class="eye">
+                                    <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                                    <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                                </div>
+                                
                             </div>
                         </div>
                         <div class="product-content">
@@ -251,8 +269,14 @@
                         <img src="./layout/assets/img/product/<?php echo $p['thumbnail']?>" alt="product thumb">
                     </a>
                     <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                        <div class="add">
+                            <a href=""> <p>Thêm sản phẩm</p> </a>
+                        </div>
+                        <div class="eye">
+                            <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                            <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="product-content">
@@ -290,8 +314,14 @@
                         <img src="./layout/assets/img/product/<?php echo $s['thumbnail']?>" alt="product thumb">
                     </a>
                     <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                        <div class="add">
+                            <a href=""> <p>Thêm sản phẩm</p> </a>
+                        </div>
+                        <div class="eye">
+                            <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                            <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="product-content">
@@ -329,8 +359,14 @@
                         <img src="./layout/assets/img/product/<?php echo $f['thumbnail']?>" alt="product thumb">
                     </a>
                     <div class="button-group">
-                        <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
-                        <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                        <div class="add">
+                            <a href=""> <p>Thêm sản phẩm</p> </a>
+                        </div>
+                        <div class="eye">
+                            <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                            <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="product-content">

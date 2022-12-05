@@ -495,7 +495,25 @@ main{
     -webkit-transition: 0.4s;
     transition: 0.4s;
 } 
-.button-group a {
+.add{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -130px;
+    border: 1px solid #777;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+}
+.add a{
+    display: block;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+.add:hover{
+    background-color: #87b106;
+}
+.button-group span {
     width: 36px;
     height: 36px;
     display: inline-block;
@@ -511,7 +529,7 @@ main{
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
-.button-group a:hover {
+.button-group span:hover {
     color: #fff;
     background-color: #87b106;
 }
