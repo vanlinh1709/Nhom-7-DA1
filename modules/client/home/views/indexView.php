@@ -49,9 +49,9 @@
     </section>
     <!-- slider area end -->
     <div class="voucher" style="text-align: center">
-                <a href="#"><img src="./assets/img/banner/cms_3.1.jpg" alt=""></a>
-                <a href="#"><img src="./assets/img/banner/cms_3.2.jpg" alt=""></a>
-                <a href="#"><img src="./assets/img/banner/cms_3.3.jpg" alt=""></a>
+            <?php foreach ($list_banner as $b): ?>
+                <a href="?role=client&mod=order&action=orderNow&id=<?php echo $b['product_id']?>"><img src="./public/uploads/images/banner/<?php echo $b['banner_img']?>" alt=""></a>
+            <?php endforeach?>
             </div>
     <div class="main-content">
         <hr>

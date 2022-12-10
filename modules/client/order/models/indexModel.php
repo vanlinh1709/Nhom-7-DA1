@@ -15,3 +15,7 @@ function createOrderDetail($order_id, $product_id, $quantity_product, $total_mon
                                 VALUES(?, ?, ?, ?)';
     pdo_execute($sql,$order_id, $product_id, $quantity_product, $total_money );
 }
+function get_product_by_id($id) {
+    $sql = 'SELECT products.id, products.title, products.thumbnail, products.promo_price FROM products WHERE id = ? ';
+    return pdo_query_one($sql, $id);
+}

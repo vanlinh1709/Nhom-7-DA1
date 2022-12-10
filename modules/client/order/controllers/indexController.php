@@ -56,3 +56,15 @@ function successOrderAction() {
 function showMyOrderAction() {
     load_view('buyedOrder');
 }
+function orderNowAction() {
+    unset($_SESSION['cart']);
+    $_SESSION['cart'] = [];
+    $id = $_GET['id'];
+    $product = get_product_by_id($id);
+    $product['amount'] = 1;
+    $product['total_money'] = $product['promo_price'];
+//    var_dump($product);
+//    die();
+    push_to_session($product);
+    header('Location: ?role=client&mod=order');
+}

@@ -27,3 +27,7 @@ function get_list_salest_products() {
     $sql = 'SELECT * FROM products ORDER BY products.promo_price/products.price  LIMIT 2';
     return pdo_query($sql);
 }
+function get_list_banner() {
+    $sql = 'SELECT * FROM banner as b JOIN products as p ON b.product_id = p.id';
+    return pdo_query($sql);
+}
