@@ -1,7 +1,6 @@
-<?php get_header('', '')?>
+<?php get_header('', 'Trang chủ')?>
 
 <main>
-
     <!-- slider area start -->
     <section class="hero-slider hero-slider--style-4">
         <div class="container">
@@ -50,9 +49,9 @@
     </section>
     <!-- slider area end -->
     <div class="voucher" style="text-align: center">
-                <img src="./assets/img/banner/cms_3.1.jpg" alt="">
-                <img src="./assets/img/banner/cms_3.2.jpg" alt="">
-                <img src="./assets/img/banner/cms_3.3.jpg" alt="">
+                <a href="#"><img src="./assets/img/banner/cms_3.1.jpg" alt=""></a>
+                <a href="#"><img src="./assets/img/banner/cms_3.2.jpg" alt=""></a>
+                <a href="#"><img src="./assets/img/banner/cms_3.3.jpg" alt=""></a>
             </div>
     <div class="main-content">
         <hr>

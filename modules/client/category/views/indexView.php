@@ -12,7 +12,7 @@ get_header('','');
                     <?php foreach($list_product as $key): ?>
                     <div class="product-item">
                         <div class="product-thumb">
-                            <a href="#">
+                            <a href="?role=client&mod=productDetail&id=<?php echo $key['id']?>">
                                 <img src="./layout/assets/img/product/<?php echo $key['thumbnail'] ?>" alt="product thumb">
                             </a>
                             <div class="button-group">
@@ -26,10 +26,15 @@ get_header('','');
                                     <a href="#"><?php echo $key['title'] ?></a>
                                 </h6>
                                 <div class="price-box">
-                                    <span class="price-old"><del><?php echo $key['price'] ?></del></span>
-                                    <span class="price-regular"><?php echo $key['promo_price'] ?></span>
+                                    <span class="price-old"><del><?php echo currency_format($key['price']) ?></del></span>
+                                    <span class="price-regular"><?php echo currency_format($key['promo_price']) ?></span>
                                 </div>
-                                <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $key['id']?>&currentMod=<?php echo get_module()?>&cate_id=<?php echo $_GET['id'] ?>"><i class="fa fa-shopping-cart"></i></a>
+                                <a class="add-to-cart" href="
+                                 <?php if(isset($_GET['id'])) echo '?role=client&mod=cart&action=add&id_product='. $key['id'].'&currentMod=category&cate_id='.$_GET['id'];
+                                        elseif (isset($_GET['brand_id'])) echo '?role=client&mod=cart&action=add&id_product='. $key['id'].'&currentMod=category'.'&brand_id='.$_GET['brand_id'];
+                                        ?>
+                                                           "
+                                ><i class="fa fa-shopping-cart"></i></a>
                             </div>
                             <div class="ratings">
                                 <span><i class="fa fa-star"></i></span>

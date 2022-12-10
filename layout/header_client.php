@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,8 +26,8 @@
     <link rel="stylesheet" href="assets/css/plugins/jqueryui.min.css">
     <!-- main style css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="./public/images/favicon.ico">
 </head>
-
 <body>
 <!-- Start Header Area -->
 <header class="header-area header-style__3 header-box header-box__3">
@@ -42,10 +41,9 @@
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="header-social-link">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    <a href="<?php echo $infoShop['link_face']?>"><i class="fa fa-facebook"></i></a>
+                                    <a href="<?php echo $infoShop['link_twitter']?>"><i class="fa fa-twitter"></i></a>
+                                    <a href="<?php echo $infoShop['link_insta']?>"><i class="fa fa-instagram"></i></a>
                                 </div>
                             </div>
                             <div class="col-lg-9 d-flex justify-content-end">
@@ -53,14 +51,14 @@
 
                                 </div>
                                 <ul class="user-info-block">
-                                    <li><a href="?role=admin" target="_blank" class="text-warning">
+                                    <li><a href="#"><i class="<?php echo isset($_SESSION['auth']) ? 'fa fa-user-circle' : ''?>"></i><span class="text-info"><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : ''?></span></a></li>
+                                    <li>
+                                        <a href="?role=admin" target="_blank" class="text">
                                             <?php echo is_admin() == true ? 'Trang quản trị' : ''?>
                                         </a>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-user-circle"></i><span class="text-info"><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : ''?></span></a></li>
                                     <li <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?>><a href="?role=client&mod=signUp"><i class="fa fa-credit-card" ></i>Đăng ký</a></li>
-
-                                    <li <?php echo is_admin() ? 'hidden' : ''?>><a href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=auth&controller=logOut' : '?role=client&mod=auth'?>"><i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Đăng xuất' : 'Đăng nhập'?></a></li>
+                                    <li><a href="<?php echo isset($_SESSION['auth']) ? '?role=client&mod=auth&controller=logOut' : '?role=client&mod=auth'?>"><i class="fa fa-sign-in"></i><?php echo isset($_SESSION['auth']) ? 'Đăng xuất' : 'Đăng nhập'?></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -96,11 +94,11 @@
                                                     <div class="call-icon">
                                                         <i class="fa fa-phone"></i>
                                                     </div>
-                                                    <span>ĐIỆN THOẠI: <?php echo $data['phone']?><a href="tel:0123456789"></a></span>
+                                                    <span>ĐIỆN THOẠI: <?php echo $infoShop['phone']?><a href="tel:0123456789"></a></span>
                                                 </li>
                                                 <li class="search-wrapper-inner">
-                                                    <form class="search-box-2">
-                                                        <input type="text" class="search-field-2" placeholder="Tìm kiếm sản phẩm">
+                                                    <form class="search-box-2" action="?role=client&mod=category&action=findProducts" method="post">
+                                                        <input type="text" name="keyword" class="search-field-2" placeholder="Tìm kiếm sản phẩm">
                                                         <button class="search-btn-2"><i class="fa fa-search"></i></button>
                                                     </form>
                                                 </li>
@@ -195,6 +193,7 @@
                                             </ul>
                                         </nav>
                                         <!-- main menu navbar end -->
+                                    </div>
                                     </div>
                                 </div>
                                 <!-- main menu area end -->

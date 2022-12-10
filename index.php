@@ -5,8 +5,7 @@
  * app path
  * --------------------------------------------------------------------
  */
-//require_once './helper/format.php';
-const BASE_URL = 'http://localhost/Nhom_7_DA1.com/';
+//Định nghĩa hằng số chứa giá trị là đường dẫn chứa file index: "C:\xampp\htdocs\Nhom_7_DA1"
 $app_path = dirname(__FILE__);
 define('APPPATH', $app_path);
 /*

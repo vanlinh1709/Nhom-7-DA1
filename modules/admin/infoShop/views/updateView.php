@@ -45,10 +45,25 @@
                             <input type="text" name="id" value="<?php echo $info['id']?>" class="form-control" hidden />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
+                        <div class="form-group">
+                            <label>Link Facebook</label>
+                            <input type="text" name="link_face" value="<?php echo $info['link_face']?>" class="form-control"  />
+                            <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
+                        </div>
+                        <div class="form-group">
+                            <label>Link Twiter</label>
+                            <input type="text" name="link_twitter" value="<?php echo $info['link_twitter']?>" class="form-control"  />
+                            <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
+                        </div>
+                        <div class="form-group">
+                            <label>Link Instagram</label>
+                            <input type="text" name="link_insta" value="<?php echo $info['link_insta']?>" class="form-control"  />
+                            <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
+                        </div>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary mr-2">Chỉnh sửa</button>
-                        <a href="?role=admin&mod=category" class="btn btn-default">Quay về</a>
+                        <a href="?role=admin&mod=infoShop" class="btn btn-default">Quay về</a>
                     </div>
                 </form>
                 <!--end::Form-->

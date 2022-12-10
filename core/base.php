@@ -120,7 +120,7 @@ function get_info_shop() {
 }
 function get_header($name = '', $title = '') {
     global $data;
-    $data = get_info_shop();
+    $infoShop = get_info_shop();
     if (empty($name)) {
         $name = 'header';
     } else {
@@ -141,7 +141,7 @@ function get_header($name = '', $title = '') {
 
 function get_footer($name = '') {
     global $data;
-    $data = get_info_shop();
+    $infoShop = get_info_shop();
     if (empty($name)) {
         $name = 'footer';
     } else {
@@ -153,41 +153,6 @@ function get_footer($name = '') {
             foreach ($data as $key => $a) {
                 $$key = $a;
             }
-        }
-        require $path;
-    } else {
-        echo "Không tìm thấy {$path}";
-    }
-}
-
-function get_sidebar($name = '') {
-    global $data;
-    if (empty($name)) {
-        $name = 'sidebar';
-    } else {
-        $name = "sidebar-{$name}";
-    }
-    $path = LAYOUTPATH . DIRECTORY_SEPARATOR . $name . '_' . get_role() . '.php';
-    if (file_exists($path)) {
-        if (is_array($data)) {
-            foreach ($data as $key => $a) {
-                $$key = $a;
-            }
-        }
-        require $path;
-    } else {
-        echo "Không tìm thấy {$path}";
-    }
-}
-
-function get_template_part($name) {
-    global $data;
-    if (empty($name))
-        return FALSE;
-    $path = LAYOUTPATH . DIRECTORY_SEPARATOR . "template-{$name}.php";
-    if (file_exists($path)) {
-        foreach ($data as $key => $a) {
-            $$key = $a;
         }
         require $path;
     } else {
