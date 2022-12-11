@@ -7,7 +7,8 @@ $request_path = MODULESPATH . DIRECTORY_SEPARATOR . get_role() . DIRECTORY_SEPAR
 if (file_exists($request_path)) {
     require $request_path;
 } else {
-    echo "Không tìm thấy:$request_path ";
+    require_once './helper/notFound.php';
+    die();
 }
 
 // get method if get default null

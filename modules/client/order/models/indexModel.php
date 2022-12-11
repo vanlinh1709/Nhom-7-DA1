@@ -19,3 +19,11 @@ function get_product_by_id($id) {
     $sql = 'SELECT products.id, products.title, products.thumbnail, products.promo_price, products.number FROM products WHERE id = ? ';
     return pdo_query_one($sql, $id);
 }
+function cancel_order($id) {
+    $sql = 'UPDATE orders SET id_status = 0 WHERE id = ?';
+    pdo_execute($sql, $id);
+}
+function get_list_id() {
+    $sql = 'SELECT id FROM orders';
+    pdo_query($sql);
+}

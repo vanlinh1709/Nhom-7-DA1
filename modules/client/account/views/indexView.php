@@ -55,6 +55,7 @@
                                                             <th>Trạng thái</th>
                                                             <th>Tổng tiền</th>
                                                             <th>Xem chi tiết</th>
+                                                            <th>Hủy đơn</th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
@@ -70,6 +71,7 @@
                                                             </td>
                                                             <td><?php echo currency_format($od['total_price'])?></td>
                                                             <td><a href="?role=client&mod=account&action=orders_detail&id_order=<?php echo $od['id']?>" class="btn btn-sqr">Xem</a>
+                                                            <td><a <?php if($od['id_status'] != 1) echo 'hidden'?> href="?role=client&mod=order&action=canceOrder&id_order=<?php echo $od['id']?>" class="btn btn-canc">Hủy</a>
                                                             </td>
                                                         </tr>
                                                         <?php endforeach?>

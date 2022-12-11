@@ -24,7 +24,6 @@ function indexAction() {
 }
 function indexPostAction() {
     //Validate form
-
     $customer_name = $_POST['name'];
     $customer_phone_number = $_POST['phone'];
     $customer_email = $_POST['email'];
@@ -38,7 +37,8 @@ function indexPostAction() {
         die();
     }
     //Đưa thông tin order vào bảng order
-    $id = rand(1,1000000);
+    $id = rand(1,100000000);
+    //
     $id_user = $_POST['id'] ? $_POST['id'] : null;
 
     $total_price = $_SESSION['final_total_money'];
@@ -79,4 +79,12 @@ function orderNowAction() {
 //    die();
     push_to_session($product);
     header('Location: ?role=client&mod=order');
+}
+function canceOrderAction() {
+    $id = $_GET['id_order'];
+    $id_user = get_id_by_email($_SESSION['auth']['email'])['id'];
+//    var_dump($id_user);
+//    die();
+    cancel_order($id);
+    header('Location: ?role=client&mod=account&id='.$id_user);
 }

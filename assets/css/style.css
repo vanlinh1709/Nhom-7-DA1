@@ -2045,6 +2045,14 @@ ul.minicart-pricing-box li:last-child {
   background-color: #87b106;
   padding: 13px 25px;
 }
+.btn-canc {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 0;
+  background-color: red;
+  padding: 13px 25px;
+}
 .btn-sqr:hover {
   color: #fff;
   background-color: #222222;
