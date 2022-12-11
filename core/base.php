@@ -295,10 +295,10 @@ function request_auth($isLogin = true)
 {
     $request_role = get_role() === 'admin' ? 2 : 1;
     //Neu chua dang nhap
-    if(!is_auth()) {
-        header("Location: ?role=" . get_role().'&mod=auth');
-        die();
-    }
+//    if(!is_auth()) {
+//        header("Location: ?role=" . get_role().'&mod=auth');
+//        die();
+//    }
     if (is_auth() !== $isLogin) {
         $auth = get_auth();
         header("Location: " . ($isLogin ? '?role='. ($auth['role_id'] == 1 ? 'client' : 'admin') . '&mod=auth' : '?role=' . ($auth['role_id   '] == 1 ? 'client' : 'admin')));
