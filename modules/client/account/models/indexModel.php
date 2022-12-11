@@ -35,3 +35,7 @@ function get_list_orders_of_user($id) {
     $sql = 'SELECT * FROM orders WHERE id_user = ?';
     return pdo_query($sql, $id);
 }
+function getInfoUser($email) {
+    $sql = "SELECT * FROM users WHERE email = ?";
+    return pdo_query_one($sql, $email);
+}

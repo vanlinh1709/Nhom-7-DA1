@@ -7,7 +7,12 @@
         $id = $_GET['id'];
         $list_orders = get_list_orders_of_user($id);
         $list_status = get_list_order_status();
-        load_view('index', compact('list_orders', 'list_status'));
+        if(is_auth() && !is_admin()) {
+            $user = get_id_by_email($_SESSION['auth']['email']);
+            $infoUser = getInfoUser($_SESSION['auth']['email']);
+        }
+//        var_dump($infoUser);
+        load_view('index', compact('list_orders', 'list_status', 'infoUser'));
     }
     function orders_detailAction() {
     $order_id = $_GET['id_order'];
