@@ -114,7 +114,7 @@
                     <br>
                 </div>
                 <div class="new-arrival-content">
-                    <?php foreach($list_newest_product as $index => $p):?>
+                    <?php foreach($list_featured_product as $index => $p):?>
                     <?php if($index == 3) break?>
                         <div class="product-item">
                             <div class="product-thumb">
