@@ -188,8 +188,8 @@
                                                 </li>
                                                 <li><a href="?role=client&mod=news">Tin tức<i class="fa"></i></a>
                                                 </li>
-                                                <li><a href="?role=client&mod=contact">Về cửa hàng</a></li>
-                                                <li><a href="?role=client&mod=about">Liên hệ</a></li>
+                                                <li><a href="?role=client&mod=about_contact_Us&action=about">Về cửa hàng</a></li>
+                                                <li><a href="?role=client&mod=about_contact_Us&action=contact">Liên hệ</a></li>
                                             </ul>
                                         </nav>
                                         <!-- main menu navbar end -->

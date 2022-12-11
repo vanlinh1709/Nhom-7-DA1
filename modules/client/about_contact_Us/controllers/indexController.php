@@ -4,7 +4,7 @@
     function aboutAction() {
         load_view('aboutUs');
     }
-    function contactUsAction() {
+    function contactAction() {
         load_view('contactUs');
 }
 ?>
