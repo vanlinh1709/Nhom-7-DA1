@@ -9,8 +9,8 @@ function get_list_product_newest() {
     return $result;
 }
 function get_list_product_bestSeller() {
-    $result = pdo_query("SELECT p.id,  thumbnail, title, price, promo_price, sum(od.quantity_product) as total FROM `products` as p  INNER JOIN order_detail as od
-                    ON p.id = od.product_id GROUP BY p.id ORDER BY sum(od.quantity_product) DESC LIMIT 6");
+    $result = pdo_query("SELECT p.id,  thumbnail, title, price, promo_price, sum(od.quantity_product) as total FROM `products` as p  
+                             INNER JOIN order_detail as od ON p.id = od.product_id GROUP BY p.id ORDER BY sum(od.quantity_product) DESC LIMIT 6");
     return $result;
 }
 function get_list_product_featured() {

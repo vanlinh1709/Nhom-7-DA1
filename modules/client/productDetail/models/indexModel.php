@@ -10,14 +10,14 @@ function getRelatedProducts($cate_id) {
     return $result;
 }
 function getCommentsOfProduct($product_id) {
-    $sql = 'SELECT * FROM comment WHERE id_sp = ? AND status = 1';
+    $sql = 'SELECT * FROM comment WHERE id_sp = ?';
     $result = pdo_query($sql, $product_id);
     return $result;
 }
-function addComment($name_sender, $email_sender, $id_sp, $contents) {
-    $sql = 'INSERT INTO comment(name_sender, email_sender, id_sp, contents) 
-            VALUES(?, ?, ?, ?)';
-    $result = pdo_execute($sql, $name_sender, $email_sender, $id_sp, $contents);
+function addComment($name_sender, $email_sender, $id_sp, $contents, $status) {
+    $sql = 'INSERT INTO comment(name_sender, email_sender, id_sp, contents, status) 
+            VALUES(?, ?, ?, ?, ?)';
+    $result = pdo_execute($sql, $name_sender, $email_sender, $id_sp, $contents, $status);
     return $result;
 }
 function updateViewProduct($id) {

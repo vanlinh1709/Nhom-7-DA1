@@ -2,20 +2,20 @@
 <main>
     <div class="container-shared">
         <div class="news-detail-content">
-            <img src="./layout/assets/img/blog/blog-1.jpg" alt="">
+            <img src="./public/uploads/images/product/<?php echo $detailNew['thumbnail']?>" alt="">
             <div class="news-detail-title">
-                <h4>CELEBRITY DAUGHTER OPENS UP ABOUT HAVING                    </h4>
+                <h4><?php echo $detailNew['title']?></h4>
             </div>
             <div class="news-detail-time">
-                <span>25/03/2021</span> <span>| Pullman</span>
+                <span><?php echo $detailNew['created_at']?></span> <span>| <?php echo $detailNew['poster']?></span>
             </div>
             <div class="news-detail-description">
                     <span>
-                        chi tiết bản tin ở đây
+                        <?php echo $detailNew['content']?>
                     </span>
             </div>
             <div class="tag">
-                <h4>tag :</h4>
+                <h4>Tag :</h4>
                 <a href="#">Necklaces</a> ,
                 <a href="#">Earrings</a>
             </div>
@@ -28,66 +28,39 @@
         </div>
         <div class="news-detail-comment">
             <div class="number-comment">
-                <h4>03 comment</h4>
+                <h4></h4>
             </div>
             <div class="main-comment">
                 <ul>
-                    <li>
+                    <?php foreach($listComments as $c):?>
+                    <li <?php if($c['name_sender'] == 'admin') echo 'class="rep-comment"'?>>
                         <div class="comment-logo">
                             <img src="./layout/assets/img/blog/comment-icon.png" alt="">
                         </div>
                         <div class="comment-body">
-                            <span class="reply-btn"><a href="#">Reply</a></span>
-                            <h5 class="comment-user">Admin</h5>
+                            <span class="reply-btn"><a href="#">Trả lời</a></span>
+                            <h5 class="comment-user"><?php echo $c['name_sender']?></h5>
                             <div class="comment-time">
-                                15 Dec, 2021 at 9:30pm
+                                <?php echo $c['created_at']?>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores
-                                adipisci optio ex, laboriosam facilis non pariatur itaque illo sunt?</p>
+                            <p><?php echo $c['contents']?></p>
                         </div>
                     </li>
-                    <li class="rep-comment">
-                        <div class="comment-logo">
-                            <img src="./layout/assets/img/blog/comment-icon.png" alt="">
-                        </div>
-                        <div class="comment-body">
-                            <span class="reply-btn"><a href="#">Reply</a></span>
-                            <h5 class="comment-user">Admin</h5>
-                            <div class="comment-time">
-                                15 Dec, 2021 at 9:30pm
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores
-                                adipisci optio ex, laboriosam facilis non pariatur itaque illo sunt?</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="comment-logo">
-                            <img src="./layout/assets/img/blog/comment-icon.png" alt="">
-                        </div>
-                        <div class="comment-body">
-                            <span class="reply-btn"><a href="#">Reply</a></span>
-                            <h5 class="comment-user">Admin</h5>
-                            <div class="comment-time">
-                                15 Dec, 2021 at 9:30pm
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores
-                                adipisci optio ex, laboriosam facilis non pariatur itaque illo sunt?</p>
-                        </div>
-                    </li>
+                    <?php endforeach;?>
                 </ul>
             </div>
         </div>
         <div class="write-comment">
             <div class="write-comment-title">
-                <h5>Leave A Reply</h5>
-                <p>Your email address will not be published. Required fields are marked *</p>
+                <h5>Gửi một bình luân</h5>
+                <p>Email của bạn sẽ không được công khai</p>
             </div>
             <form action="">
-                <label>comment</label>
+                <label>Bình luận</label>
                 <textarea name="" id="" cols="30" rows="10" placeholder="Write a comment"></textarea>
                 <div class="information-user-comment">
                     <div class="name-user-comment">
-                        <label>Name</label><br>
+                        <label>Tên</label><br>
                         <input type="text" placeholder="Name">
                     </div>
                     <div class="email-user-comment">
@@ -99,108 +72,38 @@
                         <input type="text" placeholder="Website">
                     </div>
                 </div>
-                <input class="btn-submit" type="submit" name="" value="Post Comment">
+                <input class="btn-submit" type="submit" name="" value="Gửi bình luận">
             </form>
         </div>
         <div class="related-post">
             <h3>BẢN TIN LIÊN QUAN</h3>
             <div class="news-main">
-                <div class="news-content">
-                    <div class="news-img">
-                        <img src="./layout/assets/img/blog/blog-1.jpg" alt="">
-                    </div>
-                    <div class="news-title">
-                        <p>TIÊU ĐỀ BẢN TIN</p>
-                    </div>
-                    <div class="time-poster">
-                        <div class="news-time">
-                            <i class="fa fa-calendar"></i><span>Aug 05 2021</span>
+                <?php foreach($list_related_comments as $n):?>
+                    <div class="news-content">
+                        <div class="news-img">
+                            <img src="./public/uploads/images/product/<?php echo $n['thumbnail']?>" alt="">
                         </div>
-                        <div class="poster">
-                            <i class="fa fa-user"></i><span>Admin</span>
+                        <div class="news-title">
+                            <p><?php echo $n['title']?></p>
                         </div>
-                    </div>
-                    <div class="news-description">
-                            <span>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. ...
-                            </span>
-                    </div>
-                    <div class="read-more">
-                        <a href="#"><span>Đọc Thêm</span></a>
-                    </div>
-                </div>
-                <div class="news-content">
-                    <div class="news-img">
-                        <img src="./layout/assets/img/blog/blog-1.jpg" alt="">
-                    </div>
-                    <div class="news-title">
-                        <p>TIÊU ĐỀ BẢN TIN</p>
-                    </div>
-                    <div class="time-poster">
-                        <div class="news-time">
-                            <i class="fa fa-calendar"></i><span>Aug 05 2021</span>
+                        <div class="time-poster">
+                            <div class="news-time">
+                                <i class="fa fa-calendar"></i><span><?php echo $n[2]?></span>
+                            </div>
+                            <div class="poster">
+                                <i class="fa fa-user"></i><span><?php echo $n['poster']?></span>
+                            </div>
                         </div>
-                        <div class="poster">
-                            <i class="fa fa-user"></i><span>Admin</span>
+                        <div class="news-description">
+                    <span>
+                        <?php echo $n['short_des']?>
+                    </span>
+                        </div>
+                        <div class="read-more">
+                            <a href="?role=client&mod=news&action=newdetail&id=<?php echo $n[0]?>"><span style="display: block; padding-top: 10px ">Đọc Thêm</span></a>
                         </div>
                     </div>
-                    <div class="news-description">
-                            <span>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. ...
-                            </span>
-                    </div>
-                    <div class="read-more">
-                        <a href="#"><span>Đọc Thêm</span></a>
-                    </div>
-                </div>
-                <div class="news-content">
-                    <div class="news-img">
-                        <img src="./layout/assets/img/blog/blog-1.jpg" alt="">
-                    </div>
-                    <div class="news-title">
-                        <p>TIÊU ĐỀ BẢN TIN</p>
-                    </div>
-                    <div class="time-poster">
-                        <div class="news-time">
-                            <i class="fa fa-calendar"></i><span>Aug 05 2021</span>
-                        </div>
-                        <div class="poster">
-                            <i class="fa fa-user"></i><span>Admin</span>
-                        </div>
-                    </div>
-                    <div class="news-description">
-                            <span>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. ...
-                            </span>
-                    </div>
-                    <div class="read-more">
-                        <a href="#"><span>Đọc Thêm</span></a>
-                    </div>
-                </div>
-                <div class="news-content">
-                    <div class="news-img">
-                        <img src="./layout/assets/img/blog/blog-1.jpg" alt="">
-                    </div>
-                    <div class="news-title">
-                        <p>TIÊU ĐỀ BẢN TIN</p>
-                    </div>
-                    <div class="time-poster">
-                        <div class="news-time">
-                            <i class="fa fa-calendar"></i><span>Aug 05 2021</span>
-                        </div>
-                        <div class="poster">
-                            <i class="fa fa-user"></i><span>Admin</span>
-                        </div>
-                    </div>
-                    <div class="news-description">
-                            <span>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. ...
-                            </span>
-                    </div>
-                    <div class="read-more">
-                        <a href="#"><span>Đọc Thêm</span></a>
-                    </div>
-                </div>
+                <?php endforeach?>
             </div>
         </div>
     </div>

@@ -63,9 +63,10 @@ get_header('','Trang chi tiết sản phẩm');
                     <div class="tab-content reviews-tab">
                         <div class="tab-pane fade active" id="tab_two">
                             <?php foreach ($listComments as $item):?>
-                                <div class="total-reviews">
+                                <div class="total-reviews  <?php if($item['name_sender'] == 'admin') echo " rep-comment"?>">
                                     <div class="rev-avatar">
-                                        <img src="assets/img/about/avatar.jpg" alt="">
+                                        <img src="<?php if($item['name_sender'] == 'admin') echo "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYiu0iwsKgppDcIbARpYQymEL9nhTkSJGgZ6C1ULoJfLchwTTgKc8Fpucbhs0Zn834tFY&usqp=CAU";
+                                        else echo './layout/assets/img/blog/comment-icon.png'?>" alt="">
                                     </div>
                                     <div class="review-box">
                                         <div class="post-author">

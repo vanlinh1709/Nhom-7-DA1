@@ -21,8 +21,6 @@ function indexAction() {
 //    var_dump($list_related_products);
 //    die();
     $listComments = getCommentsOfProduct($id);
-//    var_dump($listComments);
-    //
     $notifications = get_notification();
 //    var_dump($notifications);
     load_view('index',compact('product','list_related_products', 'listComments', 'notifications'));
@@ -39,8 +37,15 @@ function sendCommentPostAction() {
         $id_sp = $_GET['id_product'];
         $contents = $_POST['contents'];
     }
-    addComment($name_sender, $email_sender, $id_sp, $contents);
+    $status = 1;
+    if(is_admin()) {
+        $status = 0;
+    }
+    addComment($name_sender, $email_sender, $id_sp, $contents, $status);
     $_SESSION['notification'] = 'Bình luận của bạn đang được xem xét';
+    if(is_admin()) {
+        $_SESSION['notification'] = '';
+    }
 //    var_dump($_SESSION['notification']);
 //    die();
     header('Location: ?role=client&mod=productDetail&id='.$_GET['id_product']);

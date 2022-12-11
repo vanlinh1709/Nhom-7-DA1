@@ -5,102 +5,32 @@
     </div>
     <div class="container-shared">
         <div class="news-main">
+            <?php foreach($list_news as $n):?>
             <div class="news-content">
                 <div class="news-img">
-                    <img src="./layout/assets/img/blog/blog-1.jpg" alt="">
+                    <img src="./public/uploads/images/product/<?php echo $n['thumbnail']?>" alt="">
                 </div>
                 <div class="news-title">
-                    <p>TIÊU ĐỀ BẢN TIN</p>
+                    <p><?php echo $n['title']?></p>
                 </div>
                 <div class="time-poster">
                     <div class="news-time">
-                        <i class="fa fa-calendar"></i><span>Aug 05 2021</span>
+                        <i class="fa fa-calendar"></i><span><?php echo $n[2]?></span>
                     </div>
                     <div class="poster">
-                        <i class="fa fa-user"></i><span>Admin</span>
+                        <i class="fa fa-user"></i><span><?php echo $n['poster']?></span>
                     </div>
                 </div>
                 <div class="news-description">
                     <span>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. ...
+                        <?php echo $n['short_des']?>
                     </span>
                 </div>
                 <div class="read-more">
-                    <a href="?role=client&mod=news&action=newdetail"><span>Đọc Thêm</span></a>
+                    <a href="?role=client&mod=news&action=newdetail&id=<?php echo $n[0]?>"><span style="display: block; padding-top: 10px ">Đọc Thêm</span></a>
                 </div>
             </div>
-            <div class="news-content">
-                <div class="news-img">
-                    <img src="./layout/assets/img/blog/blog-2.jpg" alt="">
-                </div>
-                <div class="news-title">
-                    <p>TIÊU ĐỀ BẢN TIN</p>
-                </div>
-                <div class="time-poster">
-                    <div class="news-time">
-                        <i class="fa fa-calendar"></i><span>Aug 05 2021</span>
-                    </div>
-                    <div class="poster">
-                        <i class="fa fa-user"></i><span>Admin</span>
-                    </div>
-                </div>
-                <div class="news-description">
-                    <span>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. ...
-                    </span>
-                </div>
-                <div class="read-more">
-                    <a href="?role=client&mod=news&action=newdetail"><span>Đọc Thêm</span></a>
-                </div>
-            </div>
-            <div class="news-content">
-                <div class="news-img">
-                    <img src="./layout/assets/img/blog/blog-3.jpg" alt="">
-                </div>
-                <div class="news-title">
-                    <p>TIÊU ĐỀ BẢN TIN</p>
-                </div>
-                <div class="time-poster">
-                    <div class="news-time">
-                        <i class="fa fa-calendar"></i><span>Aug 05 2021</span>
-                    </div>
-                    <div class="poster">
-                        <i class="fa fa-user"></i><span>Admin</span>
-                    </div>
-                </div>
-                <div class="news-description">
-                    <span>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. ...
-                    </span>
-                </div>
-                <div class="read-more">
-                    <a href="?role=client&mod=news&action=newdetail"><span>Đọc Thêm</span></a>
-                </div>
-            </div>
-            <div class="news-content">
-                <div class="news-img">
-                    <img src="./layout/assets/img/blog/blog-4.jpg" alt="">
-                </div>
-                <div class="news-title">
-                    <p>TIÊU ĐỀ BẢN TIN</p>
-                </div>
-                <div class="time-poster">
-                    <div class="news-time">
-                        <i class="fa fa-calendar"></i><span>Aug 05 2021</span>
-                    </div>
-                    <div class="poster">
-                        <i class="fa fa-user"></i><span>Admin</span>
-                    </div>
-                </div>
-                <div class="news-description">
-                    <span>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. ...
-                    </span>
-                </div>
-                <div class="read-more">
-                    <a href="?role=client&mod=news&action=newdetail"><span>Đọc Thêm</span></a>
-                </div>
-            </div>
+           <?php endforeach?>
         </div>
     </div>
 </main>
