@@ -22,6 +22,11 @@ function createPostAction() {
     $data = $_POST;
     $data_file = $_FILES;
     $slideshow_image = $data_file['slideshow_image'];
+    if (empty($slideshow_image['name'])) {
+        push_notification('danger', ['Vui lòng nhập ảnh']);
+        header('Location: ?role=admin&mod=slideshow&action=create');
+        die();
+    }
 //    echo '<pre>';
 //    var_dump();
 //    die();
@@ -32,6 +37,8 @@ function createPostAction() {
     }
     $product_id = $data['product_id'];
     create_slide_show($slideshow_image['name'], $product_id);
+    header('Location: ?role=admin&mod=slideshow');
+
 }
 //form update
 function updateAction() {

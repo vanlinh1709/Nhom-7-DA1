@@ -31,7 +31,7 @@ function indexPostAction() {
         push_auth($auth);//Tạo giá trị cho session['auth'];
         header('Location: ?role=client');//Chạy về modules mặc định là home.
     } else {
-        push_notification_user();
+        push_notification_user_admin();
         header('Location: ?role=client&mod=auth');
     }
 }

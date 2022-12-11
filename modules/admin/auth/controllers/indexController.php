@@ -8,6 +8,8 @@ function construct($action_name = '') {
 function indexAction() {
 //    request_auth(false);
     $notifications = get_notification();
+//    var_dump($notifications);
+//    die();
     load_view('index', [
         "notifications" => $notifications
     ]);
@@ -20,6 +22,7 @@ function indexPostAction() {
     if (empty($username) || empty($password)) {
         push_notification('danger', ['Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu']);
         header('Location: ?role=admin&mod=auth');
+        die();
     }
     // xử lý đăng nhập
     $auth = get_auth_user($username, $password);
@@ -29,7 +32,8 @@ function indexPostAction() {
 //        echo '1';
         header('Location: ?role=admin');//Chạy về modules home
     } else {
-        push_notification_usser('danger', ['Tài khoản hoặc mật khẩu không chính xác']);
+        push_notification('danger', ['Tài khoản hoặc mật khẩu không chính xác']);
         header('Location: ?role=admin&mod=auth');
+        die();
     }
 }

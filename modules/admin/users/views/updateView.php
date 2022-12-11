@@ -53,7 +53,10 @@
                         </div>
                         <div class="form-group">
                             <label>Vai trò</label>
-                            <input type="text" value="<?php echo $user['role_id']?>" name="role_id" class="form-control" placeholder="Nhập vào vai trò của tài khoản" />
+                            <select name="role_id" id="cars" class="form-control">
+                                <option value="1" <?php if($user['role_id'] == 1) echo 'selected'?>>Người dùng</option>
+                                <option value="2"  <?php if($user['role_id'] == 2) echo 'selected'?>>Quản trị viên</option>
+                            </select>
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group">

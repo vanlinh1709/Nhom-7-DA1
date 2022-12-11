@@ -25,6 +25,11 @@ function createPostAction() {
 //    echo '<pre>';
 //    var_dump();
 //    die();
+    if (empty($banner_image['name'])) {
+        push_notification('danger', ['Vui lòng nhập ảnh']);
+        header('Location: ?role=admin&mod=slideshow&action=create');
+        die();
+    }
     if($banner_image['name'] != '') {
         move_uploaded_file($banner_image['tmp_name'], 'C:/xampp/htdocs/Nhom_7_DA1/public/uploads/images/banner/' .$banner_image['name']);
     } else {

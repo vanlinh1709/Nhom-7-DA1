@@ -103,7 +103,7 @@
                                                 </span>
                                             </a>
                                             <a href="?role=admin&mod=product&action=delete&id_product=<?php echo $product[0] ?>"
-                                               onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $product['title'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')" class="btn btn-sm btn-clean btn-icon" title="Delete">
+                                               onclick="return confirm('Bạn chắc chắn muốn xoá sản phẩm: <?php echo $product['title'] ?> không? Hành động sẽ xoá các đơn hàng và toàn bộ bình luân, tin tức về sản phẩm này.')" class="btn btn-sm btn-clean btn-icon" title="Delete">
                                                 <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                 <svg stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                     <rect x="0" y="0" width="24" height="24"></rect>

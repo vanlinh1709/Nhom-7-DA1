@@ -52,16 +52,16 @@
         </div>
         <div class="write-comment">
             <div class="write-comment-title">
-                <h5>Gửi một bình luân</h5>
+                <h5>Gửi một bình luận</h5>
                 <p>Email của bạn sẽ không được công khai</p>
             </div>
             <form action="">
                 <label>Bình luận</label>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write a comment"></textarea>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Viết một bình luận"></textarea>
                 <div class="information-user-comment">
                     <div class="name-user-comment">
                         <label>Tên</label><br>
-                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Họ và tên">
                     </div>
                     <div class="email-user-comment">
                         <label>Email</label><br>

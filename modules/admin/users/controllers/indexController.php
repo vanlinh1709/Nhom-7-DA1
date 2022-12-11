@@ -43,7 +43,7 @@ function createPostAction() {
 function deleteAction() {
     $id = $_GET['id_user'];
     deleteUser($id);
-    push_notification('success', ['Xoá danh mục tài khoản thành công']);
+    push_notification('success', ['Xoá tài khoản thành công']);
     header('Location: ?role=admin&mod=users');
 }
 
@@ -81,7 +81,7 @@ function updatePostAction() {
     if (empty($name) || empty($email) || empty($phone_number) || empty($address) || empty($password) ||
         empty($role_id)) {
         push_notification('danger', ['Vui lòng nhập đầy đủ các trường']);
-        header('Location: ?role=admin&mod=users&action=update');
+        header('Location: ?role=admin&mod=users&action=update&id_user='.$id);
         die();
     }
     if($_FILES['avatar']['name'] != '') {
@@ -89,7 +89,7 @@ function updatePostAction() {
         move_uploaded_file($_FILES['avatar']['tmp_name'], "C:/xampp/htdocs/Nhom_7_DA1/public/uploads/images/user/" . $avatar);
     }
     updateUser($id ,$name, $email, $phone_number, $address, $password, $role_id, $avatar);
-    push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
+    push_notification('success', ['Chỉnh sửa tài khoản thành công']);
     header('Location: ?role=admin&mod=users');
 }
 

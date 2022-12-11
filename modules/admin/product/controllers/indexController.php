@@ -29,7 +29,7 @@ function createPostAction() {
     $des = $_POST['des'];
     $status = $_POST['status'];
     if (empty($name) || empty($category_id) || empty($brand_id) || empty($price) ||
-        empty($number) || empty($thumbnail) || empty($des) || empty($status)) {
+        empty($number) || empty($thumbnail['name']) || empty($des) || empty($status)) {
         push_notification('danger', ['Vui lòng nhập đầy đủ các trường']);
         header('Location: ?role=admin&mod=product&action=create');
         die();
