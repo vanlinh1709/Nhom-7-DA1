@@ -32,7 +32,7 @@ get_header('','Trang chi tiết sản phẩm');
                 <form method="post" action="?role=client&mod=cart&action=add&id_product=<?php echo $product['id']?>&currentMod=<?php echo get_module()?>">
                   <div class="d-flex justify-content-between">
                       <div class="quantity-input">
-                          <input name="qty" type="number" min="1" max="<?php echo $product['number']?>" placeholder="1" id="num">
+                          <input name="qty" type="number" min="1" max="<?php echo $product['number']?>" value="1" id="num">
                       </div>
                       <button onclick="" style="border-radius: 10px" class="btn btn-info" type="submit">Thêm vào giỏ hàng</button>
                   </div>

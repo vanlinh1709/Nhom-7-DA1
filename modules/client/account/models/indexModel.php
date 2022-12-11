@@ -39,3 +39,7 @@ function getInfoUser($email) {
     $sql = "SELECT * FROM users WHERE email = ?";
     return pdo_query_one($sql, $email);
 }
+function updateUser($id, $name, $email, $phone_number, $address, $password) {
+    $sql = 'UPDATE users SET fullname = ?, email= ?, phone_number= ?, address= ?, password= ? WHERE id = ?';
+    pdo_execute($sql,$name, $email, $phone_number, $address, $password, $id);
+}

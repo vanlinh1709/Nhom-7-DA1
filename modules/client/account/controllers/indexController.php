@@ -11,8 +11,10 @@
             $user = get_id_by_email($_SESSION['auth']['email']);
             $infoUser = getInfoUser($_SESSION['auth']['email']);
         }
+        //
+        $notifications = get_notification();
 //        var_dump($infoUser);
-        load_view('index', compact('list_orders', 'list_status', 'infoUser'));
+        load_view('index', compact('list_orders', 'list_status', 'infoUser', 'notifications'));
     }
     function orders_detailAction() {
     $order_id = $_GET['id_order'];
@@ -34,4 +36,26 @@
 //    die();
     load_view('orderDetail', compact('orders_detail', 'product_of_orders_detail', 'order'));
 }
+    function editAccountPostAction() {
+        //Lay du lieu tu form gui len
+        $id = $_GET['id'];
+//        echo '<pre>';
+//        var_dump($id, $_POST);
+//        die();
+        //Validate du lieu do
+        $valid = validatorForm($_POST);
+//        var_dump($valid);
+//        var_dump($_SESSION['notification']);
+        if(!$valid) {
+            header('Location: ?role=client&mod=account&id='.$id);
+            die();
+        }
+        $name = $_POST['fullname'];
+        $email = $_POST['email'];
+        $phone_number = $_POST['phonenumber'];
+        $address = $_POST['address'];
+        $password = $_POST['password'];
+        updateUser($id ,$name, $email, $phone_number, $address, $password );
+        header('Location: ?role=client&mod=account&id='.$id);
+    }
 ?>

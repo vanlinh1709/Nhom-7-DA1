@@ -84,13 +84,20 @@
                                             <div class="myaccount-content">
                                                 <h5>Chỉnh sửa tài khoản</h5>
                                                 <div class="account-details-form">
-                                                    <form action="#">
+                                                    <form action="?role=client&mod=account&action=editAccount&id=<?php echo $_GET['id']?>" method="post">
                                                         <div class="row">
                                                             <div class="col-lg-6">
                                                                 <div class="single-input-item">
                                                                     <label for="last-name" class="required">Họ và tên
                                                                         </label>
-                                                                    <input type="text" id="last-name" placeholder="" value="<?php echo $infoUser['fullname']?>" />
+                                                                    <input name="fullname" type="text" id="last-name" placeholder="" value="<?php echo $infoUser['fullname']?>" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="single-input-item">
+                                                                    <label for="last-name" class="required">Email
+                                                                    </label>
+                                                                    <input name="email" type="email" id="last-name" placeholder="" value="<?php echo $infoUser['email']?>" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -99,7 +106,14 @@
                                                                 <div class="single-input-item">
                                                                     <label for="last-name" class="required">Địa chỉ
                                                                         </label>
-                                                                    <input type="text" id="last-name" placeholder="" value="<?php echo $infoUser['address']?>" />
+                                                                    <input name="address" type="text" id="last-name" placeholder="" value="<?php echo $infoUser['address']?>" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="single-input-item">
+                                                                    <label for="last-name" class="required">Mật khẩu
+                                                                    </label>
+                                                                    <input name="password" type="password" id="last-name" placeholder="" value="<?php echo $infoUser['password']?>" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -108,20 +122,24 @@
                                                                 <div class="single-input-item">
                                                                     <label for="last-name" class="required">Số điện thoại
                                                                         </label>
-                                                                    <input type="text" id="last-name" placeholder="" value="<?php echo $infoUser['phone_number']?>" />
+                                                                    <input name="phonenumber" type="text" id="last-name" placeholder="" value="<?php echo $infoUser['phone_number']?>" />
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="row">
                                                             <div class="col-lg-6">
-                                                                <div class="single-input-item">
-                                                                    <label for="last-name" class="required">Email
-                                                                        </label>
-                                                                    <input type="text" id="last-name" placeholder="" value="<?php echo $infoUser['email']?>" />
+                                                                <div class="text-center align-items-center">
+                                                                    <button style="font-size: 20px; padding: 10px; margin: 40px" type="submit" class="btn btn-success btn-lg">CHỈNH SỬA</button>
                                                                 </div>
                                                             </div>
+
                                                         </div>
                                                     </form>
+                                                    <?php foreach ($notifications as $msg) : ?>
+                                                        <li class="text-<?php echo $msg['type'] ?>"><?php if(isset($msg['fullname'])) echo  $msg['fullname'] . ' trường tên' ?></li>
+                                                        <li class="text-<?php echo $msg['type'] ?> "><?php if(isset($msg['phonenumber'])) echo $msg['phonenumber'] .' số điện thoại' ?></li>
+                                                        <li class="text-<?php echo $msg['type'] ?> "><?php if(isset($msg['email'])) echo $msg['email'] .' email'?></li>
+                                                        <li class="text-<?php echo $msg['type'] ?> "><?php if(isset($msg['address'])) echo $msg['address'] .' địa chỉ nhận hàng'?></li>
+                                                        <li class="text-<?php echo $msg['type'] ?> "><?php if(isset($msg['password'])) echo $msg['password'] .' địa chỉ mật khẩu'?></li>
+                                                    <?php endforeach; ?>
                                                 </div>
                                             </div>
                                         </div> <!-- Single Tab Content End -->
