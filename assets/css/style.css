@@ -136,7 +136,6 @@ button {
           box-shadow: none;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  background-color: transparent;
 }
 .btn:active, .btn:focus,
 button:active,
@@ -2667,7 +2666,7 @@ ul.minicart-pricing-box li:last-child {
   margin-top: 30px;
 }
 .hero-slider--style-4 .hero-slider-item {
-  height: 400px !important;
+  height: 420px !important;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .hero-slider--style-4 .hero-slider-item {

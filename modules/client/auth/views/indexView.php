@@ -18,12 +18,6 @@
                                 </div>
                                 <div class="single-input-item">
                                     <div class="login-reg-form-meta d-flex align-items-center justify-content-between">
-                                        <div class="remember-meta">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="rememberMe">
-                                                <label class="custom-control-label" for="rememberMe">Nhớ tôi</label>
-                                            </div>
-                                        </div>
                                         <a href="#" class="forget-pwd">Quên mật khẩu?</a>
                                     </div>
                                 </div>

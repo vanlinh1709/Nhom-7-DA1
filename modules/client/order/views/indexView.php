@@ -59,18 +59,23 @@
 
                                 <div class="checkout-box-wrap">
                                     <div class="single-input-item">
-
                                             <a href="?role=client&mod=auth">
-                                                <spa class="custom-control-label" for="create_pwd">Tạo mới tài khoản?</spa>
+                                                <span <?php echo isset($_SESSION['auth']) ? 'hidden' : ''?> class="custom-control-label" for="create_pwd">Tạo mới tài khoản để nhận ưu đãi?</span>
                                             </a>
-
                                     </div>
                                 </div>
-
                                 <div class="single-input-item">
                                     <label for="ordernote">Ghi chú</label>
                                     <textarea name="ordernote" id="ordernote" cols="30" rows="3" placeholder="Ghi ghi cho cho người vận chuyển"></textarea>
                                 </div>
+                            <ul class="">
+                                <?php foreach ($notifications as $msg) : ?>
+                                    <li class="text-<?php echo $msg['type'] ?>"><?php if(isset($msg['customer_name'])) echo  $msg['customer_name'] . ' trường tên' ?></li>
+                                    <li class="text-<?php echo $msg['type'] ?> "><?php if(isset($msg['customer_phone_number'])) echo $msg['customer_phone_number'] .' số điện thoại' ?></li>
+                                    <li class="text-<?php echo $msg['type'] ?> "><?php if(isset($msg['customer_email'])) echo $msg['customer_email'] .' email'?></li>
+                                    <li class="text-<?php echo $msg['type'] ?> "><?php if(isset($msg['customer_address'])) echo $msg['customer_address'] .' địa chỉ nhận hàng'?></li>
+                                <?php endforeach; ?>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -129,16 +134,11 @@
                                 <div class="single-payment-method show col">
                                     <div class="payment-method-name">
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="cashon" name="paymentmethod" value="cash" class="custom-control-input"  />
+                                            <input checked type="radio" id="cashon" name="paymentmethod" value="cash" class="custom-control-input"  />
                                             <label class="custom-control-label" for="cashon">Thanh toán khi nhận hàng</label>
                                         </div>
                                         <br>
-                                        <div class="custom-control custom-checkbox mb-20">
-                                            <input type="checkbox" class="custom-control-input" id="terms"  />
-                                            <label class="custom-control-label" for="terms">Xác nhận đặt hàng</label>
-                                        </div>
                                     </div>
-
                                 </div>
                                 <div class="summary-footer-area col text-center align-center">
                                     <button type="submit" class="btn btn-sqr text-center">Đặt hàng</button>

@@ -17,18 +17,30 @@ function indexAction() {
 //        var_dump($info_user);
 //        die();
     }
+    //
+    $notifications = get_notification();
     $list_product = $_SESSION['cart'];
-    load_view('index', compact('info_user', 'list_product'));
+    load_view('index', compact('info_user', 'list_product', 'notifications'));
 }
 function indexPostAction() {
-    //Đưa thông tin order vào bảng order
-//    var_dump($_POST);
-    $id = rand(1,10000);
-    $id_user = $_POST['id'] ? $_POST['id'] : null;
+    //Validate form
+
     $customer_name = $_POST['name'];
     $customer_phone_number = $_POST['phone'];
     $customer_email = $_POST['email'];
     $customer_address = $_POST['address'];
+    $dataValidate = compact('customer_name', 'customer_phone_number', 'customer_email' ,
+        'customer_address');
+//    var_dump($dataValidate);
+//    die();
+    if(!validatorForm($dataValidate)) {
+        header('Location: ?role=client&mod=order');
+        die();
+    }
+    //Đưa thông tin order vào bảng order
+    $id = rand(1,1000000);
+    $id_user = $_POST['id'] ? $_POST['id'] : null;
+
     $total_price = $_SESSION['final_total_money'];
 //    echo '<pre>';
 //    var_dump($id, $id_user, $customer_name, $customer_phone_number, $customer_email, $customer_address,

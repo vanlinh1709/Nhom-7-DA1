@@ -52,40 +52,62 @@
             <?php foreach ($list_banner as $b): ?>
                 <a href="?role=client&mod=order&action=orderNow&id=<?php echo $b['product_id']?>"><img src="./public/uploads/images/banner/<?php echo $b['banner_img']?>" alt=""></a>
             <?php endforeach?>
+    </div>
+    <section class="special-products-area section-padding">
+        <div class="container">
+            <hr>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h3 class="title">GIẢM SỐC HÔM NAY</h3>
+                    </div>
+                </div>
             </div>
-    <div class="main-content">
-        <hr>
-        <div class="main-content-tittle text-center">
-            <h2>GIẢM SỐC HÔM NAY</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="special-product-carousel slick-arrow-style slick-row-15">
+                    <?php foreach($list_salest_products as $l):?>
+                        <div class="product-item">
+                            <div class="product-thumb">
+                                <a href="?role=client&mod=productDetail&id=<?php echo $l['id'] ?>">
+                                    <img src="./layout/assets/img/product/<?php echo $l['thumbnail']?>" alt="product thumb">
+                                </a>
+                                <div class="button-group">
+                                    <a href="#"><span><i class="fa fa-heart-o"></i></span></a>
+                                    <a href="#"><span><i class="fa fa-eye"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-caption">
+                                    <h6 class="product-name">
+                                        <a href="?role=client&mod=productDetail&id=<?php echo $l['id'] ?>"><?php echo $l['title']?></a>
+                                    </h6>
+                                    <div class="price-box">
+                                        <span class="price-old"><del><?php echo currency_format($l['price'])?></del></span>
+                                        <span class="price-regular"><?php echo currency_format($l['promo_price'])?></span>
+                                    </div>
+                                    <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $l['id']?>&currentMod=<?php echo get_module()?>"><i class="fa fa-shopping-cart"></i></a>
+                                </div>
+                                <div class="ratings d-flex justify-content-between align-items-end">
+                                    <div class="ratings">
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                        <span><i class="fa fa-star"></i></span>
+                                    </div>
+                                <div class="text-danger" style="font-size: 30px">-<?php echo ceil((float)$l['percen_promo'] * 100)?>%</div>
+<!--                                Celi: hàm làm tròn số; (float) chuyển string thành số float-->
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach?>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="main-product">
-        <?php
-        foreach($list_salest_products as $l):?>
-        <div class="product-salient">
-            <div class="product-img">
-                <a href="?role=client&mod=productDetail&id=<?php echo $l['id'] ?>">
-                <img src="./layout/assets/img/product/<?php echo $l['thumbnail'] ?>" alt=""></a>
-            </div>
-            <div class="product-infor">
-                <div class="product-name">
-                    <a href="?role=client&mod=productDetail&id=<?php echo $l['id'] ?>">
-                    <p> <?php echo $l['title'] ?></p></a>
-                </div>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <div class="price-buy">
-                    <div class="product-price"><span><?php echo currency_format($l['price']) ?></span><span></span></div>
-                    <a href="?role=client&mod=cart&action=add&id_product=<?php echo $l['id']?>&currentMod=<?php echo get_module()?>">
-                    <button>Thêm vào giỏ hàng</button></a>
-                </div>
-            </div>
-        </div>                   
-        <?php endforeach?>
-    </div>
+    </section>
     <div class="new-arrival-product">
                 <div class="new-arrival-title">
                     <h4 style="font-size: 30px " class="text-center">GỢI Ý CHO BẠN</h4>
@@ -194,12 +216,15 @@
                             </div>
                             <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $s['id']?>&currentMod=<?php echo get_module()?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
-                        <div class="ratings">
-                            <span><i class="fa fa-star"></i></span>
-                            <span><i class="fa fa-star"></i></span>
-                            <span><i class="fa fa-star"></i></span>
-                            <span><i class="fa fa-star"></i></span>
-                            <span><i class="fa fa-star"></i></span>
+                        <div class="ratings d-flex justify-content-between">
+                            <div>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                            </div>
+                            <div class="text-danger">Đã bán: <?php echo $s['total']?></div>
                         </div>
                     </div>
                 </div>
@@ -233,12 +258,15 @@
                             </div>
                             <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $f['id']?>&currentMod=<?php echo get_module()?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
-                        <div class="ratings">
-                            <span><i class="fa fa-star"></i></span>
-                            <span><i class="fa fa-star"></i></span>
-                            <span><i class="fa fa-star"></i></span>
-                            <span><i class="fa fa-star"></i></span>
-                            <span><i class="fa fa-star"></i></span>
+                        <div class="ratings d-flex justify-content-between">
+                            <div>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                                <span><i class="fa fa-star"></i></span>
+                            </div>
+                            <div class="text-danger">Số lượt xem: <?php echo $f['views']?></div>
                         </div>
                     </div>
                 </div>

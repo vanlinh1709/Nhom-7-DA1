@@ -212,6 +212,23 @@ function validateEmail($email) {
     }
     return false;
 }
+//
+function validatorForm($data = array()) {
+    $valid = true;
+    if (is_array($data)) {
+        foreach ($data as $key => $a) {
+            $$key = $a;
+            if(empty($$key)) {
+                $_SESSION['notification'] = [];
+                $msg[$key] = 'Không được để trống';
+                $msg['type'] = 'danger';
+                $_SESSION['notification'][] = $msg;
+                $valid = false;
+            }
+        }
+    }
+    return $valid;
+}//end func
 
 function validateFullname($name) {
     if(empty($name)) {
@@ -232,7 +249,7 @@ function validatePassword($password) {
     }
     return false;
 }
-
+//
 function push_notification_user() {
     $_SESSION['notification'] = [];
     $msg['type'] ='danger';
@@ -277,6 +294,11 @@ function is_admin()
 function request_auth($isLogin = true)
 {
     $request_role = get_role() === 'admin' ? 2 : 1;
+    //Neu chua dang nhap
+    if(!is_auth()) {
+        header("Location: ?role=" . get_role().'&mod=auth');
+        die();
+    }
     if (is_auth() !== $isLogin) {
         $auth = get_auth();
         header("Location: " . ($isLogin ? '?role='. ($auth['role_id'] == 1 ? 'client' : 'admin') . '&mod=auth' : '?role=' . ($auth['role_id   '] == 1 ? 'client' : 'admin')));

@@ -20,3 +20,7 @@ function addComment($name_sender, $email_sender, $id_sp, $contents) {
     $result = pdo_execute($sql, $name_sender, $email_sender, $id_sp, $contents);
     return $result;
 }
+function updateViewProduct($id) {
+    $sql = 'UPDATE products SET views = views + 1';
+    pdo_execute($sql);
+}

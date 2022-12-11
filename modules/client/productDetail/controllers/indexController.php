@@ -6,6 +6,7 @@ function indexAction() {
     $id = $_GET['id'];
 //    var_dump($id);
     $product = getProduct($id);
+    updateViewProduct($id);
     // var_dump($product);
     // die();
     $product_cate_id = $product['category_id'];
@@ -21,7 +22,10 @@ function indexAction() {
 //    die();
     $listComments = getCommentsOfProduct($id);
 //    var_dump($listComments);
-    load_view('index',compact('product','list_related_products', 'listComments'));
+    //
+    $notifications = get_notification();
+//    var_dump($notifications);
+    load_view('index',compact('product','list_related_products', 'listComments', 'notifications'));
 }
 function sendCommentPostAction() {
     $data = $_POST;
@@ -36,6 +40,9 @@ function sendCommentPostAction() {
         $contents = $_POST['contents'];
     }
     addComment($name_sender, $email_sender, $id_sp, $contents);
+    $_SESSION['notification'] = 'Bình luận của bạn đang được xem xét';
+//    var_dump($_SESSION['notification']);
+//    die();
     header('Location: ?role=client&mod=productDetail&id='.$_GET['id_product']);
 
 

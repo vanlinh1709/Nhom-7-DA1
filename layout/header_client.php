@@ -51,7 +51,7 @@
 
                                 </div>
                                 <ul class="user-info-block">
-                                    <li><a href="#"><i class="<?php echo isset($_SESSION['auth']) ? 'fa fa-user-circle' : ''?>"></i><span class="text-info"><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : ''?></span></a></li>
+                                    <li <?php echo is_auth() == true ? '' : 'hidden'?>><a href="?role=client&mod=account&id=<?php echo $user['id']?>"><i class="<?php echo isset($_SESSION['auth']) ? 'fa fa-user-circle' : ''?>"></i><span class="text-info"><?php echo isset($_SESSION['auth']) ? $_SESSION['auth']['fullname'] : ''?></span></a></li>
                                     <li>
                                         <a href="?role=admin" target="_blank" class="text">
                                             <?php echo is_admin() == true ? 'Trang quản trị' : ''?>

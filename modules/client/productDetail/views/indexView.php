@@ -1,10 +1,10 @@
 <?php
-get_header('','');
+get_header('','Trang chi tiết sản phẩm');
 ?>
 <main>
     <div class="product-detail">
-        <div class="product-detail-img" style="text-align: center">
-            <img src="./layout/assets/img/product/<?php echo $product['thumbnail'] ?>" alt="">
+        <div class="product-detail-img text-center" style="text-align: center">
+            <img class="rounded" src="./layout/assets/img/product/<?php echo $product['thumbnail'] ?>" alt="">
         </div>
         <div class="product-detail-infor">
             <div class="product-detail-name">
@@ -30,12 +30,12 @@ get_header('','');
             <div class="quantity">
                 <div class="quantity-text"><span>Số lượng:</span></div>
                 <form method="post" action="?role=client&mod=cart&action=add&id_product=<?php echo $product['id']?>&currentMod=<?php echo get_module()?>">
-                    <div class="quantity-input">
-                        <input name="qty" type="number" min="0" placeholder="0">
-                    </div>
-                    <div class="quantity-buy">
-                        <button type="submit">Thêm vào giỏ hàng</button>
-                    </div>
+                  <div class="d-flex justify-content-between">
+                      <div class="quantity-input">
+                          <input name="qty" type="number" min="1" max="<?php echo $product['number']?>" placeholder="1" id="num">
+                      </div>
+                      <button onclick="" style="border-radius: 10px" class="btn btn-info" type="submit">Thêm vào giỏ hàng</button>
+                  </div>
                 </form>
             </div>
             <div class="detail-contact">
@@ -54,15 +54,14 @@ get_header('','');
                 <div class="product-review-info">
                     <ul class="nav review-tab">
                         <li>
-                            <a class="active" data-bs-toggle="tab" href="#tab_one">Đánh giá</a>
+                            <a class="active" data-bs-toggle="tab" href="#tab_two">Đánh giá</a>
                         </li>
-
                         <li>
-                            <a data-bs-toggle="tab" href="#tab_two">Mô tả</a>
+                            <a data-bs-toggle="tab" href="#tab_one">Mô tả</a>
                         </li>
                     </ul>
                     <div class="tab-content reviews-tab">
-                        <div class="tab-pane fade active" id="tab_one">
+                        <div class="tab-pane fade active" id="tab_two">
                             <?php foreach ($listComments as $item):?>
                                 <div class="total-reviews">
                                     <div class="rev-avatar">
@@ -101,9 +100,15 @@ get_header('','');
                                 <div class="buttons">
                                     <button class="btn btn-sqr" type="submit">Gửi</button>
                                 </div>
+                                <div>
+                                    <p class="text-danger">
+                                        <?php echo !is_array($notifications) ?  $notifications : ''?>
+                                    </p>
+                                </div>
                             </form> <!-- end of review-form -->
+
                         </div>
-                        <div class="tab-pane fade show " id="tab_two">
+                        <div class="tab-pane fade show " id="tab_one">
                             <div class="tab-two">
                                 <p>
                                     <?php echo $product['description']?>
@@ -111,7 +116,6 @@ get_header('','');
                             </div>
                         </div>
                     </div>
-
                     </div>
                 </div>
             </div>
@@ -144,8 +148,8 @@ get_header('','');
                             <a href="?role=client&mod=productDetail&id=<?php echo $key['id'] ?>"><?php echo $key['title'] ?></a>
                         </h6>
                         <div class="price-box">
-                            <span class="price-old"><del><?php echo $key['price'] ?></del></span>
-                            <span class="price-regular"><?php echo $key['promo_price'] ?></span>
+                            <span class="price-old"><del><?php echo currency_format($key['price']) ?></del></span>
+                            <span class="price-regular"><?php echo currency_format($key['promo_price']) ?></span>
                         </div>
                         <a class="add-to-cart" href="?role=client&mod=cart&action=add&id_product=<?php echo $key['id']?>&currentMod=<?php echo get_module()?>"><i class="fa fa-shopping-cart"></i></a>
                     </div>
@@ -165,3 +169,6 @@ get_header('','');
 <?php
 get_footer('');
 ?>
+<script>
+
+</script>

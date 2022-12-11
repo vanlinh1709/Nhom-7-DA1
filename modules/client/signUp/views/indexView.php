@@ -34,8 +34,6 @@ get_header('','Trang đăng ký');
                                             <div class="remember-meta">
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="subnewsletter">
-                                                    <label class="custom-control-label" for="subnewsletter">Đăng ký
-                                                        nhận bản tin</label>
                                                 </div>
                                             </div>
                                         </div>
