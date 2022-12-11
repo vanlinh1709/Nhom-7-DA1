@@ -29,10 +29,6 @@ function get_list_banner() {
     $sql = 'SELECT * FROM banner as b JOIN products as p ON b.product_id = p.id';
     return pdo_query($sql);
 }
-function get_id_by_email($email) {
-    $sql = 'SELECT id FROM users WHERE email = ?';
-    return pdo_query_one($sql, $email);
-}
 
 
 

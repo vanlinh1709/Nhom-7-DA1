@@ -113,14 +113,24 @@ function load_model($name) {
         echo "Không tìm thấy {$path}";
     }
 }
+//
 function get_info_shop() {
     $sql = 'SELECT * FROM info_shop';
     $info = pdo_query_one($sql);
     return $info;
 }
+
+function get_id_by_email($email) {
+    $sql = 'SELECT id FROM users WHERE email = ?';
+    return pdo_query_one($sql, $email);
+}
 function get_header($name = '', $title = '') {
     global $data;
     $infoShop = get_info_shop();
+    $user['id'] = '';
+    if(is_auth() && !is_admin()) {
+        $user = get_id_by_email($_SESSION['auth']['email']);
+    }
     if (empty($name)) {
         $name = 'header';
     } else {
