@@ -37,9 +37,9 @@ function sendCommentPostAction() {
         $id_sp = $_GET['id_product'];
         $contents = $_POST['contents'];
     }
-    $status = 1;
+    $status = 0;
     if(is_admin()) {
-        $status = 0;
+        $status = 1;
     }
     addComment($name_sender, $email_sender, $id_sp, $contents, $status);
     $_SESSION['notification'] = 'Bình luận của bạn đang được xem xét';

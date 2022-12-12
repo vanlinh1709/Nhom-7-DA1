@@ -11,6 +11,8 @@ function indexAction() {
     $list_featured_product = get_list_product_featured();
     $list_slide_show = get_list_slide_and_product_name();
     $list_banner = get_list_banner();
+//    var_dump($list_banner);
+//    die();
     $list_salest_products = get_list_salest_products();
 
     load_view('index', compact('categories', 'list_newest_product',

@@ -5,23 +5,7 @@
     <section class="newsletter-area">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="newsletter-wrapper text-center">
-                        <h3 class="title text-white">ĐĂNG KÝ NHẬN KHUYẾN MÃI</h3>
-                        <form class="newsletter-inner" id="mc-form">
-                            <input type="email" class="news-field" id="mc-email" autocomplete="off" placeholder="Nhập địa chỉ email">
-                            <button class="news-btn" id="mc-submit">Gửi</button>
-                        </form>
-                        <h6 class="newsletter-subtitle">Để nhận được những khuyến mãi khủng nhất hãy đăng ký email với chúng tôi</h6>
-                        <!-- mailchimp-alerts Start -->
-                        <div class="mailchimp-alerts">
-                            <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                            <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                            <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                        </div>
-                        <!-- mailchimp-alerts end -->
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>

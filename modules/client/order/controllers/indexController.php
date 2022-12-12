@@ -78,6 +78,7 @@ function orderNowAction() {
 //    var_dump($product);
 //    die();
     push_to_session($product);
+    final_total_money();
     header('Location: ?role=client&mod=order');
 }
 function canceOrderAction() {

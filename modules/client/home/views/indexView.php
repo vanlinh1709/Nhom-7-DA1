@@ -33,7 +33,7 @@
                                                 <div class="hero-slider-content slide-1 row">
                                                     <div class="col-md-7">
                                                         <h6 class="slide-title text-white"><?php echo $ls['title']?></h6>
-                                                        <a href="?role=client&mod=productDetail&id=<?php echo $ls['id']?>" class="btn btn-large btn-bg">MUA NGAY</a>
+                                                        <a href="?role=client&mod=order&action=orderNow&id=<?php echo $ls['id']?>" class="btn btn-large btn-bg">MUA NGAY</a>
                                                     </div>
                                                 </div>
                                             </div>

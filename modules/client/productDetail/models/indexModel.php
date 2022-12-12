@@ -10,7 +10,7 @@ function getRelatedProducts($cate_id) {
     return $result;
 }
 function getCommentsOfProduct($product_id) {
-    $sql = 'SELECT * FROM comment WHERE id_sp = ?';
+    $sql = 'SELECT * FROM comment WHERE id_sp = ? AND status = 1';
     $result = pdo_query($sql, $product_id);
     return $result;
 }
