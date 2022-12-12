@@ -7,10 +7,10 @@
                 <div class="col-12">
                     <div class="breadcrumb-wrap">
                         <nav aria-label="breadcrumb">
-                            <h3 class="breadcrumb-title">ABOUT US</h3>
+                            <h3 class="breadcrumb-title">VỀ CHÚNG TÔI</h3>
                             <ul class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i></a></li>
-                                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                                <li class="breadcrumb-item active" aria-current="page">Về chúng tôi</li>
                             </ul>
                         </nav>
                     </div>
@@ -31,13 +31,13 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-content">
-                        <h2 class="about-title">PULLMAN SNEAKER ABOUT US.</h2>
-                        <h3 class="about-subtitle">Investigationes demonstraverunt lectores legere me.</h3>
-                        <p>Quisque consequat venenatis rutrum. Quisque posuere enim augue, in rhoncus diam dictum non.Nunc id ante quis tellus faucibus</p>
+                        <h2 class="about-title">.</h2>
+                        <h3 class="about-subtitle">Shop giày thể thao Pullman.</h3>
+                        <p>FPT Digital chúng tôi đồng hành cùng khách hàng trong việc xác định các cơ hội số, khám phá các giá trị mới và tạo ra các mô hình kinh doanh</p>
                         <ul class="about-info">
-                            <li class="add"><i class="fa fa-home"></i>Your address goes here</li>
-                            <li class="phone"><i class="fa fa-phone"></i>Phone: 0123456789</li>
-                            <li class="mail"><i class="fa fa-envelope"></i>Email: demo@example.com</li>
+                            <li class="add"><i class="fa fa-home"></i>144 Nguyễn Trãi, Thanh Xuân</li>
+                            <li class="phone"><i class="fa fa-phone"></i>Điện thoại: 0852311221</li>
+                            <li class="mail"><i class="fa fa-envelope"></i>Pullman@gmail.com
                         </ul>
                     </div>
                 </div>
@@ -52,8 +52,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h3 class="title">WHY CHOOSE US</h3>
-                        <h4 class="sub-title">Accumsan vitae pede lacus ut ullamcorper sollicitudin quisque libero</h4>
+                        <h3 class="title">Tại sao lựa chọn chúng tôi</h3>
                     </div>
                 </div>
             </div>
@@ -61,22 +60,18 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="single-choose-item text-center mb-30">
                         <i class="fa fa-globe"></i>
-                        <h4>Free Shipping</h4>
-                        <p>Amadea Shop is a very slick and clean e-commerce template with endless possibilities.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="single-choose-item text-center mb-30">
                         <i class="fa fa-plane"></i>
-                        <h4>Fast Delivery</h4>
-                        <p>Amadea Shop is a very slick and clean e-commerce template with endless possibilities.</p>
+                        <h4>Vận chuyển nhanh</h4>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="single-choose-item text-center mb-30">
                         <i class="fa fa-comments"></i>
-                        <h4>Customers Support</h4>
-                        <p>Amadea Shop is a very slick and clean e-commerce template with endless possibilities.</p>
+                        <h4>Hỗ trợ khách hàng</h4>
                     </div>
                 </div>
             </div>

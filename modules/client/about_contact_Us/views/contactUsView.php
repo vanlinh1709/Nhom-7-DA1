@@ -31,27 +31,27 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="contact-message">
-                            <h4 class="contact-title">Tell Us Your Project</h4>
+                            <h4 class="contact-title">Nói với chúng tôi</h4>
                             <form id="contact-form" action="https://htmldemo.net/pullman/pullman/assets/php/mail.php" method="post" class="contact-form">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="first_name" placeholder="Name *" type="text" required="">
+                                        <input name="first_name" placeholder="Tên *" type="text" required="">
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="phone" placeholder="Phone *" type="text" required="">
+                                        <input name="phone" placeholder="Điện thoại *" type="text" required="">
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <input name="email_address" placeholder="Email *" type="text" required="">
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="contact_subject" placeholder="Subject *" type="text">
+                                        <input name="contact_subject" placeholder="Chủ đề *" type="text">
                                     </div>
                                     <div class="col-12">
                                         <div class="contact2-textarea text-center">
-                                            <textarea placeholder="Message *" name="message" class="form-control2" required=""></textarea>
+                                            <textarea placeholder="Tin nhắn *" name="message" class="form-control2" required=""></textarea>
                                         </div>
                                         <div class="contact-btn">
-                                            <button class="btn btn-sqr" type="submit">Send Message</button>
+                                            <button class="btn btn-sqr" type="submit">Gửi email</button>
                                         </div>
                                     </div>
                                     <div class="col-12 d-flex justify-content-center">
@@ -64,17 +64,15 @@
                     <div class="col-lg-6">
                         <div class="contact-info">
                             <h4 class="contact-title">Contact Us</h4>
-                            <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
-                                est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum
-                                formas human.</p>
+                            <p>Liên hệ với chúng tôi tại DHL và chúng tôi sẽ giải đáp mọi điều bạn quan tâm về Kinh doanh, Dịch vụ Khách hàng hoặc Thắc mắc chung.</p>
                             <ul>
-                                <li><i class="fa fa-fax"></i> Address : Your address goes here</li>
-                                <li><i class="fa fa-envelope-o"></i> E-mail: demo@example.com</li>
-                                <li><i class="fa fa-phone"></i> 01324565789</li>
+                                <li><i class="fa fa-fax"></i> Địa chỉ: 144, Nguyễn Trãi, Thanh Xuân, Hà Nội</li>
+                                <li><i class="fa fa-envelope-o"></i> E-mail: pullman@gmai.com.vn</li>
+                                <li><i class="fa fa-phone"></i>0852311221</li>
                             </ul>
                             <div class="working-time">
-                                <h6>Working Hours</h6>
-                                <p><span>Monday – Saturday:</span>08AM – 22PM</p>
+                                <h6></h6>
+                                <p><span>Thứ 2-Chủ nhật</span>08AM – 22PM</p>
                             </div>
                         </div>
                     </div>
